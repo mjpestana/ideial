@@ -9,13 +9,15 @@ namespace DISgrupo1.Ideial.Utilizadores
     public abstract class Utilizador
     {
 
+        //Atributos da classe Utilizador
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        //public string Foto { get; set; }
+        public string Foto { get; set; }
         public int Visitas { get; set; }
         public int Pontuacao { get; set; }
 
+        //Métodos da classe Utilizador
         public void Editar()
         {
 
