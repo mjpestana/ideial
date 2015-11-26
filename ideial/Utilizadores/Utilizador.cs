@@ -17,6 +17,9 @@ namespace DISgrupo1.Ideial.Utilizadores
         public int Visitas { get; set; }
         public int Pontuacao { get; set; }
 
+        public string userName { get; set; }
+        public string password { get; set; }
+
         //Métodos da classe Utilizador
         public void Editar()
         {

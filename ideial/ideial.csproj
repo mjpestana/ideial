@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db\dataset.cs" />
     <Compile Include="Db\UtilizadorDAO.cs" />
     <Compile Include="Ideia\Campanha.cs" />
     <Compile Include="Teste\formTeste.cs">
