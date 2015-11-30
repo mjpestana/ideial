@@ -1,4 +1,4 @@
-﻿namespace ideial
+﻿namespace DISgrupo1.Ideial.View
 {
     partial class Login
     {
