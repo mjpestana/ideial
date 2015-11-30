@@ -23,7 +23,7 @@ namespace DISgrupo1.Ideial.Db
             {
                 criarConexao();
 
-                comando.CommandText = "INSERT INTO utilizador (nome, email) VALUES('" + u.Nome + "', '" + u.Email + "')";
+                comando.CommandText = "INSERT INTO utilizador (nome, email, userName, password) VALUES('" + u.Nome + "', '" + u.Email + "', '" + u.userName + "'," + u.password + "')";
                 comando.CommandType = CommandType.Text;
                 conexao.Open();
 
