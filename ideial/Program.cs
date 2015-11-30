@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using DISgrupo1.Ideial.Teste;
+using DISgrupo1.Ideial.View;
 
 namespace ideial
 {
