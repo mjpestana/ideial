@@ -41,6 +41,7 @@ namespace DISgrupo1.Ideial.View
 
             uDAO = new UtilizadorDAO();
             uDAO.Login(u);
+            hola prueba 
 
         }
     }
