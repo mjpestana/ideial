@@ -40,8 +40,17 @@ namespace DISgrupo1.Ideial.View
             u.password = password_txt.Text;
 
             uDAO = new UtilizadorDAO();
-            uDAO.Login(u);
-            hola prueba rffrr
+           Boolean result = uDAO.Login(u);
+
+            if (result)
+            {
+
+                Main novo = new Main();
+                novo.ShowDialog();
+                                      
+
+            }
+           
 
         }
     }

@@ -32,24 +32,25 @@
             this.campanhas_btn = new System.Windows.Forms.Button();
             this.userName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Subsc_btn = new System.Windows.Forms.Button();
-            this.userPic_img = new System.Windows.Forms.PictureBox();
-            this.Cargo_lbl = new System.Windows.Forms.Label();
-            this.ideias_btn = new System.Windows.Forms.Button();
-            this.favoritos_btn = new System.Windows.Forms.Button();
-            this.utilizadores_btn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.criar_lbl = new System.Windows.Forms.Label();
-            this.criar_btn = new System.Windows.Forms.Button();
-            this.star_img = new System.Windows.Forms.PictureBox();
-            this.idea_img = new System.Windows.Forms.PictureBox();
-            this.score_lbl = new System.Windows.Forms.Label();
             this.numIdeias_lbl = new System.Windows.Forms.Label();
+            this.score_lbl = new System.Windows.Forms.Label();
+            this.idea_img = new System.Windows.Forms.PictureBox();
+            this.star_img = new System.Windows.Forms.PictureBox();
+            this.utilizadores_btn = new System.Windows.Forms.Button();
+            this.favoritos_btn = new System.Windows.Forms.Button();
+            this.ideias_btn = new System.Windows.Forms.Button();
+            this.Cargo_lbl = new System.Windows.Forms.Label();
+            this.userPic_img = new System.Windows.Forms.PictureBox();
+            this.Subsc_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.criar_btn = new System.Windows.Forms.Button();
+            this.criar_lbl = new System.Windows.Forms.Label();
+            this.panel_conteudo = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             this.SuspendLayout();
             // 
             // campanhas_btn
@@ -100,79 +101,49 @@
             this.panel1.Size = new System.Drawing.Size(231, 461);
             this.panel1.TabIndex = 5;
             // 
-            // Subsc_btn
+            // numIdeias_lbl
             // 
-            this.Subsc_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Subsc_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Subsc_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Subsc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Subsc_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subsc_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Subsc_btn.Location = new System.Drawing.Point(0, 313);
-            this.Subsc_btn.Name = "Subsc_btn";
-            this.Subsc_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Subsc_btn.Size = new System.Drawing.Size(231, 38);
-            this.Subsc_btn.TabIndex = 4;
-            this.Subsc_btn.Text = "Subscrições";
-            this.Subsc_btn.UseVisualStyleBackColor = false;
+            this.numIdeias_lbl.AutoSize = true;
+            this.numIdeias_lbl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.numIdeias_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numIdeias_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.numIdeias_lbl.Location = new System.Drawing.Point(128, 73);
+            this.numIdeias_lbl.Name = "numIdeias_lbl";
+            this.numIdeias_lbl.Size = new System.Drawing.Size(16, 17);
+            this.numIdeias_lbl.TabIndex = 13;
+            this.numIdeias_lbl.Text = "0";
             // 
-            // userPic_img
+            // score_lbl
             // 
-            this.userPic_img.Cursor = System.Windows.Forms.Cursors.Default;
-            this.userPic_img.Image = ((System.Drawing.Image)(resources.GetObject("userPic_img.Image")));
-            this.userPic_img.Location = new System.Drawing.Point(11, 12);
-            this.userPic_img.Name = "userPic_img";
-            this.userPic_img.Size = new System.Drawing.Size(44, 53);
-            this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPic_img.TabIndex = 6;
-            this.userPic_img.TabStop = false;
-            this.userPic_img.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.score_lbl.AutoSize = true;
+            this.score_lbl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.score_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.score_lbl.Location = new System.Drawing.Point(43, 73);
+            this.score_lbl.Name = "score_lbl";
+            this.score_lbl.Size = new System.Drawing.Size(16, 17);
+            this.score_lbl.TabIndex = 12;
+            this.score_lbl.Text = "0";
             // 
-            // Cargo_lbl
+            // idea_img
             // 
-            this.Cargo_lbl.AutoSize = true;
-            this.Cargo_lbl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Cargo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cargo_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Cargo_lbl.Location = new System.Drawing.Point(61, 41);
-            this.Cargo_lbl.Name = "Cargo_lbl";
-            this.Cargo_lbl.Size = new System.Drawing.Size(35, 13);
-            this.Cargo_lbl.TabIndex = 7;
-            this.Cargo_lbl.Text = "Cargo";
+            this.idea_img.Image = ((System.Drawing.Image)(resources.GetObject("idea_img.Image")));
+            this.idea_img.Location = new System.Drawing.Point(96, 71);
+            this.idea_img.Name = "idea_img";
+            this.idea_img.Size = new System.Drawing.Size(26, 22);
+            this.idea_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.idea_img.TabIndex = 11;
+            this.idea_img.TabStop = false;
             // 
-            // ideias_btn
+            // star_img
             // 
-            this.ideias_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ideias_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ideias_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ideias_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ideias_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ideias_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ideias_btn.Location = new System.Drawing.Point(0, 232);
-            this.ideias_btn.Name = "ideias_btn";
-            this.ideias_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ideias_btn.Size = new System.Drawing.Size(231, 38);
-            this.ideias_btn.TabIndex = 8;
-            this.ideias_btn.Text = "Ideias";
-            this.ideias_btn.UseVisualStyleBackColor = false;
-            this.ideias_btn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // favoritos_btn
-            // 
-            this.favoritos_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.favoritos_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.favoritos_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.favoritos_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.favoritos_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.favoritos_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.favoritos_btn.Location = new System.Drawing.Point(0, 273);
-            this.favoritos_btn.Name = "favoritos_btn";
-            this.favoritos_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.favoritos_btn.Size = new System.Drawing.Size(231, 38);
-            this.favoritos_btn.TabIndex = 9;
-            this.favoritos_btn.Text = "Favoritos";
-            this.favoritos_btn.UseVisualStyleBackColor = false;
-            this.favoritos_btn.Click += new System.EventHandler(this.button2_Click);
+            this.star_img.Image = ((System.Drawing.Image)(resources.GetObject("star_img.Image")));
+            this.star_img.Location = new System.Drawing.Point(11, 71);
+            this.star_img.Name = "star_img";
+            this.star_img.Size = new System.Drawing.Size(26, 22);
+            this.star_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.star_img.TabIndex = 7;
+            this.star_img.TabStop = false;
             // 
             // utilizadores_btn
             // 
@@ -189,6 +160,79 @@
             this.utilizadores_btn.TabIndex = 10;
             this.utilizadores_btn.Text = "Utilizadores";
             this.utilizadores_btn.UseVisualStyleBackColor = false;
+            this.utilizadores_btn.Click += new System.EventHandler(this.utilizadores_btn_Click);
+            // 
+            // favoritos_btn
+            // 
+            this.favoritos_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.favoritos_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.favoritos_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.favoritos_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoritos_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.favoritos_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.favoritos_btn.Location = new System.Drawing.Point(0, 273);
+            this.favoritos_btn.Name = "favoritos_btn";
+            this.favoritos_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.favoritos_btn.Size = new System.Drawing.Size(231, 38);
+            this.favoritos_btn.TabIndex = 9;
+            this.favoritos_btn.Text = "Favoritos";
+            this.favoritos_btn.UseVisualStyleBackColor = false;
+            // 
+            // ideias_btn
+            // 
+            this.ideias_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ideias_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ideias_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ideias_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ideias_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ideias_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ideias_btn.Location = new System.Drawing.Point(0, 232);
+            this.ideias_btn.Name = "ideias_btn";
+            this.ideias_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ideias_btn.Size = new System.Drawing.Size(231, 38);
+            this.ideias_btn.TabIndex = 8;
+            this.ideias_btn.Text = "Ideias";
+            this.ideias_btn.UseVisualStyleBackColor = false;
+            this.ideias_btn.Click += new System.EventHandler(this.ideias_btn_Click);
+            // 
+            // Cargo_lbl
+            // 
+            this.Cargo_lbl.AutoSize = true;
+            this.Cargo_lbl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Cargo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cargo_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Cargo_lbl.Location = new System.Drawing.Point(61, 41);
+            this.Cargo_lbl.Name = "Cargo_lbl";
+            this.Cargo_lbl.Size = new System.Drawing.Size(35, 13);
+            this.Cargo_lbl.TabIndex = 7;
+            this.Cargo_lbl.Text = "Cargo";
+            // 
+            // userPic_img
+            // 
+            this.userPic_img.Cursor = System.Windows.Forms.Cursors.Default;
+            this.userPic_img.Image = ((System.Drawing.Image)(resources.GetObject("userPic_img.Image")));
+            this.userPic_img.Location = new System.Drawing.Point(11, 12);
+            this.userPic_img.Name = "userPic_img";
+            this.userPic_img.Size = new System.Drawing.Size(44, 53);
+            this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPic_img.TabIndex = 6;
+            this.userPic_img.TabStop = false;
+            // 
+            // Subsc_btn
+            // 
+            this.Subsc_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Subsc_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Subsc_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Subsc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Subsc_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Subsc_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Subsc_btn.Location = new System.Drawing.Point(0, 313);
+            this.Subsc_btn.Name = "Subsc_btn";
+            this.Subsc_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Subsc_btn.Size = new System.Drawing.Size(231, 38);
+            this.Subsc_btn.TabIndex = 4;
+            this.Subsc_btn.Text = "Subscrições";
+            this.Subsc_btn.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -198,19 +242,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(231, 68);
             this.panel2.TabIndex = 6;
-            // 
-            // criar_lbl
-            // 
-            this.criar_lbl.AutoSize = true;
-            this.criar_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.criar_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.criar_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.criar_lbl.Location = new System.Drawing.Point(11, 25);
-            this.criar_lbl.Name = "criar_lbl";
-            this.criar_lbl.Size = new System.Drawing.Size(170, 18);
-            this.criar_lbl.TabIndex = 11;
-            this.criar_lbl.Text = "Criar Ideia/Campanha";
-            this.criar_lbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // criar_btn
             // 
@@ -223,50 +254,24 @@
             this.criar_btn.TabIndex = 7;
             this.criar_btn.UseVisualStyleBackColor = true;
             // 
-            // star_img
+            // criar_lbl
             // 
-            this.star_img.Image = ((System.Drawing.Image)(resources.GetObject("star_img.Image")));
-            this.star_img.Location = new System.Drawing.Point(11, 71);
-            this.star_img.Name = "star_img";
-            this.star_img.Size = new System.Drawing.Size(26, 22);
-            this.star_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.star_img.TabIndex = 7;
-            this.star_img.TabStop = false;
+            this.criar_lbl.AutoSize = true;
+            this.criar_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.criar_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criar_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.criar_lbl.Location = new System.Drawing.Point(11, 25);
+            this.criar_lbl.Name = "criar_lbl";
+            this.criar_lbl.Size = new System.Drawing.Size(170, 18);
+            this.criar_lbl.TabIndex = 11;
+            this.criar_lbl.Text = "Criar Ideia/Campanha";
             // 
-            // idea_img
+            // panel_conteudo
             // 
-            this.idea_img.Image = ((System.Drawing.Image)(resources.GetObject("idea_img.Image")));
-            this.idea_img.Location = new System.Drawing.Point(96, 71);
-            this.idea_img.Name = "idea_img";
-            this.idea_img.Size = new System.Drawing.Size(26, 22);
-            this.idea_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.idea_img.TabIndex = 11;
-            this.idea_img.TabStop = false;
-            // 
-            // score_lbl
-            // 
-            this.score_lbl.AutoSize = true;
-            this.score_lbl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.score_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.score_lbl.Location = new System.Drawing.Point(43, 73);
-            this.score_lbl.Name = "score_lbl";
-            this.score_lbl.Size = new System.Drawing.Size(16, 17);
-            this.score_lbl.TabIndex = 12;
-            this.score_lbl.Text = "0";
-            this.score_lbl.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // numIdeias_lbl
-            // 
-            this.numIdeias_lbl.AutoSize = true;
-            this.numIdeias_lbl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.numIdeias_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numIdeias_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.numIdeias_lbl.Location = new System.Drawing.Point(128, 73);
-            this.numIdeias_lbl.Name = "numIdeias_lbl";
-            this.numIdeias_lbl.Size = new System.Drawing.Size(16, 17);
-            this.numIdeias_lbl.TabIndex = 13;
-            this.numIdeias_lbl.Text = "0";
+            this.panel_conteudo.Location = new System.Drawing.Point(248, 3);
+            this.panel_conteudo.Name = "panel_conteudo";
+            this.panel_conteudo.Size = new System.Drawing.Size(536, 457);
+            this.panel_conteudo.TabIndex = 7;
             // 
             // Main
             // 
@@ -274,6 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel_conteudo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -283,11 +289,11 @@
             this.Text = "Ideial";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.star_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.star_img)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +316,7 @@
         private System.Windows.Forms.PictureBox idea_img;
         private System.Windows.Forms.PictureBox star_img;
         private System.Windows.Forms.Label numIdeias_lbl;
+        private System.Windows.Forms.Panel panel_conteudo;
     }
 }
 
