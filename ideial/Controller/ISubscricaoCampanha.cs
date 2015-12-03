@@ -1,4 +1,4 @@
-﻿namespace DISgrupo1.Ideial.Ideia
+﻿namespace DISgrupo1.Ideial.Controller
 {
     public interface ISubscricaoCampanha
     {

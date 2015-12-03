@@ -1,6 +1,6 @@
 ﻿namespace DISgrupo1.Ideial.View
 {
-    partial class Main
+    partial class Main_frm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_frm));
             this.campanhas_btn = new System.Windows.Forms.Button();
             this.userName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -268,12 +268,12 @@
             // 
             // panel_conteudo
             // 
-            this.panel_conteudo.Location = new System.Drawing.Point(248, 3);
+            this.panel_conteudo.Location = new System.Drawing.Point(254, 0);
             this.panel_conteudo.Name = "panel_conteudo";
-            this.panel_conteudo.Size = new System.Drawing.Size(536, 457);
+            this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
             this.panel_conteudo.TabIndex = 7;
             // 
-            // Main
+            // Main_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -284,7 +284,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Main";
+            this.Name = "Main_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ideial";
             this.panel1.ResumeLayout(false);

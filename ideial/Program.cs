@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using DISgrupo1.Ideial.Teste;
 using DISgrupo1.Ideial.View;
 
-namespace ideial
+namespace DISgrupo1.Ideial
 {
     static class Program
     {
@@ -16,8 +15,15 @@ namespace ideial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
-          //  Application.Run(new formTeste());
+
+            //Login
+            Login_frm loginForm = new Login_frm();
+            Application.Run(loginForm);
+            if (loginForm.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new Main_frm());
+            }
+
         }
     }
 }

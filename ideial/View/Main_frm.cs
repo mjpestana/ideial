@@ -1,30 +1,23 @@
-﻿using DISgrupo1.Ideial.Db;
-using DISgrupo1.Ideial.Utilizadores;
-using ideial.View;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using DISgrupo1.Ideial.View;
 
 namespace DISgrupo1.Ideial.View
 {
-    public partial class Main : Form
+    public partial class Main_frm : Form
     {
 
-        public Main() {
+        public Main_frm() {
             InitializeComponent();
         }
 
       private void utilizadores_btn_Click(object sender, EventArgs e)
         {
 
-            var form = Application.OpenForms.OfType<Utilizador_C>().FirstOrDefault();
-            Utilizador_C filho = form ?? new Utilizador_C();
+            var form = Application.OpenForms.OfType<RegistoUtilizador_frm>().FirstOrDefault();
+            RegistoUtilizador_frm filho = form ?? new RegistoUtilizador_frm();
             AddFormInPanel(filho);
 
         }
@@ -49,8 +42,8 @@ namespace DISgrupo1.Ideial.View
         private void ideias_btn_Click(object sender, EventArgs e)
         {
 
-            var form = Application.OpenForms.OfType<Ideias>().FirstOrDefault();
-            Ideias filho = form ?? new Ideias();
+            var form = Application.OpenForms.OfType<Ideias_frm>().FirstOrDefault();
+            Ideias_frm filho = form ?? new Ideias_frm();
             AddFormInPanel(filho);
 
         }

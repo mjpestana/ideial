@@ -1,6 +1,6 @@
 ﻿namespace DISgrupo1.Ideial.View
 {
-    partial class Login
+    partial class Login_frm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_frm));
             this.login_btn = new System.Windows.Forms.Button();
             this.userName_txt = new System.Windows.Forms.TextBox();
             this.password_txt = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@
             this.login_btn.Name = "login_btn";
             this.login_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.login_btn.Size = new System.Drawing.Size(160, 38);
-            this.login_btn.TabIndex = 0;
+            this.login_btn.TabIndex = 2;
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = true;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
@@ -62,16 +62,19 @@
             this.userName_txt.Location = new System.Drawing.Point(313, 184);
             this.userName_txt.Name = "userName_txt";
             this.userName_txt.Size = new System.Drawing.Size(160, 26);
-            this.userName_txt.TabIndex = 1;
+            this.userName_txt.TabIndex = 0;
             // 
             // password_txt
             // 
             this.password_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.password_txt.Location = new System.Drawing.Point(313, 246);
             this.password_txt.Name = "password_txt";
+            this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(160, 26);
-            this.password_txt.TabIndex = 2;
+            this.password_txt.TabIndex = 1;
+            this.password_txt.UseSystemPasswordChar = true;
             // 
             // lblUserName
             // 
@@ -84,7 +87,6 @@
             this.lblUserName.Size = new System.Drawing.Size(75, 20);
             this.lblUserName.TabIndex = 3;
             this.lblUserName.Text = "Utilizador";
-            this.lblUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPassword
             // 
@@ -97,7 +99,6 @@
             this.lblPassword.Size = new System.Drawing.Size(109, 20);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Palavra-passe";
-            this.lblPassword.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel1
             // 
@@ -117,7 +118,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Login
+            // Login_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +133,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login";
+            this.Name = "Login_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ideial";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DISgrupo1.Ideial.Utilizadores
+namespace DISgrupo1.Ideial.Model.Entity
 {
     public class Cliente : Parceiro
     {

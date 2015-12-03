@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DISgrupo1.Ideial.Utilizadores;
 
-namespace DISgrupo1.Ideial.Ideia
+namespace DISgrupo1.Ideial.Model.Entity
 {
     public class Campanha : ISubscricaoCampanha
     {
@@ -20,7 +16,7 @@ namespace DISgrupo1.Ideial.Ideia
         //Implementa o método Subscrever da interface ISubscricaoCampanha
         public void Subscrever()
         {
-            
+
         }
     }
 }

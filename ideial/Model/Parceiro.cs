@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DISgrupo1.Ideial.Utilizadores
+namespace DISgrupo1.Ideial.Model.Entity
 {
-    public class Fornecedor : Parceiro
+    public abstract class Parceiro : Utilizador
     {
-
-        public string Empresa { get; set; }
     }
 }

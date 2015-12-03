@@ -46,59 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Db\dataset.cs" />
-    <Compile Include="Db\UtilizadorDAO.cs" />
-    <Compile Include="Ideia\Campanha.cs" />
-    <Compile Include="View\Ideias.cs">
+    <Compile Include="Controller\RegistoControl.cs" />
+    <Compile Include="Model\ContaDAO.cs" />
+    <Compile Include="Model\ConexaoDb.cs" />
+    <Compile Include="Model\UtilizadorDAO.cs" />
+    <Compile Include="Model\Campanha.cs" />
+    <Compile Include="Model\Conta.cs" />
+    <Compile Include="Controller\ICriarUtilizador.cs" />
+    <Compile Include="View\Ideias_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Ideias.Designer.cs">
-      <DependentUpon>Ideias.cs</DependentUpon>
+    <Compile Include="View\Ideias_frm.Designer.cs">
+      <DependentUpon>Ideias_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Main.cs">
+    <Compile Include="View\Main_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="View\Main_frm.Designer.cs">
+      <DependentUpon>Main_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teste\formTeste.cs">
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Colaborador.cs" />
+    <Compile Include="View\Login_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Teste\formTeste.Designer.cs">
-      <DependentUpon>formTeste.cs</DependentUpon>
+    <Compile Include="View\Login_frm.Designer.cs">
+      <DependentUpon>Login_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teste\TesteUtilizadorDAO.cs" />
-    <Compile Include="Utilizadores\Cliente.cs" />
-    <Compile Include="Utilizadores\Colaborador.cs" />
-    <Compile Include="View\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utilizadores\Fornecedor.cs" />
-    <Compile Include="Utilizadores\Funcionario.cs" />
-    <Compile Include="Utilizadores\Gestor.cs" />
-    <Compile Include="Ideia\Ideia.cs" />
-    <Compile Include="Ideia\ISubscricaoCampanha.cs" />
-    <Compile Include="Utilizadores\Parceiro.cs" />
+    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\Gestor.cs" />
+    <Compile Include="Model\Ideia.cs" />
+    <Compile Include="Controller\ISubscricaoCampanha.cs" />
+    <Compile Include="Model\Parceiro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilizadores\Utilizador.cs" />
-    <Compile Include="View\Utilizador_C.cs">
+    <Compile Include="Model\Utilizador.cs" />
+    <Compile Include="View\RegistoUtilizador_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Utilizador_C.Designer.cs">
-      <DependentUpon>Utilizador_C.cs</DependentUpon>
+    <Compile Include="View\RegistoUtilizador_frm.Designer.cs">
+      <DependentUpon>RegistoUtilizador_frm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Ideias.resx">
-      <DependentUpon>Ideias.cs</DependentUpon>
+    <Compile Include="View\Utilizadores_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utilizadores_frm.Designer.cs">
+      <DependentUpon>Utilizadores_frm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Ideias_frm.resx">
+      <DependentUpon>Ideias_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="View\Main_frm.resx">
+      <DependentUpon>Main_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="View\Login_frm.resx">
+      <DependentUpon>Login_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,11 +112,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Teste\formTeste.resx">
-      <DependentUpon>formTeste.cs</DependentUpon>
+    <EmbeddedResource Include="View\RegistoUtilizador_frm.resx">
+      <DependentUpon>RegistoUtilizador_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Utilizador_C.resx">
-      <DependentUpon>Utilizador_C.cs</DependentUpon>
+    <EmbeddedResource Include="View\Utilizadores_frm.resx">
+      <DependentUpon>Utilizadores_frm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

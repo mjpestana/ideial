@@ -4,20 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DISgrupo1.Ideial.Utilizadores
+namespace DISgrupo1.Ideial.Model.Entity
 {
-    public class Gestor : Funcionario
+    public class Colaborador : Funcionario
     {
-
-        public void Criar()
+        public Colaborador(string nome, string email)
         {
 
         }
-
-        public void Apagar()
-        {
-
-        }
-
     }
 }

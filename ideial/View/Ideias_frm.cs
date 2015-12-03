@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ideial.View
+namespace DISgrupo1.Ideial.View
 {
-    public partial class Form1 : Form
+    public partial class Ideias_frm : Form
     {
-        public Form1()
+        public Ideias_frm()
         {
             InitializeComponent();
         }
