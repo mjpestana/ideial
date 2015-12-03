@@ -1,5 +1,7 @@
 ﻿using System;
 
+using DISgrupo1.Ideial.Controller;
+
 namespace DISgrupo1.Ideial.Model.Entity
 {
     public class Gestor : Funcionario, ICriarUtilizador
