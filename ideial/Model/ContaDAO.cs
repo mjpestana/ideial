@@ -6,8 +6,6 @@ namespace DISgrupo1.Ideial.Model.DAO
 {
     public class ContaDAO
     {
-        public string userID;
-
         public bool VerificarCredencialDb(Conta c)
         {
             try

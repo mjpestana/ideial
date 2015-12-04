@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.8.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,11 +88,11 @@
     <Compile Include="View\RegistoUtilizador_frm.Designer.cs">
       <DependentUpon>RegistoUtilizador_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Perfil_frm.cs">
+    <Compile Include="View\Utilizadores_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Perfil_frm.Designer.cs">
-      <DependentUpon>Perfil_frm.cs</DependentUpon>
+    <Compile Include="View\Utilizadores_frm.Designer.cs">
+      <DependentUpon>Utilizadores_frm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\Ideias_frm.resx">
       <DependentUpon>Ideias_frm.cs</DependentUpon>
@@ -116,8 +115,8 @@
     <EmbeddedResource Include="View\RegistoUtilizador_frm.resx">
       <DependentUpon>RegistoUtilizador_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Perfil_frm.resx">
-      <DependentUpon>Perfil_frm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Utilizadores_frm.resx">
+      <DependentUpon>Utilizadores_frm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
