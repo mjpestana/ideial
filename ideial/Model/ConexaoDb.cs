@@ -6,7 +6,7 @@ namespace DISgrupo1.Ideial.Model.DAO
     public class ConexaoDb
     {
         public static OleDbConnection conexao = new OleDbConnection();
-        
+
         public static void AbrirConexao()
         {
             conexao.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=dbIdeial.mdb";
