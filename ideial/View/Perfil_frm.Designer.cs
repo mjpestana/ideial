@@ -1,6 +1,6 @@
 ﻿namespace DISgrupo1.Ideial.View
 {
-    partial class RegistoUtilizador_frm
+    partial class Perfil_frm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,23 +32,22 @@
             this.email_txt = new System.Windows.Forms.TextBox();
             this.nome_txt = new System.Windows.Forms.TextBox();
             this.password_txt = new System.Windows.Forms.TextBox();
-            this.userName_txt = new System.Windows.Forms.TextBox();
-            this.tipoUtilizador_cmb = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.funcionario_panel = new System.Windows.Forms.Panel();
-            this.fornecedor_panel = new System.Windows.Forms.Panel();
-            this.empresa_txt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.departamento_cmb = new System.Windows.Forms.ComboBox();
             this.cargo_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.registarUtilizador_btn = new System.Windows.Forms.Button();
-            this.apagar_btn = new System.Windows.Forms.Button();
+            this.editar_btn = new System.Windows.Forms.Button();
+            this.fornecedor_panel = new System.Windows.Forms.Panel();
+            this.empresa_txt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.userName_lbl = new System.Windows.Forms.Label();
+            this.tipoUtilizador_lbl = new System.Windows.Forms.Label();
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
@@ -56,11 +55,11 @@
             // 
             // utilizador_panel
             // 
+            this.utilizador_panel.Controls.Add(this.tipoUtilizador_lbl);
+            this.utilizador_panel.Controls.Add(this.userName_lbl);
             this.utilizador_panel.Controls.Add(this.email_txt);
             this.utilizador_panel.Controls.Add(this.nome_txt);
             this.utilizador_panel.Controls.Add(this.password_txt);
-            this.utilizador_panel.Controls.Add(this.userName_txt);
-            this.utilizador_panel.Controls.Add(this.tipoUtilizador_cmb);
             this.utilizador_panel.Controls.Add(this.label5);
             this.utilizador_panel.Controls.Add(this.label4);
             this.utilizador_panel.Controls.Add(this.label3);
@@ -69,7 +68,7 @@
             this.utilizador_panel.Location = new System.Drawing.Point(0, 0);
             this.utilizador_panel.Name = "utilizador_panel";
             this.utilizador_panel.Size = new System.Drawing.Size(480, 170);
-            this.utilizador_panel.TabIndex = 0;
+            this.utilizador_panel.TabIndex = 1;
             // 
             // email_txt
             // 
@@ -92,22 +91,6 @@
             this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(121, 20);
             this.password_txt.TabIndex = 1;
-            // 
-            // userName_txt
-            // 
-            this.userName_txt.Location = new System.Drawing.Point(155, 15);
-            this.userName_txt.Name = "userName_txt";
-            this.userName_txt.Size = new System.Drawing.Size(121, 20);
-            this.userName_txt.TabIndex = 0;
-            // 
-            // tipoUtilizador_cmb
-            // 
-            this.tipoUtilizador_cmb.FormattingEnabled = true;
-            this.tipoUtilizador_cmb.Location = new System.Drawing.Point(155, 134);
-            this.tipoUtilizador_cmb.Name = "tipoUtilizador_cmb";
-            this.tipoUtilizador_cmb.Size = new System.Drawing.Size(121, 21);
-            this.tipoUtilizador_cmb.TabIndex = 4;
-            this.tipoUtilizador_cmb.SelectedIndexChanged += new System.EventHandler(this.tipoUtilizador_cmb_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -163,32 +146,7 @@
             this.funcionario_panel.Location = new System.Drawing.Point(0, 179);
             this.funcionario_panel.Name = "funcionario_panel";
             this.funcionario_panel.Size = new System.Drawing.Size(480, 72);
-            this.funcionario_panel.TabIndex = 1;
-            // 
-            // fornecedor_panel
-            // 
-            this.fornecedor_panel.Controls.Add(this.empresa_txt);
-            this.fornecedor_panel.Controls.Add(this.label8);
-            this.fornecedor_panel.Location = new System.Drawing.Point(0, 179);
-            this.fornecedor_panel.Name = "fornecedor_panel";
-            this.fornecedor_panel.Size = new System.Drawing.Size(480, 64);
-            this.fornecedor_panel.TabIndex = 3;
-            // 
-            // empresa_txt
-            // 
-            this.empresa_txt.Location = new System.Drawing.Point(155, 17);
-            this.empresa_txt.Name = "empresa_txt";
-            this.empresa_txt.Size = new System.Drawing.Size(100, 20);
-            this.empresa_txt.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(100, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Empresa";
+            this.funcionario_panel.TabIndex = 2;
             // 
             // departamento_cmb
             // 
@@ -223,37 +181,69 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Departamento";
             // 
-            // registarUtilizador_btn
+            // editar_btn
             // 
-            this.registarUtilizador_btn.Location = new System.Drawing.Point(155, 303);
-            this.registarUtilizador_btn.Name = "registarUtilizador_btn";
-            this.registarUtilizador_btn.Size = new System.Drawing.Size(75, 23);
-            this.registarUtilizador_btn.TabIndex = 2;
-            this.registarUtilizador_btn.Text = "Registar";
-            this.registarUtilizador_btn.UseVisualStyleBackColor = true;
-            this.registarUtilizador_btn.Click += new System.EventHandler(this.registarUtilizador_btn_Click);
+            this.editar_btn.Location = new System.Drawing.Point(54, 296);
+            this.editar_btn.Name = "editar_btn";
+            this.editar_btn.Size = new System.Drawing.Size(75, 23);
+            this.editar_btn.TabIndex = 3;
+            this.editar_btn.Text = "Editar";
+            this.editar_btn.UseVisualStyleBackColor = true;
             // 
-            // apagar_btn
+            // fornecedor_panel
             // 
-            this.apagar_btn.Location = new System.Drawing.Point(250, 303);
-            this.apagar_btn.Name = "apagar_btn";
-            this.apagar_btn.Size = new System.Drawing.Size(75, 23);
-            this.apagar_btn.TabIndex = 4;
-            this.apagar_btn.Text = "Apagar";
-            this.apagar_btn.UseVisualStyleBackColor = true;
+            this.fornecedor_panel.Controls.Add(this.empresa_txt);
+            this.fornecedor_panel.Controls.Add(this.label8);
+            this.fornecedor_panel.Location = new System.Drawing.Point(0, 179);
+            this.fornecedor_panel.Name = "fornecedor_panel";
+            this.fornecedor_panel.Size = new System.Drawing.Size(480, 64);
+            this.fornecedor_panel.TabIndex = 4;
             // 
-            // RegistoUtilizador_frm
+            // empresa_txt
+            // 
+            this.empresa_txt.Location = new System.Drawing.Point(155, 17);
+            this.empresa_txt.Name = "empresa_txt";
+            this.empresa_txt.Size = new System.Drawing.Size(100, 20);
+            this.empresa_txt.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(100, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Empresa";
+            // 
+            // userName_lbl
+            // 
+            this.userName_lbl.AutoSize = true;
+            this.userName_lbl.Location = new System.Drawing.Point(155, 22);
+            this.userName_lbl.Name = "userName_lbl";
+            this.userName_lbl.Size = new System.Drawing.Size(55, 13);
+            this.userName_lbl.TabIndex = 35;
+            this.userName_lbl.Text = "userName";
+            // 
+            // tipoUtilizador_lbl
+            // 
+            this.tipoUtilizador_lbl.AutoSize = true;
+            this.tipoUtilizador_lbl.Location = new System.Drawing.Point(155, 141);
+            this.tipoUtilizador_lbl.Name = "tipoUtilizador_lbl";
+            this.tipoUtilizador_lbl.Size = new System.Drawing.Size(67, 13);
+            this.tipoUtilizador_lbl.TabIndex = 36;
+            this.tipoUtilizador_lbl.Text = "tipoUtilizador";
+            // 
+            // Perfil_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 362);
-            this.Controls.Add(this.apagar_btn);
             this.Controls.Add(this.fornecedor_panel);
-            this.Controls.Add(this.registarUtilizador_btn);
+            this.Controls.Add(this.editar_btn);
             this.Controls.Add(this.funcionario_panel);
             this.Controls.Add(this.utilizador_panel);
-            this.Name = "RegistoUtilizador_frm";
-            this.Text = "Registo Utilizador";
+            this.Name = "Perfil_frm";
+            this.Text = "Perfil Utilizador";
             this.utilizador_panel.ResumeLayout(false);
             this.utilizador_panel.PerformLayout();
             this.funcionario_panel.ResumeLayout(false);
@@ -270,8 +260,6 @@
         private System.Windows.Forms.TextBox email_txt;
         private System.Windows.Forms.TextBox nome_txt;
         private System.Windows.Forms.TextBox password_txt;
-        private System.Windows.Forms.TextBox userName_txt;
-        private System.Windows.Forms.ComboBox tipoUtilizador_cmb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -282,10 +270,11 @@
         private System.Windows.Forms.TextBox cargo_txt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button registarUtilizador_btn;
+        private System.Windows.Forms.Button editar_btn;
         private System.Windows.Forms.Panel fornecedor_panel;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox empresa_txt;
-        private System.Windows.Forms.Button apagar_btn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label tipoUtilizador_lbl;
+        private System.Windows.Forms.Label userName_lbl;
     }
 }

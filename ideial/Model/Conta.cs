@@ -12,8 +12,6 @@
         {
             this.UserName = userName;
             this.Password = password;
-
-            //Teste
         }
     }
 }
