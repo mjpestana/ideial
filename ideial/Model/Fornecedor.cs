@@ -9,6 +9,6 @@ namespace DISgrupo1.Ideial.Model.Entity
     public class Fornecedor : Parceiro
     {
         //Atributos da classe Fornecedor
-        public string Empresa { get; set; }
+        public string Empresa { get; protected set; }
     }
 }

@@ -3,13 +3,13 @@
     public abstract class Utilizador
     {
         //Atributos da classe Utilizador
-        public int Id { get; private set; }
-        public Conta conta { get; private set; }
-        public string Nome { get; private set; }
-        public string Email { get; private set; }
-        public string Foto { get; private set; }
-        public int Visitas { get; private set; }
-        public int Pontuacao { get; private set; }
+        public int Id { get; protected set; }
+        public Conta conta { get; protected set; }
+        public string Nome { get; protected set; }
+        public string Email { get; protected set; }
+        public string Foto { get; protected set; }
+        public int Visitas { get; protected set; }
+        public int Pontuacao { get; protected set; }
 
         //Métodos da classe Utilizador
         public void Editar()

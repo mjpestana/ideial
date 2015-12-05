@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 using DISgrupo1.Ideial.View;
+using DISgrupo1.Ideial.Model.DAO;
 
 namespace DISgrupo1.Ideial.View
 {
@@ -48,5 +49,22 @@ namespace DISgrupo1.Ideial.View
             Perfil_frm filho = form ?? new Perfil_frm();
             AddFormInPanel(filho);
         }
+
+        private void sair_btn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja sair da aplicação?", "Ideial", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void Main_frm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            ConexaoDb.FecharConexao();  //chama método para fechar conexão
+            Application.Exit(); //fecha a aplicação   
+
+        }
+
     }
 }

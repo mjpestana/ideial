@@ -3,9 +3,9 @@
     public class Conta
     {
         //Atributos da classe Conta
-        public int Id { get; private set; }
-        public string UserName { get; private set; }
-        public string Password { get; private set; }
+        public int Id { get; protected set; }
+        public string UserName { get; protected set; }
+        public string Password { get; protected set; }
 
         //Construtor
         public Conta(string userName, string password)

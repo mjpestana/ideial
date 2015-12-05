@@ -57,8 +57,11 @@ namespace DISgrupo1.Ideial.View
         {
             string user = userName_txt.Text;
             string pass = password_txt.Text;
+            string nome = nome_txt.Text;
+            string email = email_txt.Text;
+            string tipo = tipoUtilizador_cmb.SelectedText;
 
-            RegistoControl.CriarUtilizador(user, pass);
+            UtilizadorControl.CriarUtilizador(user, pass, nome, email, tipo);
         }
     }
 }

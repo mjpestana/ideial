@@ -46,6 +46,7 @@
             this.criar_btn = new System.Windows.Forms.Button();
             this.criar_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
+            this.sair_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
@@ -85,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.sair_btn);
             this.panel1.Controls.Add(this.numIdeias_lbl);
             this.panel1.Controls.Add(this.score_lbl);
             this.panel1.Controls.Add(this.idea_img);
@@ -274,6 +276,23 @@
             this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
             this.panel_conteudo.TabIndex = 7;
             // 
+            // sair_btn
+            // 
+            this.sair_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sair_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sair_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.sair_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sair_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sair_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.sair_btn.Location = new System.Drawing.Point(0, 397);
+            this.sair_btn.Name = "sair_btn";
+            this.sair_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sair_btn.Size = new System.Drawing.Size(231, 38);
+            this.sair_btn.TabIndex = 14;
+            this.sair_btn.Text = "Sair";
+            this.sair_btn.UseVisualStyleBackColor = false;
+            this.sair_btn.Click += new System.EventHandler(this.sair_btn_Click);
+            // 
             // Main_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +307,7 @@
             this.Name = "Main_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ideial";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_frm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
@@ -318,6 +338,7 @@
         private System.Windows.Forms.PictureBox star_img;
         private System.Windows.Forms.Label numIdeias_lbl;
         private System.Windows.Forms.Panel panel_conteudo;
+        private System.Windows.Forms.Button sair_btn;
     }
 }
 

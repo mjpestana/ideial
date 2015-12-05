@@ -29,7 +29,7 @@ namespace DISgrupo1.Ideial.View
             }
             else
             {
-                bool login = RegistoControl.EfetuarLogin(user, pass);
+                bool login = UtilizadorControl.EfetuarLogin(user, pass);
 
                 if (login) //credenciais válidas, fecha form Login
                 {

@@ -1,4 +1,4 @@
-﻿using System.Data.OleDb;
+﻿using MySql.Data.MySqlClient;
 
 using DISgrupo1.Ideial.Model.Entity;
 
@@ -12,7 +12,7 @@ namespace DISgrupo1.Ideial.Model.DAO
         {
             try
             {
-                OleDbDataReader reader;
+                MySqlDataReader reader;
 
                 reader = ConexaoDb.SelecionarRegistos("SELECT userName, password FROM conta WHERE userName = '" + c.UserName + "' AND password= '" + c.Password + "'");
 
@@ -28,12 +28,13 @@ namespace DISgrupo1.Ideial.Model.DAO
             }
         }
 
-        public void InserirUtilizadorDb(Conta c)
+        public void InserirUtilizadorDb(Conta c, Colaborador u)
         {
             try
             {
-                //ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('" + c.UserName + "', '" + c.Password + "')");
-                ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('teste', '123456')");
+                long id = ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('" + c.UserName + "', '" + c.Password + "')");   //insere os dados na tabela Conta e retorna o Id
+
+                ConexaoDb.ExecutarComando("INSERT INTO utilizador (nome, email, id_tipoUtilizador, id_departamento, id_cargo, id_conta) VALUES('" + c + "', '" + c.Password + "')");    //insere os dados na tabela Utilizador
             }
             catch (System.Exception)
             {
