@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\RegistoControl.cs" />
+    <Compile Include="Controller\UtilizadorControl.cs" />
     <Compile Include="Model\ContaDAO.cs" />
     <Compile Include="Model\ConexaoDb.cs" />
     <Compile Include="Model\UtilizadorDAO.cs" />
