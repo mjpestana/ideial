@@ -63,5 +63,10 @@ namespace DISgrupo1.Ideial.View
 
             UtilizadorControl.CriarUtilizador(user, pass, nome, email, tipo);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

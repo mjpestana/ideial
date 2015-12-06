@@ -32,6 +32,7 @@
             this.campanhas_btn = new System.Windows.Forms.Button();
             this.userName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sair_btn = new System.Windows.Forms.Button();
             this.numIdeias_lbl = new System.Windows.Forms.Label();
             this.score_lbl = new System.Windows.Forms.Label();
             this.idea_img = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,8 @@
             this.criar_btn = new System.Windows.Forms.Button();
             this.criar_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
-            this.sair_btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
@@ -62,7 +64,7 @@
             this.campanhas_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.campanhas_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campanhas_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.campanhas_btn.Location = new System.Drawing.Point(0, 191);
+            this.campanhas_btn.Location = new System.Drawing.Point(0, 216);
             this.campanhas_btn.Name = "campanhas_btn";
             this.campanhas_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.campanhas_btn.Size = new System.Drawing.Size(231, 38);
@@ -103,6 +105,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(231, 461);
             this.panel1.TabIndex = 5;
+            // 
+            // sair_btn
+            // 
+            this.sair_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sair_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sair_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.sair_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sair_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sair_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.sair_btn.Location = new System.Drawing.Point(0, 422);
+            this.sair_btn.Name = "sair_btn";
+            this.sair_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sair_btn.Size = new System.Drawing.Size(231, 38);
+            this.sair_btn.TabIndex = 14;
+            this.sair_btn.Text = "Sair";
+            this.sair_btn.UseVisualStyleBackColor = false;
+            this.sair_btn.Click += new System.EventHandler(this.sair_btn_Click);
             // 
             // numIdeias_lbl
             // 
@@ -156,7 +175,7 @@
             this.utilizadores_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.utilizadores_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.utilizadores_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.utilizadores_btn.Location = new System.Drawing.Point(0, 355);
+            this.utilizadores_btn.Location = new System.Drawing.Point(0, 380);
             this.utilizadores_btn.Name = "utilizadores_btn";
             this.utilizadores_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.utilizadores_btn.Size = new System.Drawing.Size(231, 38);
@@ -173,7 +192,7 @@
             this.favoritos_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.favoritos_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.favoritos_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.favoritos_btn.Location = new System.Drawing.Point(0, 273);
+            this.favoritos_btn.Location = new System.Drawing.Point(0, 298);
             this.favoritos_btn.Name = "favoritos_btn";
             this.favoritos_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.favoritos_btn.Size = new System.Drawing.Size(231, 38);
@@ -189,7 +208,7 @@
             this.ideias_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ideias_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ideias_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ideias_btn.Location = new System.Drawing.Point(0, 232);
+            this.ideias_btn.Location = new System.Drawing.Point(0, 257);
             this.ideias_btn.Name = "ideias_btn";
             this.ideias_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ideias_btn.Size = new System.Drawing.Size(231, 38);
@@ -229,7 +248,7 @@
             this.Subsc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Subsc_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Subsc_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Subsc_btn.Location = new System.Drawing.Point(0, 313);
+            this.Subsc_btn.Location = new System.Drawing.Point(0, 338);
             this.Subsc_btn.Name = "Subsc_btn";
             this.Subsc_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Subsc_btn.Size = new System.Drawing.Size(231, 38);
@@ -239,11 +258,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.criar_btn);
             this.panel2.Controls.Add(this.criar_lbl);
             this.panel2.Location = new System.Drawing.Point(1, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 68);
+            this.panel2.Size = new System.Drawing.Size(231, 111);
             this.panel2.TabIndex = 6;
             // 
             // criar_btn
@@ -251,7 +272,7 @@
             this.criar_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criar_btn.BackgroundImage")));
             this.criar_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.criar_btn.FlatAppearance.BorderSize = 0;
-            this.criar_btn.Location = new System.Drawing.Point(184, 15);
+            this.criar_btn.Location = new System.Drawing.Point(162, 12);
             this.criar_btn.Name = "criar_btn";
             this.criar_btn.Size = new System.Drawing.Size(42, 42);
             this.criar_btn.TabIndex = 7;
@@ -263,11 +284,12 @@
             this.criar_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.criar_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.criar_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.criar_lbl.Location = new System.Drawing.Point(11, 25);
+            this.criar_lbl.Location = new System.Drawing.Point(66, 23);
             this.criar_lbl.Name = "criar_lbl";
-            this.criar_lbl.Size = new System.Drawing.Size(170, 18);
+            this.criar_lbl.Size = new System.Drawing.Size(85, 18);
             this.criar_lbl.TabIndex = 11;
-            this.criar_lbl.Text = "Criar Ideia/Campanha";
+            this.criar_lbl.Text = "Criar Ideia";
+            this.criar_lbl.Click += new System.EventHandler(this.criar_lbl_Click);
             // 
             // panel_conteudo
             // 
@@ -276,22 +298,29 @@
             this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
             this.panel_conteudo.TabIndex = 7;
             // 
-            // sair_btn
+            // button1
             // 
-            this.sair_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.sair_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.sair_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.sair_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sair_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sair_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.sair_btn.Location = new System.Drawing.Point(0, 397);
-            this.sair_btn.Name = "sair_btn";
-            this.sair_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sair_btn.Size = new System.Drawing.Size(231, 38);
-            this.sair_btn.TabIndex = 14;
-            this.sair_btn.Text = "Sair";
-            this.sair_btn.UseVisualStyleBackColor = false;
-            this.sair_btn.Click += new System.EventHandler(this.sair_btn_Click);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(162, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 42);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(21, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Criar Campanha";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Main_frm
             // 
@@ -339,6 +368,8 @@
         private System.Windows.Forms.Label numIdeias_lbl;
         private System.Windows.Forms.Panel panel_conteudo;
         private System.Windows.Forms.Button sair_btn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

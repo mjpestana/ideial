@@ -66,5 +66,14 @@ namespace DISgrupo1.Ideial.View
 
         }
 
+        private void criar_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
