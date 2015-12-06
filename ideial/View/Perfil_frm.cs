@@ -31,5 +31,25 @@ namespace DISgrupo1.Ideial.View
         //uDAO.criarUtilizador(u);
 
     }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editar_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

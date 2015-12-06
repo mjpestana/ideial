@@ -59,7 +59,6 @@
             // 
             this.utilizador_panel.Controls.Add(this.email_txt);
             this.utilizador_panel.Controls.Add(this.nome_txt);
-            this.utilizador_panel.Controls.Add(this.funcionario_panel);
             this.utilizador_panel.Controls.Add(this.password_txt);
             this.utilizador_panel.Controls.Add(this.userName_txt);
             this.utilizador_panel.Controls.Add(this.tipoUtilizador_cmb);
@@ -183,9 +182,9 @@
             this.funcionario_panel.Controls.Add(this.cargo_txt);
             this.funcionario_panel.Controls.Add(this.label7);
             this.funcionario_panel.Controls.Add(this.label6);
-            this.funcionario_panel.Location = new System.Drawing.Point(0, 205);
+            this.funcionario_panel.Location = new System.Drawing.Point(0, 219);
             this.funcionario_panel.Name = "funcionario_panel";
-            this.funcionario_panel.Size = new System.Drawing.Size(480, 99);
+            this.funcionario_panel.Size = new System.Drawing.Size(480, 85);
             this.funcionario_panel.TabIndex = 1;
             // 
             // departamento_cmb
@@ -236,7 +235,7 @@
             this.fornecedor_panel.Controls.Add(this.label8);
             this.fornecedor_panel.Location = new System.Drawing.Point(0, 219);
             this.fornecedor_panel.Name = "fornecedor_panel";
-            this.fornecedor_panel.Size = new System.Drawing.Size(480, 64);
+            this.fornecedor_panel.Size = new System.Drawing.Size(480, 73);
             this.fornecedor_panel.TabIndex = 3;
             // 
             // empresa_txt
@@ -292,6 +291,7 @@
             this.ClientSize = new System.Drawing.Size(484, 362);
             this.Controls.Add(this.apagar_btn);
             this.Controls.Add(this.fornecedor_panel);
+            this.Controls.Add(this.funcionario_panel);
             this.Controls.Add(this.registarUtilizador_btn);
             this.Controls.Add(this.utilizador_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
