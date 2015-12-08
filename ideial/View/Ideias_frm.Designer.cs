@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ideias_frm));
             this.ideiasBG_pnl = new System.Windows.Forms.Panel();
             this.top_pnl = new System.Windows.Forms.Panel();
-            this.userPic_img = new System.Windows.Forms.PictureBox();
-            this.userName_lbl = new System.Windows.Forms.Label();
+            this.criadorIdeiaPic_img = new System.Windows.Forms.PictureBox();
+            this.criadorIdeia_lbl = new System.Windows.Forms.Label();
             this.scoresNbr_lbl = new System.Windows.Forms.Label();
             this.star5_img = new System.Windows.Forms.PictureBox();
             this.ideiaTitulo_lbl = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.subscriptionsNbr_lbl = new System.Windows.Forms.Label();
             this.ideiasBG_pnl.SuspendLayout();
             this.top_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.criadorIdeiaPic_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star5_img)).BeginInit();
             this.bottom_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_img)).BeginInit();
@@ -75,42 +75,41 @@
             // top_pnl
             // 
             this.top_pnl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.top_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.top_pnl.Controls.Add(this.star1_img);
             this.top_pnl.Controls.Add(this.star2_img);
             this.top_pnl.Controls.Add(this.star3_img);
             this.top_pnl.Controls.Add(this.star4_img);
             this.top_pnl.Controls.Add(this.scoresNbr_lbl);
-            this.top_pnl.Controls.Add(this.userName_lbl);
+            this.top_pnl.Controls.Add(this.criadorIdeia_lbl);
             this.top_pnl.Controls.Add(this.star5_img);
-            this.top_pnl.Controls.Add(this.userPic_img);
+            this.top_pnl.Controls.Add(this.criadorIdeiaPic_img);
             this.top_pnl.Location = new System.Drawing.Point(-1, -1);
             this.top_pnl.Name = "top_pnl";
             this.top_pnl.Size = new System.Drawing.Size(474, 55);
             this.top_pnl.TabIndex = 1;
             // 
-            // userPic_img
+            // criadorIdeiaPic_img
             // 
-            this.userPic_img.Cursor = System.Windows.Forms.Cursors.Default;
-            this.userPic_img.Image = ((System.Drawing.Image)(resources.GetObject("userPic_img.Image")));
-            this.userPic_img.Location = new System.Drawing.Point(9, 8);
-            this.userPic_img.Name = "userPic_img";
-            this.userPic_img.Size = new System.Drawing.Size(29, 38);
-            this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPic_img.TabIndex = 7;
-            this.userPic_img.TabStop = false;
+            this.criadorIdeiaPic_img.Cursor = System.Windows.Forms.Cursors.Default;
+            this.criadorIdeiaPic_img.Image = ((System.Drawing.Image)(resources.GetObject("criadorIdeiaPic_img.Image")));
+            this.criadorIdeiaPic_img.Location = new System.Drawing.Point(9, 8);
+            this.criadorIdeiaPic_img.Name = "criadorIdeiaPic_img";
+            this.criadorIdeiaPic_img.Size = new System.Drawing.Size(29, 38);
+            this.criadorIdeiaPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.criadorIdeiaPic_img.TabIndex = 7;
+            this.criadorIdeiaPic_img.TabStop = false;
             // 
-            // userName_lbl
+            // criadorIdeia_lbl
             // 
-            this.userName_lbl.AutoSize = true;
-            this.userName_lbl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.userName_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.userName_lbl.Location = new System.Drawing.Point(44, 20);
-            this.userName_lbl.Name = "userName_lbl";
-            this.userName_lbl.Size = new System.Drawing.Size(96, 13);
-            this.userName_lbl.TabIndex = 8;
-            this.userName_lbl.Text = "Nome do Utilizador";
+            this.criadorIdeia_lbl.AutoSize = true;
+            this.criadorIdeia_lbl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.criadorIdeia_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criadorIdeia_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.criadorIdeia_lbl.Location = new System.Drawing.Point(44, 20);
+            this.criadorIdeia_lbl.Name = "criadorIdeia_lbl";
+            this.criadorIdeia_lbl.Size = new System.Drawing.Size(96, 13);
+            this.criadorIdeia_lbl.TabIndex = 8;
+            this.criadorIdeia_lbl.Text = "Nome do Utilizador";
             // 
             // scoresNbr_lbl
             // 
@@ -164,7 +163,6 @@
             // bottom_pnl
             // 
             this.bottom_pnl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.bottom_pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bottom_pnl.Controls.Add(this.subscriptionsNbr_lbl);
             this.bottom_pnl.Controls.Add(this.subscription_img);
             this.bottom_pnl.Controls.Add(this.commentsNbr_lbl);
@@ -177,7 +175,7 @@
             // comment_img
             // 
             this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
-            this.comment_img.Location = new System.Drawing.Point(408, 5);
+            this.comment_img.Location = new System.Drawing.Point(408, 4);
             this.comment_img.Name = "comment_img";
             this.comment_img.Size = new System.Drawing.Size(30, 26);
             this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +188,7 @@
             this.commentsNbr_lbl.BackColor = System.Drawing.SystemColors.Highlight;
             this.commentsNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentsNbr_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.commentsNbr_lbl.Location = new System.Drawing.Point(444, 9);
+            this.commentsNbr_lbl.Location = new System.Drawing.Point(444, 10);
             this.commentsNbr_lbl.Name = "commentsNbr_lbl";
             this.commentsNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.commentsNbr_lbl.TabIndex = 15;
@@ -239,7 +237,7 @@
             // subscription_img
             // 
             this.subscription_img.Image = ((System.Drawing.Image)(resources.GetObject("subscription_img.Image")));
-            this.subscription_img.Location = new System.Drawing.Point(11, 3);
+            this.subscription_img.Location = new System.Drawing.Point(11, 4);
             this.subscription_img.Name = "subscription_img";
             this.subscription_img.Size = new System.Drawing.Size(30, 26);
             this.subscription_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +250,7 @@
             this.subscriptionsNbr_lbl.BackColor = System.Drawing.SystemColors.Highlight;
             this.subscriptionsNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subscriptionsNbr_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.subscriptionsNbr_lbl.Location = new System.Drawing.Point(47, 9);
+            this.subscriptionsNbr_lbl.Location = new System.Drawing.Point(47, 10);
             this.subscriptionsNbr_lbl.Name = "subscriptionsNbr_lbl";
             this.subscriptionsNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.subscriptionsNbr_lbl.TabIndex = 17;
@@ -273,7 +271,7 @@
             this.ideiasBG_pnl.PerformLayout();
             this.top_pnl.ResumeLayout(false);
             this.top_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.criadorIdeiaPic_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star5_img)).EndInit();
             this.bottom_pnl.ResumeLayout(false);
             this.bottom_pnl.PerformLayout();
@@ -291,8 +289,8 @@
 
         private System.Windows.Forms.Panel ideiasBG_pnl;
         private System.Windows.Forms.Panel top_pnl;
-        private System.Windows.Forms.PictureBox userPic_img;
-        private System.Windows.Forms.Label userName_lbl;
+        private System.Windows.Forms.PictureBox criadorIdeiaPic_img;
+        private System.Windows.Forms.Label criadorIdeia_lbl;
         private System.Windows.Forms.Label scoresNbr_lbl;
         private System.Windows.Forms.PictureBox star5_img;
         private System.Windows.Forms.Label ideiaTitulo_lbl;
