@@ -16,5 +16,20 @@ namespace DISgrupo1.Ideial.View
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void criar_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ideiaConteudo_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
