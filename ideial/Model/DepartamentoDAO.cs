@@ -6,26 +6,21 @@ namespace DISgrupo1.Ideial.Model.DAO
     class DepartamentoDAO
     {
 
-        //public DataTable Cheia_Departamento()
-        public MySqlDataReader SelecionarTodos()
+        public DataTable SelecionarTodos()
         {
 
             try
             {
-                MySqlDataReader reader;
+                MySqlDataAdapter cc;
 
-                //var Departamento_dt = new DataTable();
+                DataSet Departamento_ds = new DataSet();
+                ConexaoDb.FecharConexao();
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM departamento");
+                string sql = "SELECT * FROM departamento";
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc.Fill(Departamento_ds, "Departamento_dt");
 
-                if (reader.Read())
-                {
-                    //Departamento_dt.Load(reader);
-                    return reader;
-                }
-
-                //return Departamento_dt;
-                return null;
+                return Departamento_ds.Tables["Departamento_dt"];
             }
             catch (System.Exception)
             {

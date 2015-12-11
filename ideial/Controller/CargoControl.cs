@@ -10,21 +10,12 @@ namespace DISgrupo1.Ideial.Controller
         public static DataTable Cargo_DataTable()
         {
             CargoDAO cargoDAO = new CargoDAO();
-            //var cargo_dt = new DataTable();
-            //cargo_dt = cargoDAO.Cheia_Cargo();
 
             DataTable cargo_dt = new DataTable();
 
-            MySqlDataReader reader = cargoDAO.SelecionarTodos();
+            cargo_dt  = cargoDAO.SelecionarTodos();
 
-            if (reader.Read())
-            {
-                cargo_dt.Load(reader);
-                return cargo_dt;
-            }
-
-            //return cargo_dt;
-            return null;
+            return cargo_dt;
         }
 
     }

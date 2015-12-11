@@ -6,25 +6,22 @@ namespace DISgrupo1.Ideial.Model.DAO
     class TipoUtilizadorDAO
     {
 
-        //public DataTable Cheia_TipoUtilizador()
-        public MySqlDataReader SelecionarTodos()
+        public DataTable SelecionarTodos()
         {
             try
             {
-                MySqlDataReader reader;
 
-                //var TipoUtilizador_dt = new DataTable();
+                MySqlDataAdapter cc;
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM tipoutilizador");
+                DataSet TipoUtilizador_ds = new DataSet();
+                ConexaoDb.FecharConexao();
 
-                if (reader.Read())
-                {
-                    //TipoUtilizador_dt.Load(reader);
-                    return reader;
-                }
+                string sql = "SELECT * FROM tipoutilizador";
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc.Fill(TipoUtilizador_ds, "TipoUtilizador_dt");
+                return TipoUtilizador_ds.Tables["TipoUtilizador_dt"];    
 
-                //return TipoUtilizador_dt;
-                return null;
+
             }
             catch (System.Exception)
             {

@@ -6,25 +6,19 @@ namespace DISgrupo1.Ideial.Model.DAO
     class EmpresaDAO
     {
 
-        //public DataTable Cheia_Empresa()
-        public MySqlDataReader SelecionarTodos()
+        public DataTable SelecionarTodos()
         {
             try
             {
-                MySqlDataReader reader;
+                MySqlDataAdapter cc;
 
-                //var empresa_dt = new DataTable();
+                DataSet empresa_ds = new DataSet();
+                ConexaoDb.FecharConexao();
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM empresa");
-
-                if (reader.Read())
-                {
-                    //empresa_dt.Load(reader);
-                    return reader;
-                }
-
-                //return empresa_dt;
-                return null;
+                string sql = "SELECT * FROM empresa";
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc.Fill(empresa_ds, "empresa_dt");
+                return empresa_ds.Tables["empresa_dt"];
             }
             catch (System.Exception)
             {

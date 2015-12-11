@@ -6,25 +6,19 @@ namespace DISgrupo1.Ideial.Model.DAO
     class CargoDAO
     {
 
-        //public DataTable Cheia_Cargo()
-        public MySqlDataReader SelecionarTodos()
+        public DataTable SelecionarTodos()
         {
             try
             {
-                MySqlDataReader reader;
+                MySqlDataAdapter cc;
 
-                //var cargo_dt = new DataTable();
+                DataSet cargo_ds = new DataSet();
+                ConexaoDb.FecharConexao();
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM cargo");
-
-                if (reader.Read())
-                {
-                    //cargo_dt.Load(read);
-                    return reader;
-                }
-
-                //return cargo_dt;
-                return null;
+                string sql = "SELECT * FROM cargo";
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc.Fill(cargo_ds, "cargo_dt");
+                return cargo_ds.Tables["cargo_dt"];
             }
             catch (System.Exception)
             {
