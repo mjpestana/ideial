@@ -52,11 +52,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.registarUtilizador_btn = new System.Windows.Forms.Button();
             this.apagar_btn = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+
             this.textBox1 = new System.Windows.Forms.TextBox();
-=======
+
             this.button2 = new System.Windows.Forms.Button();
->>>>>>> origin/master
+
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
@@ -311,7 +311,7 @@
             this.apagar_btn.Text = "Apagar";
             this.apagar_btn.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
+
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(321, 15);
@@ -319,8 +319,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 36;
             this.textBox1.Text = "prueba";
-=======
-            // button2
+       // button2
             // 
             this.button2.Location = new System.Drawing.Point(325, 56);
             this.button2.Name = "button2";
@@ -328,7 +327,7 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
->>>>>>> origin/master
+
             // 
             // RegistoUtilizador_frm
             // 
@@ -378,12 +377,12 @@
         private System.Windows.Forms.Button apagar_btn;
         private System.Windows.Forms.ComboBox cargo_cmb;
         private System.Windows.Forms.ComboBox empresa_cmb;
-<<<<<<< HEAD
+
         private System.Windows.Forms.TextBox textBox1;
-=======
+
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
->>>>>>> origin/master
+
     }
 }
