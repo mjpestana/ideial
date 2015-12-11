@@ -41,15 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.funcionario_panel = new System.Windows.Forms.Panel();
+            this.cargo_cmb = new System.Windows.Forms.ComboBox();
             this.departamento_cmb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.fornecedor_panel = new System.Windows.Forms.Panel();
+            this.empresa_cmb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.registarUtilizador_btn = new System.Windows.Forms.Button();
             this.apagar_btn = new System.Windows.Forms.Button();
-            this.cargo_cmb = new System.Windows.Forms.ComboBox();
-            this.empresa_cmb = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
@@ -186,6 +188,16 @@
             this.funcionario_panel.Size = new System.Drawing.Size(480, 85);
             this.funcionario_panel.TabIndex = 1;
             // 
+            // cargo_cmb
+            // 
+            this.cargo_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cargo_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cargo_cmb.FormattingEnabled = true;
+            this.cargo_cmb.Location = new System.Drawing.Point(156, 44);
+            this.cargo_cmb.Name = "cargo_cmb";
+            this.cargo_cmb.Size = new System.Drawing.Size(121, 28);
+            this.cargo_cmb.TabIndex = 4;
+            // 
             // departamento_cmb
             // 
             this.departamento_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,12 +232,24 @@
             // 
             // fornecedor_panel
             // 
+            this.fornecedor_panel.Controls.Add(this.checkBox1);
+            this.fornecedor_panel.Controls.Add(this.button1);
             this.fornecedor_panel.Controls.Add(this.empresa_cmb);
             this.fornecedor_panel.Controls.Add(this.label8);
             this.fornecedor_panel.Location = new System.Drawing.Point(0, 219);
             this.fornecedor_panel.Name = "fornecedor_panel";
             this.fornecedor_panel.Size = new System.Drawing.Size(480, 73);
             this.fornecedor_panel.TabIndex = 3;
+            // 
+            // empresa_cmb
+            // 
+            this.empresa_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empresa_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.empresa_cmb.FormattingEnabled = true;
+            this.empresa_cmb.Location = new System.Drawing.Point(155, 5);
+            this.empresa_cmb.Name = "empresa_cmb";
+            this.empresa_cmb.Size = new System.Drawing.Size(121, 28);
+            this.empresa_cmb.TabIndex = 35;
             // 
             // label8
             // 
@@ -263,25 +287,24 @@
             this.apagar_btn.Text = "Apagar";
             this.apagar_btn.UseVisualStyleBackColor = false;
             // 
-            // cargo_cmb
+            // button1
             // 
-            this.cargo_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cargo_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cargo_cmb.FormattingEnabled = true;
-            this.cargo_cmb.Location = new System.Drawing.Point(156, 44);
-            this.cargo_cmb.Name = "cargo_cmb";
-            this.cargo_cmb.Size = new System.Drawing.Size(121, 28);
-            this.cargo_cmb.TabIndex = 4;
+            this.button1.Location = new System.Drawing.Point(353, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // empresa_cmb
+            // checkBox1
             // 
-            this.empresa_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empresa_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.empresa_cmb.FormattingEnabled = true;
-            this.empresa_cmb.Location = new System.Drawing.Point(155, 5);
-            this.empresa_cmb.Name = "empresa_cmb";
-            this.empresa_cmb.Size = new System.Drawing.Size(121, 28);
-            this.empresa_cmb.TabIndex = 35;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(353, 9);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // RegistoUtilizador_frm
             // 
@@ -331,5 +354,7 @@
         private System.Windows.Forms.Button apagar_btn;
         private System.Windows.Forms.ComboBox cargo_cmb;
         private System.Windows.Forms.ComboBox empresa_cmb;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
