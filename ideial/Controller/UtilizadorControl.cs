@@ -1,7 +1,6 @@
 ﻿using DISgrupo1.Ideial.Model.DAO;
 using DISgrupo1.Ideial.Model.Entity;
 using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace DISgrupo1.Ideial.Controller
 {

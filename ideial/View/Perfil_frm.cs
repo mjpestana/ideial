@@ -10,46 +10,6 @@ namespace DISgrupo1.Ideial.View
             InitializeComponent();
         }
 
-        private void registo_btn_Click(object sender, EventArgs e)
-        {
-            
-        /*
-        Utilizador u = new Colaborador();
 
-        u.Email = email_txt.Text;
-        u.Nome = Nome_txt.Text;
-        u.password = password_txt.Text;
-        u.userName = username_txt.Text;
-        */
-
-        /*
-        Conta c = new Conta(username_txt.Text, password_txt.Text);
-        UtilizadorDAO uDAO = new UtilizadorDAO();
-        uDAO.criarUtilizador(c);
-        */
-
-        //uDAO.criarUtilizador(u);
-
-    }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editar_btn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

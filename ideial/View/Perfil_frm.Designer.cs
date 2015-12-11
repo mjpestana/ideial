@@ -153,7 +153,6 @@
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 32;
             this.label3.Text = "Nome";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -217,7 +216,6 @@
             this.label7.Size = new System.Drawing.Size(52, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "Cargo";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -229,7 +227,6 @@
             this.label6.Size = new System.Drawing.Size(112, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Departamento";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // editar_btn
             // 
@@ -242,7 +239,6 @@
             this.editar_btn.TabIndex = 3;
             this.editar_btn.Text = "Gravar";
             this.editar_btn.UseVisualStyleBackColor = false;
-            this.editar_btn.Click += new System.EventHandler(this.editar_btn_Click);
             // 
             // fornecedor_panel
             // 
@@ -281,8 +277,8 @@
             this.ClientSize = new System.Drawing.Size(484, 362);
             this.Controls.Add(this.fornecedor_panel);
             this.Controls.Add(this.editar_btn);
-            this.Controls.Add(this.funcionario_panel);
             this.Controls.Add(this.utilizador_panel);
+            this.Controls.Add(this.funcionario_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Perfil_frm";

@@ -44,11 +44,11 @@
             this.userPic_img = new System.Windows.Forms.PictureBox();
             this.Subsc_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.criar_btn = new System.Windows.Forms.Button();
             this.criar_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
@@ -267,6 +267,29 @@
             this.panel2.Size = new System.Drawing.Size(231, 111);
             this.panel2.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(21, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Criar Campanha";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(162, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 42);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // criar_btn
             // 
             this.criar_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criar_btn.BackgroundImage")));
@@ -289,7 +312,6 @@
             this.criar_lbl.Size = new System.Drawing.Size(85, 18);
             this.criar_lbl.TabIndex = 11;
             this.criar_lbl.Text = "Criar Ideia";
-            this.criar_lbl.Click += new System.EventHandler(this.criar_lbl_Click);
             // 
             // panel_conteudo
             // 
@@ -297,30 +319,6 @@
             this.panel_conteudo.Name = "panel_conteudo";
             this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
             this.panel_conteudo.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(162, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 42);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(21, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 18);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Criar Campanha";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Main_frm
             // 
