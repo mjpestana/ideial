@@ -13,5 +13,13 @@
             this.UserName = userName;
             this.Password = password;
         }
+
+        public Conta(int userID, string userName, string password)
+        {
+            this.Id = userID;
+            this.UserName = userName;
+            this.Password = password;
+        }
+
     }
 }

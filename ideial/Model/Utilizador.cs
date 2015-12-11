@@ -10,6 +10,11 @@
         public string Foto { get; protected set; }
         public int Visitas { get; protected set; }
         public int Pontuacao { get; protected set; }
+        public string tipo { get; protected set; }
+        public int id_tipo { get; protected set; }
+        public int id_departamento { get; protected set; }
+        public int id_empresa { get; protected set; }
+        public int id_cargo { get; protected set; }
 
         //Métodos da classe Utilizador
         public void Editar()

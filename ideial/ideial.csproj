@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CargoControl.cs" />
+    <Compile Include="Controller\ContaControl.cs" />
+    <Compile Include="Controller\DepartamentoControl.cs" />
+    <Compile Include="Controller\EmpresaControl.cs" />
+    <Compile Include="Controller\TipoUtilizadorControl.cs" />
     <Compile Include="Controller\UtilizadorControl.cs" />
     <Compile Include="Campanha_frm.cs">
       <SubType>Form</SubType>
@@ -54,8 +59,12 @@
     <Compile Include="Campanha_frm.Designer.cs">
       <DependentUpon>Campanha_frm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CargoDAO.cs" />
     <Compile Include="Model\ContaDAO.cs" />
     <Compile Include="Model\ConexaoDb.cs" />
+    <Compile Include="Model\DepartamentoDAO.cs" />
+    <Compile Include="Model\EmpresaDAO.cs" />
+    <Compile Include="Model\TipoUtilizadorDAO.cs" />
     <Compile Include="Model\UtilizadorDAO.cs" />
     <Compile Include="Model\Campanha.cs" />
     <Compile Include="Model\Conta.cs" />

@@ -1,80 +1,46 @@
-﻿namespace DISgrupo1.Ideial.Model.DAO
+﻿using DISgrupo1.Ideial.Model.Entity;
+using MySql.Data.MySqlClient;
+
+namespace DISgrupo1.Ideial.Model.DAO
 {
     class UtilizadorDAO
     {
-        /*
-        OleDbConnection conexao;
-        OleDbCommand comando;
 
-        public void criarConexao()
-        {
-            conexao = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=dbIdeial.mdb");
-            comando = conexao.CreateCommand();
-        }
-        */
-
-        /*
-        //Registar utilizador
-        //public void criarUtilizador(Utilizador u)
-        public void criarUtilizador(Conta c)
+        public void InserirUtilizadorDb(Conta c, Colaborador u)
         {
             try
             {
-                criarConexao();
+                long contaID = ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('" + c.UserName + "', '" + c.Password + "')");   //insere os dados na tabela Conta e retorna o Id
 
-                //comando.CommandText = "INSERT INTO utilizador (nome, email) VALUES('" + u.Nome + "', '" + u.Email + "')";
-                comando.CommandText = "INSERT INTO conta (userName, password) VALUES ('@userName', '@password')";
-
-                //Parâmetros
-                comando.Parameters.AddWithValue("@userName", c.UserName);
-                comando.Parameters.AddWithValue("@password", c.Password);
-
-                comando.CommandType = CommandType.Text;
-                conexao.Open();
-
-                comando.ExecuteNonQuery();  //executa string SQL
+                ConexaoDb.ExecutarComando("INSERT INTO utilizador (nome, email, id_conta, id_tipoutilizador, id_departamento, id_Cargo) VALUES('" + u.Nome + "', '" + u.Email + "', '" + contaID + "', '" + u.id_tipo + "', '" + u.id_departamento + "', '" + u.id_cargo + "' )");    //insere os dados na tabela Utilizador
             }
             catch (System.Exception)
             {
+
                 throw;
             }
         }
 
-        
-
-        //Verificação de credencias
-        public bool  Login(Conta c)
-        //public bool  Login(Utilizador u)
+        public MySqlDataReader SelecionarUtilizadorIdDb(int contaID)
         {
             try
             {
-                criarConexao();
+                MySqlDataReader reader;
 
-                //comando.CommandText = "SELECT userName, password FROM conta WHERE userName = '" + u.UserName + "' AND password= '" + u.Password + "'";
+                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE id_conta = '" + contaID + "'");
 
-                comando.CommandText = "SELECT userName, password FROM conta WHERE userName = @userName AND password = @password";
-
-                //Parâmetros
-                comando.Parameters.AddWithValue("@userName", c.UserName);
-                comando.Parameters.AddWithValue("@password", c.Password);
-
-                comando.CommandType = CommandType.Text;
-                conexao.Open();
-
-                OleDbDataReader reader = comando.ExecuteReader();   //executa string SQL
-
-                while (reader.Read())   //se encontrar na db, retorna true
+                if (reader.Read())
                 {
-                    return true;
+                    return reader;
                 }
-                return false;
+
+                return null;
             }
             catch (System.Exception)
             {
                 throw;
             }
-
         }
-        */
+
     }
 }

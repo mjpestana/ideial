@@ -6,39 +6,25 @@ namespace DISgrupo1.Ideial.Model.DAO
 {
     public class ContaDAO
     {
-        public string userID;
+        public int contaID;
 
-        public bool VerificarCredencialDb(Conta c)
+        public int VerificarCredencialDb(Conta c)
         {
             try
             {
                 MySqlDataReader reader;
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT userName, password FROM conta WHERE userName = '" + c.UserName + "' AND password= '" + c.Password + "'");
+                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM conta WHERE userName = '" + c.UserName + "' AND password= '" + c.Password + "'");
 
                 if (reader.Read())
                 {
-                    return true;
+                    contaID = (int)reader["ID"];
+                    return contaID;
                 }
-                return false;
+                return 0;
             }
             catch (System.Exception)
             {
-                throw;
-            }
-        }
-
-        public void InserirUtilizadorDb(Conta c, Colaborador u)
-        {
-            try
-            {
-                long id = ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('" + c.UserName + "', '" + c.Password + "')");   //insere os dados na tabela Conta e retorna o Id
-
-                ConexaoDb.ExecutarComando("INSERT INTO utilizador (nome, email, id_tipoUtilizador, id_departamento, id_cargo, id_conta) VALUES('" + c + "', '" + c.Password + "')");    //insere os dados na tabela Utilizador
-            }
-            catch (System.Exception)
-            {
-
                 throw;
             }
         }
