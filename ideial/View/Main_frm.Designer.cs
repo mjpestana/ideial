@@ -49,11 +49,14 @@
             this.criar_btn = new System.Windows.Forms.Button();
             this.criar_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
+            this.mainv_ScrlBr = new System.Windows.Forms.VScrollBar();
+            this.editPrfl_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel_conteudo.SuspendLayout();
             this.SuspendLayout();
             // 
             // campanhas_btn
@@ -88,6 +91,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.editPrfl_button);
             this.panel1.Controls.Add(this.sair_btn);
             this.panel1.Controls.Add(this.numIdeias_lbl);
             this.panel1.Controls.Add(this.score_lbl);
@@ -315,10 +319,26 @@
             // 
             // panel_conteudo
             // 
+            this.panel_conteudo.Controls.Add(this.mainv_ScrlBr);
             this.panel_conteudo.Location = new System.Drawing.Point(254, 0);
             this.panel_conteudo.Name = "panel_conteudo";
             this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
             this.panel_conteudo.TabIndex = 7;
+            // 
+            // mainv_ScrlBr
+            // 
+            this.mainv_ScrlBr.Location = new System.Drawing.Point(512, 2);
+            this.mainv_ScrlBr.Name = "mainv_ScrlBr";
+            this.mainv_ScrlBr.Size = new System.Drawing.Size(15, 455);
+            this.mainv_ScrlBr.TabIndex = 0;
+            // 
+            // editPrfl_button
+            // 
+            this.editPrfl_button.Location = new System.Drawing.Point(196, 13);
+            this.editPrfl_button.Name = "editPrfl_button";
+            this.editPrfl_button.Size = new System.Drawing.Size(20, 23);
+            this.editPrfl_button.TabIndex = 15;
+            this.editPrfl_button.UseVisualStyleBackColor = true;
             // 
             // Main_frm
             // 
@@ -342,6 +362,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel_conteudo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -368,6 +389,8 @@
         private System.Windows.Forms.Button sair_btn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.VScrollBar mainv_ScrlBr;
+        private System.Windows.Forms.Button editPrfl_button;
     }
 }
 

@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\RegistoUtilizador_frm.resx">
       <DependentUpon>RegistoUtilizador_frm.cs</DependentUpon>
@@ -154,6 +155,16 @@
     <Content Include="dbIdeial.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="images\user_pic.png" />
+    <None Include="images\subscription symbol.png" />
+    <None Include="images\star.png" />
+    <None Include="images\plus.png" />
+    <None Include="images\inactiveStar.png" />
+    <None Include="images\ideial symbol.png" />
+    <None Include="images\ideial logo white.png" />
+    <None Include="images\ideia.png" />
+    <None Include="images\commentDark symbol.png" />
+    <None Include="images\comment symbol.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
