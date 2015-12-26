@@ -1,4 +1,4 @@
-﻿namespace DISgrupo1.Ideial.View
+﻿namespace ideial.View
 {
     partial class RegistoUtilizador_frm
     {
@@ -46,17 +46,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.fornecedor_panel = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.empresa_cmb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.registarUtilizador_btn = new System.Windows.Forms.Button();
             this.apagar_btn = new System.Windows.Forms.Button();
-
-            this.textBox1 = new System.Windows.Forms.TextBox();
-
-            this.button2 = new System.Windows.Forms.Button();
-
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
@@ -64,7 +59,6 @@
             // 
             // utilizador_panel
             // 
-            this.utilizador_panel.Controls.Add(this.button2);
             this.utilizador_panel.Controls.Add(this.email_txt);
             this.utilizador_panel.Controls.Add(this.nome_txt);
             this.utilizador_panel.Controls.Add(this.password_txt);
@@ -238,32 +232,12 @@
             // 
             // fornecedor_panel
             // 
-            this.fornecedor_panel.Controls.Add(this.textBox1);
             this.fornecedor_panel.Controls.Add(this.empresa_cmb);
             this.fornecedor_panel.Controls.Add(this.label8);
             this.fornecedor_panel.Location = new System.Drawing.Point(0, 219);
             this.fornecedor_panel.Name = "fornecedor_panel";
             this.fornecedor_panel.Size = new System.Drawing.Size(480, 73);
             this.fornecedor_panel.TabIndex = 3;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(353, 9);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(353, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // empresa_cmb
             // 
@@ -285,6 +259,25 @@
             this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Empresa";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(353, 9);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(353, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // registarUtilizador_btn
             // 
@@ -310,24 +303,6 @@
             this.apagar_btn.TabIndex = 4;
             this.apagar_btn.Text = "Apagar";
             this.apagar_btn.UseVisualStyleBackColor = false;
-            // 
-
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(321, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "prueba";
-       // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(325, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-
             // 
             // RegistoUtilizador_frm
             // 
@@ -378,11 +353,8 @@
         private System.Windows.Forms.ComboBox cargo_cmb;
         private System.Windows.Forms.ComboBox empresa_cmb;
 
-        private System.Windows.Forms.TextBox textBox1;
-
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
 
     }
 }

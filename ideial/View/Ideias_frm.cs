@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DISgrupo1.Ideial.View
+namespace ideial.View
 {
     public partial class Ideias_frm : Form
     {
-        readonly Bitmap _starSelected = ideial.Properties.Resources.star;
-        readonly Bitmap _starDeselected = ideial.Properties.Resources.inactiveStar;
+        readonly Bitmap _starSelected = Properties.Resources.star;
+        readonly Bitmap _starDeselected = Properties.Resources.inactiveStar;
 
         public Ideias_frm()
         {

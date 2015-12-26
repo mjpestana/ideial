@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using ideial.Controller;
 
-using DISgrupo1.Ideial.Controller;
-
-namespace DISgrupo1.Ideial.View
+namespace ideial.View
 {
     public partial class Login_frm : Form
     {

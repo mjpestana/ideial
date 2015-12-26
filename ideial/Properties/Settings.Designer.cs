@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DISgrupo1.Ideial.Properties
+namespace ideial.Properties
 {
 
 

@@ -1,24 +1,27 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace DISgrupo1.Ideial.Model.DAO
+namespace ideial.Model.DAO
 {
-    class EmpresaDAO
+    class TipoUtilizadorDAO
     {
 
         public DataTable SelecionarTodos()
         {
             try
             {
+
                 MySqlDataAdapter cc;
 
-                DataSet empresa_ds = new DataSet();
+                DataSet TipoUtilizador_ds = new DataSet();
                 ConexaoDb.FecharConexao();
 
-                string sql = "SELECT * FROM empresa";
+                string sql = "SELECT * FROM tipoutilizador";
                 cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
-                cc.Fill(empresa_ds, "empresa_dt");
-                return empresa_ds.Tables["empresa_dt"];
+                cc.Fill(TipoUtilizador_ds, "TipoUtilizador_dt");
+                return TipoUtilizador_ds.Tables["TipoUtilizador_dt"];    
+
+
             }
             catch (System.Exception)
             {

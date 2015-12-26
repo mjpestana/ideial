@@ -1,7 +1,7 @@
-﻿using DISgrupo1.Ideial.Model.DAO;
-using DISgrupo1.Ideial.Model.Entity;
+﻿using ideial.Model.DAO;
+using ideial.Model.Entity;
 
-namespace DISgrupo1.Ideial.Controller
+namespace ideial.Controller
 {
     class ContaControl
     {

@@ -1,4 +1,4 @@
-﻿namespace DISgrupo1.Ideial.View
+﻿namespace ideial.View
 {
     partial class Ideias_frm
     {

@@ -1,24 +1,26 @@
-﻿using MySql.Data.MySqlClient;
-using System.Data;
+﻿using System.Data;
+using MySql.Data.MySqlClient;
 
-namespace DISgrupo1.Ideial.Model.DAO
+namespace ideial.Model.DAO
 {
-    class CargoDAO
+    class DepartamentoDAO
     {
 
         public DataTable SelecionarTodos()
         {
+
             try
             {
                 MySqlDataAdapter cc;
 
-                DataSet cargo_ds = new DataSet();
+                DataSet Departamento_ds = new DataSet();
                 ConexaoDb.FecharConexao();
 
-                string sql = "SELECT * FROM cargo";
+                string sql = "SELECT * FROM departamento";
                 cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
-                cc.Fill(cargo_ds, "cargo_dt");
-                return cargo_ds.Tables["cargo_dt"];
+                cc.Fill(Departamento_ds, "Departamento_dt");
+
+                return Departamento_ds.Tables["Departamento_dt"];
             }
             catch (System.Exception)
             {

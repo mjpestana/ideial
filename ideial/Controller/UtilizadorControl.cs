@@ -1,37 +1,40 @@
-﻿using DISgrupo1.Ideial.Model.DAO;
-using DISgrupo1.Ideial.Model.Entity;
+﻿using ideial.Model.DAO;
+using ideial.Model.Entity;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
-namespace DISgrupo1.Ideial.Controller
+namespace ideial.Controller
 {
     public class UtilizadorControl
     {
-        public int userID, visitas, pontuacao, id_tipoUtilizador, id_departamento, id_cargo, id_empresa, id_conta;
-        public string nome, email, foto;
+        public int id_conta, userID, visitas, pontuacao, id_cargo, id_departamento, id_empresa;
+        public string nome, email, foto, tipoUtilizador;
 
-        public static void CriarUtilizador(string user, string pass, string nome, string email, string tipo, int id_tipo, int id_departamento, int id_empresa, int id_cargo)
+        public static void CriarUtilizador(string user, string pass, string nome, string email, string foto, string tipo, int id_cargo, int id_departamento, int id_empresa)
         {
-            Conta conta = new Conta(user, pass);
+            //Instância Conta
+            Conta c = new Conta(user, pass);
+
+            //Insere Conta na Db e retorna Id
+            ContaDAO contaDAO = new ContaDAO();
+            int contaId = (int)contaDAO.InserirContaDb(c);
+
+            //Instância Utilizador
+            FactoryUtilizador utilizador = new FactoryUtilizador();
+            Utilizador u = utilizador.getUtilizadorObj(contaId, nome, email, foto, tipo, id_cargo, id_departamento, id_empresa);
+            
+            //Instância UtilizadorDAO e chama método para guardar Utilizador na DB e retorna Id
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
+            int userId = (int)utilizadorDAO.InserirUtilizadorDb(u);
 
-            switch (tipo)
+            if (userId > 0)
             {
-                case "Colaborador":
-                    Colaborador colaborador = new Colaborador(nome, email, id_tipo, id_departamento, id_cargo);
-                    utilizadorDAO.InserirUtilizadorDb(conta, colaborador);    //Chama método para guardar Utilizador na DB
-                    break;
-
-                case "Gestor":
-                    break;
-
-                case "Fornecedor":
-                    break;
-
-                case "Cliente":
-                    break;
-
-                default:
-                    break;
+                MessageBox.Show("Registo inserido com sucesso!", "Ideial", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um problema ao inserir o registo!", "Ideial", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -43,15 +46,17 @@ namespace DISgrupo1.Ideial.Controller
             userID = (int)reader["ID"];
             nome = (string)reader["nome"];
             email = (string)reader["email"];
+            foto = (string)reader["foto"];
             visitas = (int)reader["visitas"];
             pontuacao = (int)reader["puntuacao"];
-            id_tipoUtilizador = (int)reader["id_tipoUtilizador"];
+            //id_tipoUtilizador = (int)reader["id_tipoUtilizador"];
+            tipoUtilizador = (string)reader["tipoUtilizador"];
             id_departamento = (int)reader["id_departamento"];
             id_cargo = (int)reader["id_cargo"];
             id_empresa = (int)reader["id_empresa"];
             id_conta = (int)reader["id_conta"];
-            foto = (string)reader["foto"];
 
+            /*
             switch (id_tipoUtilizador)
             {
                 case 1:
@@ -59,6 +64,7 @@ namespace DISgrupo1.Ideial.Controller
                 default:
                     break;
             }
+            */
         }
 
     }

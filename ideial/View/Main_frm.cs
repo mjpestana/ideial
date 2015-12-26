@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Windows.Forms;
 
-using DISgrupo1.Ideial.View;
-using DISgrupo1.Ideial.Model.DAO;
+using ideial.View;
+using ideial.Model.DAO;
 
-namespace DISgrupo1.Ideial.View
+namespace ideial.View
 {
     public partial class Main_frm : Form
     {
@@ -52,18 +52,21 @@ namespace DISgrupo1.Ideial.View
 
         private void sair_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja sair da aplicação?", "Ideial", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Close();
-            }
+            this.Close();
+            
         }
 
         private void Main_frm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            ConexaoDb.FecharConexao();  //chama método para fechar conexão
-            Application.Exit(); //fecha a aplicação   
-
+            if (MessageBox.Show("Deseja sair da aplicação?", "Ideial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ConexaoDb.FecharConexao(); //chama método para fechar conexão
+                Environment.Exit(0);    //fecha a aplicação 
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

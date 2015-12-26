@@ -1,8 +1,7 @@
-﻿using DISgrupo1.Ideial.Model.DAO;
-using MySql.Data.MySqlClient;
-using System.Data;
+﻿using System.Data;
+using ideial.Model.DAO;
 
-namespace DISgrupo1.Ideial.Controller
+namespace ideial.Controller
 {
     class CargoControl
     {

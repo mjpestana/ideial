@@ -53,22 +53,26 @@
     <Compile Include="Controller\EmpresaControl.cs" />
     <Compile Include="Controller\TipoUtilizadorControl.cs" />
     <Compile Include="Controller\UtilizadorControl.cs" />
-    <Compile Include="Campanha_frm.cs">
+    <Compile Include="Model\Entity\ConcreteCliente.cs" />
+    <Compile Include="Model\Entity\ConcreteColaborador.cs" />
+    <Compile Include="Model\Entity\ConcreteFornecedor.cs" />
+    <Compile Include="Model\Entity\ConcreteGestor.cs" />
+    <Compile Include="Model\Entity\FactoryUtilizador.cs" />
+    <Compile Include="View\Campanha_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Campanha_frm.Designer.cs">
+    <Compile Include="View\Campanha_frm.Designer.cs">
       <DependentUpon>Campanha_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CargoDAO.cs" />
-    <Compile Include="Model\ContaDAO.cs" />
-    <Compile Include="Model\ConexaoDb.cs" />
-    <Compile Include="Model\DepartamentoDAO.cs" />
-    <Compile Include="Model\EmpresaDAO.cs" />
-    <Compile Include="Model\TipoUtilizadorDAO.cs" />
-    <Compile Include="Model\UtilizadorDAO.cs" />
-    <Compile Include="Model\Campanha.cs" />
-    <Compile Include="Model\Conta.cs" />
-    <Compile Include="Controller\ICriarUtilizador.cs" />
+    <Compile Include="Model\DAO\CargoDAO.cs" />
+    <Compile Include="Model\DAO\ContaDAO.cs" />
+    <Compile Include="Model\DAO\ConexaoDb.cs" />
+    <Compile Include="Model\DAO\DepartamentoDAO.cs" />
+    <Compile Include="Model\DAO\EmpresaDAO.cs" />
+    <Compile Include="Model\DAO\TipoUtilizadorDAO.cs" />
+    <Compile Include="Model\DAO\UtilizadorDAO.cs" />
+    <Compile Include="Model\Entity\Campanha.cs" />
+    <Compile Include="Model\Entity\Conta.cs" />
     <Compile Include="View\Ideias_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,23 +85,17 @@
     <Compile Include="View\Main_frm.Designer.cs">
       <DependentUpon>Main_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Model\Colaborador.cs" />
     <Compile Include="View\Login_frm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Login_frm.Designer.cs">
       <DependentUpon>Login_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Fornecedor.cs" />
-    <Compile Include="Model\Funcionario.cs" />
-    <Compile Include="Model\Gestor.cs" />
-    <Compile Include="Model\Ideia.cs" />
+    <Compile Include="Model\Entity\Ideia.cs" />
     <Compile Include="Controller\ISubscricaoCampanha.cs" />
-    <Compile Include="Model\Parceiro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Utilizador.cs" />
+    <Compile Include="Model\Entity\Utilizador.cs" />
     <Compile Include="View\RegistoUtilizador_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,7 +108,7 @@
     <Compile Include="View\Perfil_frm.Designer.cs">
       <DependentUpon>Perfil_frm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Campanha_frm.resx">
+    <EmbeddedResource Include="View\Campanha_frm.resx">
       <DependentUpon>Campanha_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ideias_frm.resx">
@@ -152,9 +150,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dbIdeial.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="images\user_pic.png" />
     <None Include="images\subscription symbol.png" />
     <None Include="images\star.png" />

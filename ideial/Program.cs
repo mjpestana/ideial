@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using ideial.View;
 
-using DISgrupo1.Ideial.View;
-
-namespace DISgrupo1.Ideial
+namespace ideial
 {
     static class Program
     {

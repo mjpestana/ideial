@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data;
+using ideial.Controller;
 
-using DISgrupo1.Ideial.Controller;
-
-namespace DISgrupo1.Ideial.View
+namespace ideial.View
 {
     public partial class RegistoUtilizador_frm : Form
     {
@@ -23,48 +21,32 @@ namespace DISgrupo1.Ideial.View
 
         private void AdicionaTipoUtilizador()
         {
-            //var TipoUtilizador_dt = new DataTable() ;
-            //TipoUtilizador_dt =  UtilizadorControl.Cheia_TipoUtilizador();
-
             tipoUtilizador_cmb.DisplayMember = "nome";
             tipoUtilizador_cmb.ValueMember = "ID";
-            //tipoUtilizador_cmb.DataSource = TipoUtilizador_dt;
             tipoUtilizador_cmb.DataSource = TipoUtilizadorControl.TipoUtilizador_DataTable();
             tipoUtilizador_cmb.BindingContext = this.BindingContext;
         }
 
         private void AdicionaDepartamento()
         {
-            //var Departamento_dt = new DataTable();
-            //Departamento_dt = UtilizadorControl.Cheia_Departamento();
-
             departamento_cmb.DisplayMember = "nome";
             departamento_cmb.ValueMember = "ID";
-            //departamento_cmb.DataSource = Departamento_dt;
             departamento_cmb.DataSource = DepartamentoControl.Departamento_DataTable();
             departamento_cmb.BindingContext = this.BindingContext;
         }
 
         private void AdicionaEmpresa()
         {
-            //var empresa_dt = new DataTable();
-            //empresa_dt = EmpresaControl.Cheia_Empresa_DataTable();
-
             empresa_cmb.DisplayMember = "nome";
             empresa_cmb.ValueMember = "ID";
-            //empresa_cmb.DataSource = empresa_dt;
             empresa_cmb.DataSource = EmpresaControl.Empresa_DataTable();
             empresa_cmb.BindingContext = this.BindingContext;
         }
 
         private void AdicionaCargo()
         {
-            //var cargo_dt = new DataTable();
-            //cargo_dt = CargoControl.Cheia_Cargo();
-
             cargo_cmb.DisplayMember = "nome";
             cargo_cmb.ValueMember = "ID";
-            //cargo_cmb.DataSource = cargo_dt;
             cargo_cmb.DataSource = CargoControl.Cargo_DataTable();
             cargo_cmb.BindingContext = this.BindingContext;
         }
@@ -97,13 +79,13 @@ namespace DISgrupo1.Ideial.View
             string pass = password_txt.Text;
             string nome = nome_txt.Text;
             string email = email_txt.Text;
+            string foto = "";
             string tipo = tipoUtilizador_cmb.Text;
-            int id_tipo = (int)tipoUtilizador_cmb.SelectedValue;
             int id_departamento = (int)departamento_cmb.SelectedValue;
             int id_empresa = (int)empresa_cmb.SelectedValue;
             int id_cargo = (int)cargo_cmb.SelectedValue;
 
-            UtilizadorControl.CriarUtilizador(user, pass, nome, email, tipo, id_tipo, id_departamento, id_empresa, id_cargo);
+            UtilizadorControl.CriarUtilizador(user, pass, nome, email, foto, tipo, id_cargo, id_departamento, id_empresa);
         }
 
     }
