@@ -2,6 +2,7 @@
 using ideial.Model.Entity;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System;
 
 namespace ideial.Controller
 {
@@ -15,17 +16,17 @@ namespace ideial.Controller
             //Instância Conta
             Conta c = new Conta(user, pass);
 
-            //Insere Conta na Db e retorna Id
+            //Insere Conta na Db e retorna IdConta
             ContaDAO contaDAO = new ContaDAO();
-            int contaId = (int)contaDAO.InserirContaDb(c);
+            int contaId = (int)contaDAO.InserirConta(c);
 
             //Instância Utilizador
             FactoryUtilizador utilizador = new FactoryUtilizador();
             Utilizador u = utilizador.getUtilizadorObj(contaId, nome, email, foto, tipo, id_cargo, id_departamento, id_empresa);
             
-            //Instância UtilizadorDAO e chama método para guardar Utilizador na DB e retorna Id
+            //Instância UtilizadorDAO e chama método para guardar Utilizador na DB e retorna IdConta
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-            int userId = (int)utilizadorDAO.InserirUtilizadorDb(u);
+            int userId = (int)utilizadorDAO.InserirUtilizador(u);
 
             if (userId > 0)
             {
@@ -38,10 +39,27 @@ namespace ideial.Controller
             }
         }
 
+        /*
+        public static void AtualizarUtilizador(string user, string pass, int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
+        {
+            if (pass != "")
+            {
+                //Instância Conta
+                Conta c = new Conta(user, pass);
+
+                //Atualiza Conta na Db
+                ContaDAO contaDAO = new ContaDAO();
+                contaDAO.AtualizarConta(c);
+            }
+            
+        }
+        */
+
+        /*
         public void SelecionarUtilizadorId(int contaID)
         {
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-            MySqlDataReader reader = utilizadorDAO.SelecionarUtilizadorIdDb(contaID);
+            MySqlDataReader reader = utilizadorDAO.SelecionarUtilizadorIdConta(contaID);
 
             userID = (int)reader["ID"];
             nome = (string)reader["nome"];
@@ -56,7 +74,7 @@ namespace ideial.Controller
             id_empresa = (int)reader["id_empresa"];
             id_conta = (int)reader["id_conta"];
 
-            /*
+            
             switch (id_tipoUtilizador)
             {
                 case 1:
@@ -64,8 +82,9 @@ namespace ideial.Controller
                 default:
                     break;
             }
-            */
+          
         }
+        */
 
     }
 }

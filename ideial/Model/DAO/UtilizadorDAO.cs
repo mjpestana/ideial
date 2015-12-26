@@ -1,13 +1,13 @@
 ﻿using System;
-using ideial.Model.Entity;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
+
+using ideial.Model.Entity;
 
 namespace ideial.Model.DAO
 {
     class UtilizadorDAO
     {
-        public long InserirUtilizadorDb(Utilizador u)
+        public long InserirUtilizador(Utilizador u)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace ideial.Model.DAO
                         ConcreteFornecedor fornecedor = (ConcreteFornecedor)u;   //conversão Utilizador -> ConcreteFornecedor
                         return ConexaoDb.ExecutarComando("INSERT INTO utilizador (id_conta, nome, email, foto, tipoutilizador, id_empresa) VALUES('" + fornecedor.IdConta + "', '" + fornecedor.Nome + "', '" + fornecedor.Email + "', '" + fornecedor.Foto + "', '" + fornecedor.TipoUtilizador + "', '" + fornecedor.IdEmpresa + "' )");
                     case "Gestor":
-                        ConcreteGestor gestor = (ConcreteGestor)u;   //conversão Utilizador -> ConcreteColaborador
+                        ConcreteGestor gestor = (ConcreteGestor)u;   //conversão Utilizador -> ConcreteGestor
                         return ConexaoDb.ExecutarComando("INSERT INTO utilizador (id_conta, nome, email, foto, tipoutilizador, id_cargo, id_departamento) VALUES('" + gestor.IdConta + "', '" + gestor.Nome + "', '" + gestor.Email + "', '" + gestor.Foto + "', '" + gestor.TipoUtilizador + "', '" + gestor.IdCargo + "', '" + gestor.IdDepartamento + "' )");
                     default:
                         return -1;  //retorna -1 se TipoUtilizador não especificado
@@ -36,20 +36,18 @@ namespace ideial.Model.DAO
             }
         }
 
-        public MySqlDataReader SelecionarUtilizadorIdDb(int contaID)
+        public MySqlDataReader SelecionarUtilizadorIdConta(int idCconta)
         {
             try
             {
-                MySqlDataReader reader;
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE id_conta = '" + idCconta + "'");
 
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE id_conta = '" + contaID + "'");
-
-                if (reader.Read())
-                {
+                //if (reader.Read())
+                //{
                     return reader;
-                }
+                //}
 
-                return null;
+                //return null;
             }
             catch (System.Exception)
             {

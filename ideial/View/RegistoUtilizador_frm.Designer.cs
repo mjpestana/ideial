@@ -118,7 +118,7 @@
             this.tipoUtilizador_cmb.FormattingEnabled = true;
             this.tipoUtilizador_cmb.Location = new System.Drawing.Point(155, 167);
             this.tipoUtilizador_cmb.Name = "tipoUtilizador_cmb";
-            this.tipoUtilizador_cmb.Size = new System.Drawing.Size(121, 28);
+            this.tipoUtilizador_cmb.Size = new System.Drawing.Size(160, 28);
             this.tipoUtilizador_cmb.TabIndex = 4;
             this.tipoUtilizador_cmb.SelectedIndexChanged += new System.EventHandler(this.tipoUtilizador_cmb_SelectedIndexChanged);
             // 
@@ -195,7 +195,7 @@
             this.cargo_cmb.FormattingEnabled = true;
             this.cargo_cmb.Location = new System.Drawing.Point(156, 44);
             this.cargo_cmb.Name = "cargo_cmb";
-            this.cargo_cmb.Size = new System.Drawing.Size(121, 28);
+            this.cargo_cmb.Size = new System.Drawing.Size(160, 28);
             this.cargo_cmb.TabIndex = 4;
             // 
             // departamento_cmb
@@ -205,7 +205,7 @@
             this.departamento_cmb.FormattingEnabled = true;
             this.departamento_cmb.Location = new System.Drawing.Point(156, 8);
             this.departamento_cmb.Name = "departamento_cmb";
-            this.departamento_cmb.Size = new System.Drawing.Size(121, 28);
+            this.departamento_cmb.Size = new System.Drawing.Size(160, 28);
             this.departamento_cmb.TabIndex = 3;
             // 
             // label7
@@ -246,7 +246,7 @@
             this.empresa_cmb.FormattingEnabled = true;
             this.empresa_cmb.Location = new System.Drawing.Point(156, 5);
             this.empresa_cmb.Name = "empresa_cmb";
-            this.empresa_cmb.Size = new System.Drawing.Size(121, 28);
+            this.empresa_cmb.Size = new System.Drawing.Size(159, 28);
             this.empresa_cmb.TabIndex = 35;
             // 
             // label8
@@ -319,6 +319,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistoUtilizador_frm";
             this.Text = "Registo Utilizador";
+            this.Load += new System.EventHandler(this.RegistoUtilizador_frm_Load);
             this.utilizador_panel.ResumeLayout(false);
             this.utilizador_panel.PerformLayout();
             this.funcionario_panel.ResumeLayout(false);

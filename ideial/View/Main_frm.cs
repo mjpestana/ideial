@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Windows.Forms;
 
-using ideial.View;
 using ideial.Model.DAO;
+using ideial.Model.Entity;
 
 namespace ideial.View
 {
@@ -38,16 +38,11 @@ namespace ideial.View
 
         private void ideias_btn_Click(object sender, EventArgs e)
         {
+            /*
             var form = Application.OpenForms.OfType<Ideias_frm>().FirstOrDefault();
             Ideias_frm filho = form ?? new Ideias_frm();
             AddFormInPanel(filho);
-        }
-
-        private void userName_lbl_Click(object sender, EventArgs e)
-        {
-            var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
-            Perfil_frm filho = form ?? new Perfil_frm();
-            AddFormInPanel(filho);
+            */
         }
 
         private void sair_btn_Click(object sender, EventArgs e)
@@ -67,6 +62,36 @@ namespace ideial.View
             {
                 e.Cancel = true;
             }
+        }
+
+        private void editPrfl_button_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
+            Perfil_frm filho = form ?? new Perfil_frm();
+            AddFormInPanel(filho);
+        }
+
+        private void userName_lbl_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
+            Perfil_frm filho = form ?? new Perfil_frm();
+            AddFormInPanel(filho);
+        }
+
+        private void Main_frm_Load(object sender, EventArgs e)
+        {
+            CarregaDadosUtilizador();
+        }
+
+        private void CarregaDadosUtilizador()
+        {
+            userName_lbl.Text = UserLogged.User;
+            tipoUtilizador_lbl.Text = UserLogged.TipoUtilizador;
+        }
+
+        private void campanhas_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

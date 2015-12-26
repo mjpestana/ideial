@@ -57,6 +57,7 @@
     <Compile Include="Model\Entity\ConcreteColaborador.cs" />
     <Compile Include="Model\Entity\ConcreteFornecedor.cs" />
     <Compile Include="Model\Entity\ConcreteGestor.cs" />
+    <Compile Include="Model\Entity\UserLogged.cs" />
     <Compile Include="Model\Entity\FactoryUtilizador.cs" />
     <Compile Include="View\Campanha_frm.cs">
       <SubType>Form</SubType>

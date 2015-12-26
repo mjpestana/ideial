@@ -32,6 +32,7 @@
             this.campanhas_btn = new System.Windows.Forms.Button();
             this.userName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.editPrfl_button = new System.Windows.Forms.Button();
             this.sair_btn = new System.Windows.Forms.Button();
             this.numIdeias_lbl = new System.Windows.Forms.Label();
             this.score_lbl = new System.Windows.Forms.Label();
@@ -40,7 +41,7 @@
             this.utilizadores_btn = new System.Windows.Forms.Button();
             this.favoritos_btn = new System.Windows.Forms.Button();
             this.ideias_btn = new System.Windows.Forms.Button();
-            this.Cargo_lbl = new System.Windows.Forms.Label();
+            this.tipoUtilizador_lbl = new System.Windows.Forms.Label();
             this.userPic_img = new System.Windows.Forms.PictureBox();
             this.Subsc_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,7 +51,6 @@
             this.criar_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
             this.mainv_ScrlBr = new System.Windows.Forms.VScrollBar();
-            this.editPrfl_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
@@ -74,6 +74,7 @@
             this.campanhas_btn.TabIndex = 0;
             this.campanhas_btn.Text = "Campanhas";
             this.campanhas_btn.UseVisualStyleBackColor = false;
+            this.campanhas_btn.Click += new System.EventHandler(this.campanhas_btn_Click);
             // 
             // userName_lbl
             // 
@@ -83,9 +84,9 @@
             this.userName_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.userName_lbl.Location = new System.Drawing.Point(61, 23);
             this.userName_lbl.Name = "userName_lbl";
-            this.userName_lbl.Size = new System.Drawing.Size(128, 17);
+            this.userName_lbl.Size = new System.Drawing.Size(67, 17);
             this.userName_lbl.TabIndex = 3;
-            this.userName_lbl.Text = "Nome do Utilizador";
+            this.userName_lbl.Text = "Utilizador";
             this.userName_lbl.Click += new System.EventHandler(this.userName_lbl_Click);
             // 
             // panel1
@@ -100,7 +101,7 @@
             this.panel1.Controls.Add(this.utilizadores_btn);
             this.panel1.Controls.Add(this.favoritos_btn);
             this.panel1.Controls.Add(this.ideias_btn);
-            this.panel1.Controls.Add(this.Cargo_lbl);
+            this.panel1.Controls.Add(this.tipoUtilizador_lbl);
             this.panel1.Controls.Add(this.userPic_img);
             this.panel1.Controls.Add(this.Subsc_btn);
             this.panel1.Controls.Add(this.campanhas_btn);
@@ -109,6 +110,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(231, 461);
             this.panel1.TabIndex = 5;
+            // 
+            // editPrfl_button
+            // 
+            this.editPrfl_button.Location = new System.Drawing.Point(196, 21);
+            this.editPrfl_button.Name = "editPrfl_button";
+            this.editPrfl_button.Size = new System.Drawing.Size(20, 23);
+            this.editPrfl_button.TabIndex = 15;
+            this.editPrfl_button.UseVisualStyleBackColor = true;
+            this.editPrfl_button.Click += new System.EventHandler(this.editPrfl_button_Click);
             // 
             // sair_btn
             // 
@@ -221,17 +231,17 @@
             this.ideias_btn.UseVisualStyleBackColor = false;
             this.ideias_btn.Click += new System.EventHandler(this.ideias_btn_Click);
             // 
-            // Cargo_lbl
+            // tipoUtilizador_lbl
             // 
-            this.Cargo_lbl.AutoSize = true;
-            this.Cargo_lbl.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Cargo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cargo_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Cargo_lbl.Location = new System.Drawing.Point(61, 41);
-            this.Cargo_lbl.Name = "Cargo_lbl";
-            this.Cargo_lbl.Size = new System.Drawing.Size(35, 13);
-            this.Cargo_lbl.TabIndex = 7;
-            this.Cargo_lbl.Text = "Cargo";
+            this.tipoUtilizador_lbl.AutoSize = true;
+            this.tipoUtilizador_lbl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tipoUtilizador_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoUtilizador_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tipoUtilizador_lbl.Location = new System.Drawing.Point(61, 41);
+            this.tipoUtilizador_lbl.Name = "tipoUtilizador_lbl";
+            this.tipoUtilizador_lbl.Size = new System.Drawing.Size(74, 13);
+            this.tipoUtilizador_lbl.TabIndex = 7;
+            this.tipoUtilizador_lbl.Text = "Tipo Utilizador";
             // 
             // userPic_img
             // 
@@ -332,14 +342,6 @@
             this.mainv_ScrlBr.Size = new System.Drawing.Size(15, 455);
             this.mainv_ScrlBr.TabIndex = 0;
             // 
-            // editPrfl_button
-            // 
-            this.editPrfl_button.Location = new System.Drawing.Point(196, 13);
-            this.editPrfl_button.Name = "editPrfl_button";
-            this.editPrfl_button.Size = new System.Drawing.Size(20, 23);
-            this.editPrfl_button.TabIndex = 15;
-            this.editPrfl_button.UseVisualStyleBackColor = true;
-            // 
             // Main_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,6 +357,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ideial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_frm_FormClosing);
+            this.Load += new System.EventHandler(this.Main_frm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
@@ -373,7 +376,7 @@
         private System.Windows.Forms.Label userName_lbl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Subsc_btn;
-        private System.Windows.Forms.Label Cargo_lbl;
+        private System.Windows.Forms.Label tipoUtilizador_lbl;
         private System.Windows.Forms.PictureBox userPic_img;
         private System.Windows.Forms.Button ideias_btn;
         private System.Windows.Forms.Button favoritos_btn;

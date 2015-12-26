@@ -41,13 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.funcionario_panel = new System.Windows.Forms.Panel();
+            this.cargo_cmb = new System.Windows.Forms.ComboBox();
             this.departamento_cmb = new System.Windows.Forms.ComboBox();
-            this.cargo_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.editar_btn = new System.Windows.Forms.Button();
+            this.atualizar_btn = new System.Windows.Forms.Button();
             this.fornecedor_panel = new System.Windows.Forms.Panel();
-            this.empresa_txt = new System.Windows.Forms.TextBox();
+            this.empresa_cmb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
@@ -178,14 +178,24 @@
             // 
             // funcionario_panel
             // 
+            this.funcionario_panel.Controls.Add(this.cargo_cmb);
             this.funcionario_panel.Controls.Add(this.departamento_cmb);
-            this.funcionario_panel.Controls.Add(this.cargo_txt);
             this.funcionario_panel.Controls.Add(this.label7);
             this.funcionario_panel.Controls.Add(this.label6);
             this.funcionario_panel.Location = new System.Drawing.Point(0, 217);
             this.funcionario_panel.Name = "funcionario_panel";
             this.funcionario_panel.Size = new System.Drawing.Size(480, 86);
             this.funcionario_panel.TabIndex = 2;
+            // 
+            // cargo_cmb
+            // 
+            this.cargo_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cargo_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cargo_cmb.FormattingEnabled = true;
+            this.cargo_cmb.Location = new System.Drawing.Point(155, 43);
+            this.cargo_cmb.Name = "cargo_cmb";
+            this.cargo_cmb.Size = new System.Drawing.Size(160, 28);
+            this.cargo_cmb.TabIndex = 4;
             // 
             // departamento_cmb
             // 
@@ -194,17 +204,8 @@
             this.departamento_cmb.FormattingEnabled = true;
             this.departamento_cmb.Location = new System.Drawing.Point(156, 8);
             this.departamento_cmb.Name = "departamento_cmb";
-            this.departamento_cmb.Size = new System.Drawing.Size(121, 28);
+            this.departamento_cmb.Size = new System.Drawing.Size(160, 28);
             this.departamento_cmb.TabIndex = 3;
-            // 
-            // cargo_txt
-            // 
-            this.cargo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cargo_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cargo_txt.Location = new System.Drawing.Point(156, 48);
-            this.cargo_txt.Name = "cargo_txt";
-            this.cargo_txt.Size = new System.Drawing.Size(121, 26);
-            this.cargo_txt.TabIndex = 2;
             // 
             // label7
             // 
@@ -228,35 +229,37 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Departamento";
             // 
-            // editar_btn
+            // atualizar_btn
             // 
-            this.editar_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.editar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editar_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.editar_btn.Location = new System.Drawing.Point(245, 309);
-            this.editar_btn.Name = "editar_btn";
-            this.editar_btn.Size = new System.Drawing.Size(160, 38);
-            this.editar_btn.TabIndex = 3;
-            this.editar_btn.Text = "Gravar";
-            this.editar_btn.UseVisualStyleBackColor = false;
+            this.atualizar_btn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.atualizar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.atualizar_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.atualizar_btn.Location = new System.Drawing.Point(157, 309);
+            this.atualizar_btn.Name = "atualizar_btn";
+            this.atualizar_btn.Size = new System.Drawing.Size(160, 38);
+            this.atualizar_btn.TabIndex = 3;
+            this.atualizar_btn.Text = "Atualizar";
+            this.atualizar_btn.UseVisualStyleBackColor = false;
+            this.atualizar_btn.Click += new System.EventHandler(this.atualizar_btn_Click);
             // 
             // fornecedor_panel
             // 
-            this.fornecedor_panel.Controls.Add(this.empresa_txt);
+            this.fornecedor_panel.Controls.Add(this.empresa_cmb);
             this.fornecedor_panel.Controls.Add(this.label8);
             this.fornecedor_panel.Location = new System.Drawing.Point(0, 217);
             this.fornecedor_panel.Name = "fornecedor_panel";
             this.fornecedor_panel.Size = new System.Drawing.Size(480, 74);
             this.fornecedor_panel.TabIndex = 4;
             // 
-            // empresa_txt
+            // empresa_cmb
             // 
-            this.empresa_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empresa_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.empresa_txt.Location = new System.Drawing.Point(155, 17);
-            this.empresa_txt.Name = "empresa_txt";
-            this.empresa_txt.Size = new System.Drawing.Size(121, 26);
-            this.empresa_txt.TabIndex = 1;
+            this.empresa_cmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empresa_cmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.empresa_cmb.FormattingEnabled = true;
+            this.empresa_cmb.Location = new System.Drawing.Point(155, 14);
+            this.empresa_cmb.Name = "empresa_cmb";
+            this.empresa_cmb.Size = new System.Drawing.Size(160, 28);
+            this.empresa_cmb.TabIndex = 4;
             // 
             // label8
             // 
@@ -276,13 +279,14 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(484, 362);
             this.Controls.Add(this.fornecedor_panel);
-            this.Controls.Add(this.editar_btn);
+            this.Controls.Add(this.atualizar_btn);
             this.Controls.Add(this.utilizador_panel);
             this.Controls.Add(this.funcionario_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Perfil_frm";
             this.Text = "Perfil Utilizador";
+            this.Load += new System.EventHandler(this.Perfil_frm_Load);
             this.utilizador_panel.ResumeLayout(false);
             this.utilizador_panel.PerformLayout();
             this.funcionario_panel.ResumeLayout(false);
@@ -306,14 +310,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel funcionario_panel;
         private System.Windows.Forms.ComboBox departamento_cmb;
-        private System.Windows.Forms.TextBox cargo_txt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button editar_btn;
+        private System.Windows.Forms.Button atualizar_btn;
         private System.Windows.Forms.Panel fornecedor_panel;
-        private System.Windows.Forms.TextBox empresa_txt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label tipoUtilizador_lbl;
         private System.Windows.Forms.Label userName_lbl;
+        private System.Windows.Forms.ComboBox cargo_cmb;
+        private System.Windows.Forms.ComboBox empresa_cmb;
     }
 }

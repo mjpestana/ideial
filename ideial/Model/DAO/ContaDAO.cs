@@ -1,24 +1,23 @@
-﻿using ideial.Model.Entity;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+
+using ideial.Model.Entity;
 
 namespace ideial.Model.DAO
 {
     public class ContaDAO
     {
-        public int contaId;
+        public int idConta;
 
-        public int VerificarCredencialDb(Conta c)
+        public int VerificarCredencial(string user, string pass)
         {
             try
             {
-                MySqlDataReader reader;
-
-                reader = ConexaoDb.SelecionarRegistos("SELECT * FROM conta WHERE userName = '" + c.UserName + "' AND password= '" + c.Password + "'");
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM conta WHERE userName = '" + user + "' AND password= '" + pass + "'");
 
                 if (reader.Read())
                 {
-                    contaId = (int)reader["ID"];
-                    return contaId;
+                    idConta = (int)reader["ID"];
+                    return idConta;
                 }
                 return 0;
             }
@@ -28,11 +27,11 @@ namespace ideial.Model.DAO
             }
         }
 
-        public long InserirContaDb(Conta c)
+        public long InserirConta(Conta c)
         {
             try
             {
-                //Insere os dados na tabela Conta e retorna o Id
+                //Insere os dados na tabela Conta e retorna o IdConta
                 long contaId = ConexaoDb.ExecutarComando("INSERT INTO conta (userName, password) VALUES('" + c.UserName + "', '" + c.Password + "')");
 
                 return contaId;
@@ -42,6 +41,21 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        /*
+        public void AtualizarConta(Conta c)
+        {
+            try
+            {
+                //Atualiza os dados na tabela Conta
+                ConexaoDb.ExecutarComando("UPDATE conta SET password = '" + c.Password + "' WHERE userName = '" + c.UserName + "')");
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+        */
 
     }
 }
