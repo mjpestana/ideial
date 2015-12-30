@@ -51,7 +51,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.registarUtilizador_btn = new System.Windows.Forms.Button();
-            this.apagar_btn = new System.Windows.Forms.Button();
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
@@ -284,7 +283,7 @@
             this.registarUtilizador_btn.BackColor = System.Drawing.SystemColors.Highlight;
             this.registarUtilizador_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registarUtilizador_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.registarUtilizador_btn.Location = new System.Drawing.Point(79, 312);
+            this.registarUtilizador_btn.Location = new System.Drawing.Point(167, 311);
             this.registarUtilizador_btn.Name = "registarUtilizador_btn";
             this.registarUtilizador_btn.Size = new System.Drawing.Size(160, 38);
             this.registarUtilizador_btn.TabIndex = 2;
@@ -292,25 +291,12 @@
             this.registarUtilizador_btn.UseVisualStyleBackColor = false;
             this.registarUtilizador_btn.Click += new System.EventHandler(this.registarUtilizador_btn_Click);
             // 
-            // apagar_btn
-            // 
-            this.apagar_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.apagar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apagar_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.apagar_btn.Location = new System.Drawing.Point(245, 312);
-            this.apagar_btn.Name = "apagar_btn";
-            this.apagar_btn.Size = new System.Drawing.Size(160, 38);
-            this.apagar_btn.TabIndex = 4;
-            this.apagar_btn.Text = "Apagar";
-            this.apagar_btn.UseVisualStyleBackColor = false;
-            // 
             // RegistoUtilizador_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.apagar_btn);
             this.Controls.Add(this.fornecedor_panel);
             this.Controls.Add(this.registarUtilizador_btn);
             this.Controls.Add(this.utilizador_panel);
@@ -350,7 +336,6 @@
         private System.Windows.Forms.Button registarUtilizador_btn;
         private System.Windows.Forms.Panel fornecedor_panel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button apagar_btn;
         private System.Windows.Forms.ComboBox cargo_cmb;
         private System.Windows.Forms.ComboBox empresa_cmb;
 

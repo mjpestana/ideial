@@ -14,6 +14,12 @@ namespace ideial.View
             InitializeComponent();
         }
 
+        private void Main_frm_Load(object sender, EventArgs e)
+        {
+            CarregaDadosUtilizador();
+            PermissoesFormPrincipal();
+        }
+
         private void utilizadores_btn_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<RegistoUtilizador_frm>().FirstOrDefault();
@@ -34,15 +40,6 @@ namespace ideial.View
                 this.panel_conteudo.Controls.Add(con);
                 this.panel_conteudo.Tag = con;
                 con.Show();
-        }
-
-        private void ideias_btn_Click(object sender, EventArgs e)
-        {
-            /*
-            var form = Application.OpenForms.OfType<Ideias_frm>().FirstOrDefault();
-            Ideias_frm filho = form ?? new Ideias_frm();
-            AddFormInPanel(filho);
-            */
         }
 
         private void sair_btn_Click(object sender, EventArgs e)
@@ -66,21 +63,19 @@ namespace ideial.View
 
         private void editPrfl_button_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
-            Perfil_frm filho = form ?? new Perfil_frm();
-            AddFormInPanel(filho);
+            editarPerfilForm();
         }
 
         private void userName_lbl_Click(object sender, EventArgs e)
         {
+            editarPerfilForm();
+        }
+
+        private void editarPerfilForm()
+        {
             var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
             Perfil_frm filho = form ?? new Perfil_frm();
             AddFormInPanel(filho);
-        }
-
-        private void Main_frm_Load(object sender, EventArgs e)
-        {
-            CarregaDadosUtilizador();
         }
 
         private void CarregaDadosUtilizador()
@@ -89,9 +84,56 @@ namespace ideial.View
             tipoUtilizador_lbl.Text = UserLogged.TipoUtilizador;
         }
 
-        private void campanhas_btn_Click(object sender, EventArgs e)
+        private void PermissoesFormPrincipal()
         {
-
+            switch (UserLogged.TipoUtilizador)
+            {
+                case "Gestor":
+                    criarCampanha_lbl.Visible = true;
+                    criarCampanha_btn.Visible = true;
+                    utilizadores_btn.Visible = true;
+                    break;
+                default:
+                    criarCampanha_lbl.Visible = false;
+                    criarCampanha_btn.Visible = false;
+                    utilizadores_btn.Visible = false;
+                    break;
+            }
         }
+
+        private void criarIdeia_btn_Click(object sender, EventArgs e)
+        {
+            criarIdeiaForm();
+        }
+
+        private void criarIdeia_lbl_Click(object sender, EventArgs e)
+        {
+            criarIdeiaForm();
+        }
+
+        private void criarIdeiaForm()
+        {
+            var form = Application.OpenForms.OfType<CriarIdeia_frm>().FirstOrDefault();
+            CriarIdeia_frm filho = form ?? new CriarIdeia_frm();
+            AddFormInPanel(filho);
+        }
+
+        private void criarCampanha_btn_Click(object sender, EventArgs e)
+        {
+            criarCampanhaForm();
+        }
+
+        private void criarCampanha_lbl_Click(object sender, EventArgs e)
+        {
+            criarCampanhaForm();
+        }
+
+        private void criarCampanhaForm()
+        {
+            var form = Application.OpenForms.OfType<CriarCampanha_frm>().FirstOrDefault();
+            CriarCampanha_frm filho = form ?? new CriarCampanha_frm();
+            AddFormInPanel(filho);
+        }
+
     }
 }

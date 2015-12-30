@@ -95,17 +95,28 @@ namespace ideial.View
 
         private void atualizar_btn_Click(object sender, EventArgs e)
         {
-            //Prepara dados para serem instânciados e posteriormente alterados na Db
-            string user = UserLogged.User;
-            string pass = password_txt.Text;
-            int idUtilizador = UserLogged.IdUtilizador;
-            string nome = nome_txt.Text;
-            string email = email_txt.Text;
-            int idCargo = (int)cargo_cmb.SelectedValue;
-            int idDepartamento = (int)departamento_cmb.SelectedValue;
-            int idEmpresa = (int)empresa_cmb.SelectedValue;
+            string user, pass, tipoUtilizador, nome, email, foto;
+            int idConta=0, idUtilizador=0, idCargo=0, idDepartamento=0, idEmpresa=0;
 
-            //UtilizadorControl.AtualizarUtilizador(user, pass, idUtilizador, nome, email, idCargo, idDepartamento, idEmpresa);
+            //Prepara dados do utilizador
+            idConta = UserLogged.IdConta;
+            user = UserLogged.User;
+            idUtilizador = UserLogged.IdUtilizador;
+            tipoUtilizador = UserLogged.TipoUtilizador;
+            foto = UserLogged.Foto;
+
+            //Atribuir valores as variáveis de acordo com os campos alterados
+            pass = password_txt.Text;
+            nome = nome_txt.Text;
+            email = email_txt.Text;
+
+            //Atribui valores as variáveis de acordo com o valor selecionado nas ComboBox
+            if (cargo_cmb.SelectedValue != null) { idCargo = (int) cargo_cmb.SelectedValue; }
+            if (departamento_cmb.SelectedValue != null) { idDepartamento = (int)departamento_cmb.SelectedValue; }
+            if (empresa_cmb.SelectedValue != null) { idEmpresa = (int)empresa_cmb.SelectedValue; }
+
+            //Chama método para atualizar utilizador de acordo com os parâmetros enviados
+            UtilizadorControl.AtualizarUtilizador(idConta, user, pass, idUtilizador, tipoUtilizador, nome, email, foto, idCargo, idDepartamento, idEmpresa);
         }
     }
 }

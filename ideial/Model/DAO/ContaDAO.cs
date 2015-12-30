@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 using ideial.Model.Entity;
 
@@ -42,20 +43,27 @@ namespace ideial.Model.DAO
             }
         }
 
-        /*
-        public void AtualizarConta(Conta c)
+        public void AtualizarConta(int idConta, string pass)
         {
             try
             {
-                //Atualiza os dados na tabela Conta
-                ConexaoDb.ExecutarComando("UPDATE conta SET password = '" + c.Password + "' WHERE userName = '" + c.UserName + "')");
+                //Prepara string para atualizar dados da tabela 
+                string sql = "UPDATE conta SET password = '" + pass + "' WHERE ID = '" + idConta + "'";
+
+                ConexaoDb.AbrirConexao();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = sql;
+                comando.Connection = ConexaoDb.conexao;
+
+                //Executa comando
+                comando.ExecuteReader();
             }
-            catch (System.Exception)
+            catch (MySqlException msg)
             {
-                throw;
+                MessageBox.Show("Error: " + msg.Message);
             }
         }
-        */
 
     }
 }

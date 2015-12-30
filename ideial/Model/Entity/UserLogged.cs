@@ -4,6 +4,7 @@ namespace ideial.Model.Entity
     public static class UserLogged
     {
         //Atributos da classe UserLogged
+        public static int IdConta { get; set; }
         public static string User { get; set; }
         public static int IdUtilizador { get; set; }
         public static string NomeUtilizador { get; set; }

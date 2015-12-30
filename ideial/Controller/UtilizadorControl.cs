@@ -39,52 +39,31 @@ namespace ideial.Controller
             }
         }
 
-        /*
-        public static void AtualizarUtilizador(string user, string pass, int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
+        public static void AtualizarUtilizador(int idConta, string user, string pass, int idUtilizador, string tipoUtilizador, string nome, string email, string foto, int idCargo, int idDepartamento, int idEmpresa)
         {
             if (pass != "")
             {
-                //Instância Conta
-                Conta c = new Conta(user, pass);
-
                 //Atualiza Conta na Db
                 ContaDAO contaDAO = new ContaDAO();
-                contaDAO.AtualizarConta(c);
+                contaDAO.AtualizarConta(idConta, pass);
             }
-            
-        }
-        */
 
-        /*
-        public void SelecionarUtilizadorId(int contaID)
-        {
+            //Atualiza Utilizador na Db
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-            MySqlDataReader reader = utilizadorDAO.SelecionarUtilizadorIdConta(contaID);
+            utilizadorDAO.AtualizarUtilizador(idUtilizador, nome, email, idCargo, idDepartamento, idEmpresa);
 
-            userID = (int)reader["ID"];
-            nome = (string)reader["nome"];
-            email = (string)reader["email"];
-            foto = (string)reader["foto"];
-            visitas = (int)reader["visitas"];
-            pontuacao = (int)reader["puntuacao"];
-            //id_tipoUtilizador = (int)reader["id_tipoUtilizador"];
-            tipoUtilizador = (string)reader["tipoUtilizador"];
-            id_departamento = (int)reader["id_departamento"];
-            id_cargo = (int)reader["id_cargo"];
-            id_empresa = (int)reader["id_empresa"];
-            id_conta = (int)reader["id_conta"];
-
-            
-            switch (id_tipoUtilizador)
-            {
-                case 1:
-                    break;
-                default:
-                    break;
-            }
-          
+            //Atualiza os dados do objeto UserLogged
+            UserLogged.IdConta = idConta;
+            UserLogged.User = user;
+            UserLogged.IdUtilizador = idUtilizador;
+            UserLogged.NomeUtilizador = nome;
+            UserLogged.Email = email;
+            UserLogged.Foto = foto;
+            UserLogged.TipoUtilizador = tipoUtilizador;
+            UserLogged.IdCargo = idCargo;
+            UserLogged.IdDepartamento = idDepartamento;
+            UserLogged.IdEmpresa = idEmpresa;
         }
-        */
-
+        
     }
 }

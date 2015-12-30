@@ -48,7 +48,7 @@ namespace ideial.Model.DAO
             comando.CommandText = sql;
             comando.Connection = conexao;
 
-            //Envia o comando para a conexão e cria um OleDbDataReader
+            //Executa comando e cria um DataReader
             MySqlDataReader reader = comando.ExecuteReader();
 
             return reader;

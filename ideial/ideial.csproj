@@ -74,6 +74,18 @@
     <Compile Include="Model\DAO\UtilizadorDAO.cs" />
     <Compile Include="Model\Entity\Campanha.cs" />
     <Compile Include="Model\Entity\Conta.cs" />
+    <Compile Include="View\CriarCampanha_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CriarCampanha_frm.Designer.cs">
+      <DependentUpon>CriarCampanha_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CriarIdeia_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CriarIdeia_frm.Designer.cs">
+      <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Ideias_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </Compile>
     <EmbeddedResource Include="View\Campanha_frm.resx">
       <DependentUpon>Campanha_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CriarCampanha_frm.resx">
+      <DependentUpon>CriarCampanha_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CriarIdeia_frm.resx">
+      <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ideias_frm.resx">
       <DependentUpon>Ideias_frm.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 using ideial.Model.Entity;
@@ -26,13 +27,13 @@ namespace ideial.Model.DAO
                         ConcreteGestor gestor = (ConcreteGestor)u;   //conversão Utilizador -> ConcreteGestor
                         return ConexaoDb.ExecutarComando("INSERT INTO utilizador (id_conta, nome, email, foto, tipoutilizador, id_cargo, id_departamento) VALUES('" + gestor.IdConta + "', '" + gestor.Nome + "', '" + gestor.Email + "', '" + gestor.Foto + "', '" + gestor.TipoUtilizador + "', '" + gestor.IdCargo + "', '" + gestor.IdDepartamento + "' )");
                     default:
-                        return -1;  //retorna -1 se TipoUtilizador não especificado
+                        return 0;  //retorna 0 se TipoUtilizador não especificado
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("{0} : Erro ao tentar inserir o registo", e);
-                return -1;
+                return 0;
             }
         }
 
@@ -42,16 +43,36 @@ namespace ideial.Model.DAO
             {
                 MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE id_conta = '" + idCconta + "'");
 
-                //if (reader.Read())
-                //{
-                    return reader;
-                //}
-
-                //return null;
+                return reader;
             }
             catch (System.Exception)
             {
                 throw;
+            }
+        }
+
+        public void AtualizarUtilizador(int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
+        {
+            try
+            {
+                //Prepara string para atualizar dados da tabela 
+                string sql = "UPDATE utilizador SET nome = '" + nome + "', email = '" + email + "', id_cargo = '" + idCargo + "', id_departamento = '" + idDepartamento + "', id_empresa = '" + idEmpresa + "' WHERE ID = '" + idUtilizador + "'";
+
+                ConexaoDb.AbrirConexao();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = sql;
+                comando.Connection = ConexaoDb.conexao;
+
+                //Executa comando e cria um DataReader
+                comando.ExecuteReader();
+
+                MessageBox.Show("Registo atualizado com sucesso!", "Ideial", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (MySqlException msg)
+            {
+                MessageBox.Show("Error: " + msg.Message);
             }
         }
 

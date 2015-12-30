@@ -21,6 +21,7 @@ namespace ideial.Controller
                 //Atribui os valores encontrados ao objeto UserLogged
                 while (row.Read())
                 {
+                    UserLogged.IdConta = idConta; //atribui o idConta ao objeto UserLogged 
                     UserLogged.User = user; //atribui o user ao objeto UserLogged
                     UserLogged.IdUtilizador = Convert.ToInt32( row["ID"].ToString() );
                     UserLogged.NomeUtilizador = row["nome"].ToString();
