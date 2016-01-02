@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using ideial.Model.Entity;
+using ideial.Controller;
 
 namespace ideial.View
 {
@@ -18,6 +19,17 @@ namespace ideial.View
 
             DateTime data = DateTime.Now.Date;
             data_lbl.Text = String.Format("{0:dd/MM/yyyy}", DateTime.Now.Date);
+        }
+
+        private void criarCampanha_btn_Click(object sender, EventArgs e)
+        {
+            //Prepara dados para serem instânciados e posteriormente inseridos na Db
+            string nome = nome_txt.Text;
+            string descricao = descricao_txt.Text;
+            int id_utilizador = UserLogged.IdUtilizador;
+            string data = DateTime.Now.Date.ToString("yyyy-MM-dd");
+
+            CampanhaControl.CriarCampanha(nome, descricao, id_utilizador, data);
         }
     }
 }

@@ -51,6 +51,20 @@ namespace ideial.Model.DAO
             }
         }
 
+        public MySqlDataReader SelecionarUtilizadorId(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE ID = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+        
         public void AtualizarUtilizador(int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
         {
             try
@@ -67,12 +81,11 @@ namespace ideial.Model.DAO
                 //Executa comando e cria um DataReader
                 comando.ExecuteReader();
 
-                MessageBox.Show("Registo atualizado com sucesso!", "Ideial", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                MessageBox.Show("Registo atualizado com sucesso!", "Ideial", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException msg)
             {
-                MessageBox.Show("Error: " + msg.Message);
+                MessageBox.Show("Erro: " + msg.Message);
             }
         }
 

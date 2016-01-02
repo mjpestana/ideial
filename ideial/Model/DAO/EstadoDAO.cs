@@ -1,30 +1,29 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace ideial.Model.DAO
 {
-    class TipoUtilizadorDAO
+    class EstadoDAO
     {
-
         public DataTable SelecionarTodos()
         {
             try
             {
                 MySqlDataAdapter cc;
 
-                DataSet TipoUtilizador_ds = new DataSet();
+                DataSet estado_ds = new DataSet();
                 ConexaoDb.FecharConexao();
 
-                string sql = "SELECT * FROM tipoutilizador";
+                string sql = "SELECT * FROM estado";
                 cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
-                cc.Fill(TipoUtilizador_ds, "TipoUtilizador_dt");
-                return TipoUtilizador_ds.Tables["TipoUtilizador_dt"];    
+                cc.Fill(estado_ds, "estado_dt");
+                return estado_ds.Tables["estado_dt"];
             }
             catch (System.Exception)
             {
                 throw;
             }
         }
-
     }
 }

@@ -173,6 +173,7 @@
             this.criarIdeia_btn.TabIndex = 14;
             this.criarIdeia_btn.Text = "Criar Ideia";
             this.criarIdeia_btn.UseVisualStyleBackColor = true;
+            this.criarIdeia_btn.Click += new System.EventHandler(this.criarIdeia_btn_Click);
             // 
             // CriarIdeia_frm
             // 

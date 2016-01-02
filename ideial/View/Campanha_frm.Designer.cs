@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Campanha_frm));
             this.campanhaBG_pnl = new System.Windows.Forms.Panel();
             this.bottom_pnl = new System.Windows.Forms.Panel();
+            this.adicionarIdeia_btn = new System.Windows.Forms.Button();
             this.camp_commentsNbr_lbl = new System.Windows.Forms.Label();
             this.comment_img = new System.Windows.Forms.PictureBox();
             this.ideiaConteudo_lbl = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.criadorCampanha_lbl = new System.Windows.Forms.Label();
             this.ideias_img = new System.Windows.Forms.PictureBox();
             this.criadorCampanhaPic_img = new System.Windows.Forms.PictureBox();
-            this.adicionarIdeia_btn = new System.Windows.Forms.Button();
             this.campanhaBG_pnl.SuspendLayout();
             this.bottom_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comment_img)).BeginInit();
@@ -72,6 +72,18 @@
             this.bottom_pnl.Name = "bottom_pnl";
             this.bottom_pnl.Size = new System.Drawing.Size(482, 36);
             this.bottom_pnl.TabIndex = 15;
+            // 
+            // adicionarIdeia_btn
+            // 
+            this.adicionarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adicionarIdeia_btn.BackgroundImage")));
+            this.adicionarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adicionarIdeia_btn.FlatAppearance.BorderSize = 0;
+            this.adicionarIdeia_btn.Location = new System.Drawing.Point(9, 4);
+            this.adicionarIdeia_btn.Name = "adicionarIdeia_btn";
+            this.adicionarIdeia_btn.Size = new System.Drawing.Size(29, 28);
+            this.adicionarIdeia_btn.TabIndex = 8;
+            this.adicionarIdeia_btn.UseVisualStyleBackColor = true;
+            this.adicionarIdeia_btn.Click += new System.EventHandler(this.adicionarIdeia_btn_Click);
             // 
             // camp_commentsNbr_lbl
             // 
@@ -119,7 +131,6 @@
             this.ideiaTitulo_lbl.Size = new System.Drawing.Size(158, 18);
             this.ideiaTitulo_lbl.TabIndex = 12;
             this.ideiaTitulo_lbl.Text = "Título da Campanha";
-            this.ideiaTitulo_lbl.Click += new System.EventHandler(this.ideiaTitulo_lbl_Click);
             // 
             // top_pnl
             // 
@@ -177,17 +188,6 @@
             this.criadorCampanhaPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.criadorCampanhaPic_img.TabIndex = 7;
             this.criadorCampanhaPic_img.TabStop = false;
-            // 
-            // adicionarIdeia_btn
-            // 
-            this.adicionarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adicionarIdeia_btn.BackgroundImage")));
-            this.adicionarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.adicionarIdeia_btn.FlatAppearance.BorderSize = 0;
-            this.adicionarIdeia_btn.Location = new System.Drawing.Point(9, 4);
-            this.adicionarIdeia_btn.Name = "adicionarIdeia_btn";
-            this.adicionarIdeia_btn.Size = new System.Drawing.Size(29, 28);
-            this.adicionarIdeia_btn.TabIndex = 8;
-            this.adicionarIdeia_btn.UseVisualStyleBackColor = true;
             // 
             // Campanha_frm
             // 

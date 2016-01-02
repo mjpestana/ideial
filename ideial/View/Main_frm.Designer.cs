@@ -39,11 +39,9 @@
             this.idea_img = new System.Windows.Forms.PictureBox();
             this.star_img = new System.Windows.Forms.PictureBox();
             this.utilizadores_btn = new System.Windows.Forms.Button();
-            this.favoritos_btn = new System.Windows.Forms.Button();
             this.ideias_btn = new System.Windows.Forms.Button();
             this.tipoUtilizador_lbl = new System.Windows.Forms.Label();
             this.userPic_img = new System.Windows.Forms.PictureBox();
-            this.Subsc_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.criarCampanha_lbl = new System.Windows.Forms.Label();
             this.criarCampanha_btn = new System.Windows.Forms.Button();
@@ -74,6 +72,7 @@
             this.campanhas_btn.TabIndex = 0;
             this.campanhas_btn.Text = "Campanhas";
             this.campanhas_btn.UseVisualStyleBackColor = false;
+            this.campanhas_btn.Click += new System.EventHandler(this.campanhas_btn_Click);
             // 
             // userName_lbl
             // 
@@ -98,11 +97,9 @@
             this.panel1.Controls.Add(this.idea_img);
             this.panel1.Controls.Add(this.star_img);
             this.panel1.Controls.Add(this.utilizadores_btn);
-            this.panel1.Controls.Add(this.favoritos_btn);
             this.panel1.Controls.Add(this.ideias_btn);
             this.panel1.Controls.Add(this.tipoUtilizador_lbl);
             this.panel1.Controls.Add(this.userPic_img);
-            this.panel1.Controls.Add(this.Subsc_btn);
             this.panel1.Controls.Add(this.campanhas_btn);
             this.panel1.Controls.Add(this.userName_lbl);
             this.panel1.Location = new System.Drawing.Point(1, 0);
@@ -198,22 +195,6 @@
             this.utilizadores_btn.UseVisualStyleBackColor = false;
             this.utilizadores_btn.Click += new System.EventHandler(this.utilizadores_btn_Click);
             // 
-            // favoritos_btn
-            // 
-            this.favoritos_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.favoritos_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.favoritos_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.favoritos_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.favoritos_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.favoritos_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.favoritos_btn.Location = new System.Drawing.Point(0, 298);
-            this.favoritos_btn.Name = "favoritos_btn";
-            this.favoritos_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.favoritos_btn.Size = new System.Drawing.Size(231, 38);
-            this.favoritos_btn.TabIndex = 9;
-            this.favoritos_btn.Text = "Favoritos";
-            this.favoritos_btn.UseVisualStyleBackColor = false;
-            // 
             // ideias_btn
             // 
             this.ideias_btn.BackColor = System.Drawing.SystemColors.Highlight;
@@ -229,6 +210,7 @@
             this.ideias_btn.TabIndex = 8;
             this.ideias_btn.Text = "Ideias";
             this.ideias_btn.UseVisualStyleBackColor = false;
+            this.ideias_btn.Click += new System.EventHandler(this.ideias_btn_Click);
             // 
             // tipoUtilizador_lbl
             // 
@@ -252,22 +234,6 @@
             this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userPic_img.TabIndex = 6;
             this.userPic_img.TabStop = false;
-            // 
-            // Subsc_btn
-            // 
-            this.Subsc_btn.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Subsc_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Subsc_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Subsc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Subsc_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subsc_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Subsc_btn.Location = new System.Drawing.Point(0, 338);
-            this.Subsc_btn.Name = "Subsc_btn";
-            this.Subsc_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Subsc_btn.Size = new System.Drawing.Size(231, 38);
-            this.Subsc_btn.TabIndex = 4;
-            this.Subsc_btn.Text = "Subscrições";
-            this.Subsc_btn.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -378,11 +344,9 @@
         private System.Windows.Forms.Button campanhas_btn;
         private System.Windows.Forms.Label userName_lbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Subsc_btn;
         private System.Windows.Forms.Label tipoUtilizador_lbl;
         private System.Windows.Forms.PictureBox userPic_img;
         private System.Windows.Forms.Button ideias_btn;
-        private System.Windows.Forms.Button favoritos_btn;
         private System.Windows.Forms.Button utilizadores_btn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label criarIdeia_lbl;

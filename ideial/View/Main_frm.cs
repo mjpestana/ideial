@@ -9,6 +9,7 @@ namespace ideial.View
 {
     public partial class Main_frm : Form
     {
+        private int idCampanha;
 
         public Main_frm() {
             InitializeComponent();
@@ -20,26 +21,27 @@ namespace ideial.View
             PermissoesFormPrincipal();
         }
 
-        private void utilizadores_btn_Click(object sender, EventArgs e)
+        private void AddFormInPanel(Form con)
         {
-            var form = Application.OpenForms.OfType<RegistoUtilizador_frm>().FirstOrDefault();
-            RegistoUtilizador_frm filho = form ?? new RegistoUtilizador_frm();
-            AddFormInPanel(filho);
-        }
-
-        private void AddFormInPanel(Form con) {
 
             if (this.panel_conteudo.Controls.Count != 0)
             {
                 this.panel_conteudo.Controls.RemoveAt(0);
             }
-                con.TopLevel = false;
-                con.FormBorderStyle = FormBorderStyle.None;
-                con.Dock = DockStyle.Fill;
+            con.TopLevel = false;
+            con.FormBorderStyle = FormBorderStyle.None;
+            con.Dock = DockStyle.Fill;
 
-                this.panel_conteudo.Controls.Add(con);
-                this.panel_conteudo.Tag = con;
-                con.Show();
+            this.panel_conteudo.Controls.Add(con);
+            this.panel_conteudo.Tag = con;
+            con.Show();
+        }
+
+        private void utilizadores_btn_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<RegistoUtilizador_frm>().FirstOrDefault();
+            RegistoUtilizador_frm filho = form ?? new RegistoUtilizador_frm();
+            AddFormInPanel(filho);
         }
 
         private void sair_btn_Click(object sender, EventArgs e)
@@ -114,7 +116,7 @@ namespace ideial.View
         private void criarIdeiaForm()
         {
             var form = Application.OpenForms.OfType<CriarIdeia_frm>().FirstOrDefault();
-            CriarIdeia_frm filho = form ?? new CriarIdeia_frm();
+            CriarIdeia_frm filho = form ?? new CriarIdeia_frm(idCampanha=0);
             AddFormInPanel(filho);
         }
 
@@ -135,5 +137,18 @@ namespace ideial.View
             AddFormInPanel(filho);
         }
 
+        private void ideias_btn_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<ListaIdeias_frm>().FirstOrDefault();
+            ListaIdeias_frm filho = form ?? new ListaIdeias_frm();
+            AddFormInPanel(filho);
+        }
+
+        private void campanhas_btn_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<ListaCampanhas_frm>().FirstOrDefault();
+            ListaCampanhas_frm filho = form ?? new ListaCampanhas_frm();
+            AddFormInPanel(filho);
+        }
     }
 }

@@ -47,12 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CampanhaControl.cs" />
     <Compile Include="Controller\CargoControl.cs" />
     <Compile Include="Controller\ContaControl.cs" />
     <Compile Include="Controller\DepartamentoControl.cs" />
     <Compile Include="Controller\EmpresaControl.cs" />
+    <Compile Include="Controller\IdeiaControl.cs" />
+    <Compile Include="Model\DAO\CampanhaDAO.cs" />
+    <Compile Include="Model\DAO\EstadoDAO.cs" />
     <Compile Include="Controller\TipoUtilizadorControl.cs" />
     <Compile Include="Controller\UtilizadorControl.cs" />
+    <Compile Include="Model\DAO\IdeiaDAO.cs" />
+    <Compile Include="Model\Entity\Campanha_old.cs" />
     <Compile Include="Model\Entity\ConcreteCliente.cs" />
     <Compile Include="Model\Entity\ConcreteColaborador.cs" />
     <Compile Include="Model\Entity\ConcreteFornecedor.cs" />
@@ -86,11 +92,24 @@
     <Compile Include="View\CriarIdeia_frm.Designer.cs">
       <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Ideias_frm.cs">
+    <Compile Include="Controller\EstadoControl.cs" />
+    <Compile Include="View\Ideia_frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Ideias_frm.Designer.cs">
-      <DependentUpon>Ideias_frm.cs</DependentUpon>
+    <Compile Include="View\Ideia_frm.Designer.cs">
+      <DependentUpon>Ideia_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListaCampanhas_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListaCampanhas_frm.Designer.cs">
+      <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListaIdeias_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListaIdeias_frm.Designer.cs">
+      <DependentUpon>ListaIdeias_frm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Main_frm.cs">
       <SubType>Form</SubType>
@@ -105,7 +124,6 @@
       <DependentUpon>Login_frm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Entity\Ideia.cs" />
-    <Compile Include="Controller\ISubscricaoCampanha.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Entity\Utilizador.cs" />
@@ -130,8 +148,14 @@
     <EmbeddedResource Include="View\CriarIdeia_frm.resx">
       <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Ideias_frm.resx">
-      <DependentUpon>Ideias_frm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Ideia_frm.resx">
+      <DependentUpon>Ideia_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListaCampanhas_frm.resx">
+      <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListaIdeias_frm.resx">
+      <DependentUpon>ListaIdeias_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main_frm.resx">
       <DependentUpon>Main_frm.cs</DependentUpon>

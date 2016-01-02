@@ -1,5 +1,5 @@
-﻿using System.Data;
-using ideial.Model.DAO;
+﻿using ideial.Model.DAO;
+using System.Data;
 
 namespace ideial.Controller
 {

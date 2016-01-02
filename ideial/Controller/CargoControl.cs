@@ -1,4 +1,5 @@
 ﻿using System.Data;
+
 using ideial.Model.DAO;
 
 namespace ideial.Controller

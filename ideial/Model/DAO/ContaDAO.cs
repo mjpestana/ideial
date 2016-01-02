@@ -61,7 +61,7 @@ namespace ideial.Model.DAO
             }
             catch (MySqlException msg)
             {
-                MessageBox.Show("Error: " + msg.Message);
+                MessageBox.Show("Erro: " + msg.Message);
             }
         }
 

@@ -116,6 +116,7 @@
             this.criarCampanha_btn.TabIndex = 21;
             this.criarCampanha_btn.Text = "Criar Campanha";
             this.criarCampanha_btn.UseVisualStyleBackColor = true;
+            this.criarCampanha_btn.Click += new System.EventHandler(this.criarCampanha_btn_Click);
             // 
             // CriarCampanha_frm
             // 

@@ -1,15 +1,13 @@
-﻿using ideial.Model.DAO;
-using ideial.Model.Entity;
+﻿using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
-using System;
+
+using ideial.Model.Entity;
+using ideial.Model.DAO;
 
 namespace ideial.Controller
 {
-    public class UtilizadorControl
+    class UtilizadorControl
     {
-        public int id_conta, userID, visitas, pontuacao, id_cargo, id_departamento, id_empresa;
-        public string nome, email, foto, tipoUtilizador;
 
         public static void CriarUtilizador(string user, string pass, string nome, string email, string foto, string tipo, int id_cargo, int id_departamento, int id_empresa)
         {
@@ -63,6 +61,18 @@ namespace ideial.Controller
             UserLogged.IdCargo = idCargo;
             UserLogged.IdDepartamento = idDepartamento;
             UserLogged.IdEmpresa = idEmpresa;
+        }
+
+        public string SelecionarUtilizadorId(int id)
+        {
+            UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
+
+            //Chama o método para selecionar Utilizador por Id
+            MySqlDataReader row = utilizadorDAO.SelecionarUtilizadorId(id);
+
+            string nome = row["nome"].ToString();
+
+            return nome;
         }
         
     }
