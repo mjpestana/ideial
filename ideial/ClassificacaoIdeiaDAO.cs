@@ -35,6 +35,20 @@ namespace ideial.Model.DAO
             }
         }
 
+        public MySqlDataReader SelecionarTotalClassif(int idId)
+        {
+            try
+            {
+                var reader = ConexaoDb.SelecionarRegistos("SELECT classificacao FROM classificacao WHERE id_ideia = '" + idId + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
         public void AtualizarClassificacao(int id, int classif)
         {
             try

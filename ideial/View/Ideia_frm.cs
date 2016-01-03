@@ -12,26 +12,29 @@ namespace ideial.View
         readonly Bitmap _starSelected = Properties.Resources.star;
         readonly Bitmap _starDeselected = Properties.Resources.inactiveStar;
 
-        private int idIdeia;
+        private readonly int _idIdeia;
         private bool _classificacaoExistente;
+
+        private readonly ClassificacaoIdeiaControl _cic = new ClassificacaoIdeiaControl();
 
         public Ideia_frm(int id)
         {
             InitializeComponent();
 
-            idIdeia = id;
+            _idIdeia = id;
         }
 
         private void Ideia_frm_Load(object sender, EventArgs e)
         {
             CarregaDadosIdeia();
             CarregaDadosClassificacao();
+            UpdateTotalClassif(_idIdeia);
         }
 
         private void CarregaDadosIdeia()
         {
             IdeiaControl ic = new IdeiaControl();
-            Ideia i = ic.SelecionarIdeiaId(idIdeia);
+            Ideia i = ic.SelecionarIdeiaId(_idIdeia);
 
             ideiaTitulo_lbl.Text = i.Titulo;
             ideiaConteudo_lbl.Text = i.Descricao;
@@ -44,8 +47,7 @@ namespace ideial.View
 
         private void CarregaDadosClassificacao()
         {
-            var cic = new ClassificacaoIdeiaControl();
-            var ci = cic.SelecionarClassif(idIdeia, UserLogged.IdUtilizador);
+            var ci = _cic.SelecionarClassif(_idIdeia, UserLogged.IdUtilizador);
             if (ci != null)
             {
                 _classificacaoExistente = true;
@@ -79,18 +81,24 @@ namespace ideial.View
             ideiaScore_img.Image = tempImage == _starSelected ? _starDeselected : _starSelected;
             
             var classificacao = ideiaScore_img.Image == _starSelected ? 1 : 0;
-
+            
             if (_classificacaoExistente)
             {
-                var cic = new ClassificacaoIdeiaControl();
-                var ideiaId = cic.SelecionarClassifId(idIdeia, UserLogged.IdUtilizador);
-
+                var ideiaId = _cic.SelecionarClassifId(_idIdeia, UserLogged.IdUtilizador);
                 ClassificacaoIdeiaControl.AtualizarClassificacao(ideiaId, classificacao);
             }
             else
             {
-                ClassificacaoIdeiaControl.ClassificarIdeia(idIdeia, UserLogged.IdUtilizador, classificacao);
+                ClassificacaoIdeiaControl.ClassificarIdeia(_idIdeia, UserLogged.IdUtilizador, classificacao);
             }
+
+            UpdateTotalClassif(_idIdeia);
+        }
+
+        private void UpdateTotalClassif(int idId)
+        {
+            var totalClassif = _cic.SelecionarTotalClassif(_idIdeia);
+            scoresNbr_lbl.Text = totalClassif.ToString();
         }
 
     }

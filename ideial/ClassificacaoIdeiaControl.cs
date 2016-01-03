@@ -52,6 +52,18 @@ namespace ideial.Controller
             return idClassif;
         }
 
+        public int SelecionarTotalClassif(int idId)
+        {
+            var classifSelec = new ClassificacaoIdeiaDAO();
+            var row = classifSelec.SelecionarTotalClassif(idId);
+            var total = 0;
+            while (row.Read())
+            {
+                total += Convert.ToInt32(row["classificacao"]);
+            }
+            return total;
+        }
+
         public static void AtualizarClassificacao(int id, int classif)
         {
             var classifDAO = new ClassificacaoIdeiaDAO();
