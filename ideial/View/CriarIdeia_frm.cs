@@ -13,7 +13,7 @@ namespace ideial.View
         public CriarIdeia_frm(int idCampanha)
         {
             InitializeComponent();
-
+            nomeCampanha_lbl.Text = idCampanha.ToString();
             id_campanha = idCampanha;
         }
 
@@ -47,6 +47,8 @@ namespace ideial.View
             string tags = tags_txt.Text;
 
             IdeiaControl.CriarIdeia(titulo, descricao, id_utilizador, data, id_estado, tags, id_campanha);
+            Close();
+
         }
 
         private void nomeCampanha_lbl_Click(object sender, EventArgs e)

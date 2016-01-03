@@ -9,7 +9,10 @@ namespace ideial.View
     public partial class Campanha_frm : Form
     {
         private int idCampanha;
+        private readonly CampanhaControl _cc = new CampanhaControl();
 
+        
+         
         public Campanha_frm(int id)
         {
             InitializeComponent();
@@ -20,12 +23,12 @@ namespace ideial.View
         private void Campanha_Load(object sender, EventArgs e)
         {
             CarregaDadosCampanha();
+            UpdateTotalIdeias(idCampanha);
         }
 
         private void CarregaDadosCampanha()
         {
-            CampanhaControl cc = new CampanhaControl();
-            Campanha c = cc.SelecionarCampanhaId(idCampanha);
+            Campanha c = _cc.SelecionarCampanhaId(idCampanha);
 
             ideiaTitulo_lbl.Text = c.Nome ;
             ideiaConteudo_lbl.Text = c.Descricao;
@@ -40,6 +43,12 @@ namespace ideial.View
         {
             CriarIdeia_frm form = new CriarIdeia_frm(idCampanha); //alterar para receber Id de forma dinâmica
             form.Show();
+        }
+
+        private void UpdateTotalIdeias(int idCampanha)
+        {
+            var totalIdeias = _cc.SelecionarTotalIdeias(idCampanha);
+            ideiasNbr_lbl.Text = totalIdeias.ToString();
         }
     }
 }

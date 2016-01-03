@@ -40,5 +40,16 @@ namespace ideial.Controller
             return campanha;
         }
 
+        public int SelecionarTotalIdeias(int id)
+        {
+            var ideiasCamp = new CampanhaDAO();
+            var row = ideiasCamp.SelecionarTotalIdeias(id);
+            var totalIdeias = 0;
+            while (row.Read())
+            {
+                totalIdeias ++;
+            }
+            return totalIdeias;
+        }
     }
 }
