@@ -56,7 +56,7 @@ namespace ideial.Model.DAO
             try
             {
                 MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM utilizador WHERE ID = '" + id + "'");
-
+                
                 return reader;
             }
             catch (System.Exception)

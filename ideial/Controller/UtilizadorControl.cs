@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 using ideial.Model.Entity;
@@ -69,9 +70,11 @@ namespace ideial.Controller
 
             //Chama o método para selecionar Utilizador por Id
             MySqlDataReader row = utilizadorDAO.SelecionarUtilizadorId(id);
-
-            string nome = row["nome"].ToString();
-
+            string nome = "";
+            while (row.Read())
+            {
+                nome = row["nome"].ToString();
+            }
             return nome;
         }
         
