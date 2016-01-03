@@ -48,5 +48,10 @@ namespace ideial.View
 
             IdeiaControl.CriarIdeia(titulo, descricao, id_utilizador, data, id_estado, tags, id_campanha);
         }
+
+        private void nomeCampanha_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

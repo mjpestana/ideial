@@ -44,7 +44,7 @@
             // 
             this.descricao_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricao_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.descricao_txt.Location = new System.Drawing.Point(155, 70);
+            this.descricao_txt.Location = new System.Drawing.Point(155, 75);
             this.descricao_txt.Multiline = true;
             this.descricao_txt.Name = "descricao_txt";
             this.descricao_txt.Size = new System.Drawing.Size(266, 101);
@@ -64,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(46, 70);
+            this.label2.Location = new System.Drawing.Point(46, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 14;
@@ -86,7 +86,7 @@
             this.data_lbl.AutoSize = true;
             this.data_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.data_lbl.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.data_lbl.Location = new System.Drawing.Point(155, 213);
+            this.data_lbl.Location = new System.Drawing.Point(155, 224);
             this.data_lbl.Name = "data_lbl";
             this.data_lbl.Size = new System.Drawing.Size(44, 20);
             this.data_lbl.TabIndex = 20;
@@ -97,7 +97,7 @@
             this.nomeUtilizador_lbl.AutoSize = true;
             this.nomeUtilizador_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeUtilizador_lbl.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.nomeUtilizador_lbl.Location = new System.Drawing.Point(155, 186);
+            this.nomeUtilizador_lbl.Location = new System.Drawing.Point(155, 192);
             this.nomeUtilizador_lbl.Name = "nomeUtilizador_lbl";
             this.nomeUtilizador_lbl.Size = new System.Drawing.Size(121, 20);
             this.nomeUtilizador_lbl.TabIndex = 19;
@@ -108,7 +108,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(82, 213);
+            this.label7.Location = new System.Drawing.Point(82, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
             this.label7.TabIndex = 18;
@@ -119,7 +119,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(51, 186);
+            this.label6.Location = new System.Drawing.Point(51, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 20);
             this.label6.TabIndex = 17;
@@ -130,7 +130,7 @@
             this.criarCampanha_btn.BackColor = System.Drawing.SystemColors.Highlight;
             this.criarCampanha_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.criarCampanha_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.criarCampanha_btn.Location = new System.Drawing.Point(170, 271);
+            this.criarCampanha_btn.Location = new System.Drawing.Point(170, 282);
             this.criarCampanha_btn.Name = "criarCampanha_btn";
             this.criarCampanha_btn.Size = new System.Drawing.Size(160, 38);
             this.criarCampanha_btn.TabIndex = 21;
