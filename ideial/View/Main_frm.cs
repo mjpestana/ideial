@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-
+using ideial.Controller;
 using ideial.Model.DAO;
 using ideial.Model.Entity;
 
@@ -11,7 +11,8 @@ namespace ideial.View
     public partial class Main_frm : Form
     {
         private int idCampanha;
-
+        private readonly UtilizadorControl _uc = new UtilizadorControl();
+        
         public Main_frm() {
             InitializeComponent();
         }
@@ -20,6 +21,7 @@ namespace ideial.View
         {
             CarregaDadosUtilizador();
             PermissoesFormPrincipal();
+            UpdateTotalIdeias(UserLogged.IdUtilizador);
         }
 
         private void AddFormInPanel(Form con)
@@ -150,6 +152,12 @@ namespace ideial.View
             var form = Application.OpenForms.OfType<ListaCampanhas_frm>().FirstOrDefault();
             ListaCampanhas_frm filho = form ?? new ListaCampanhas_frm();
             AddFormInPanel(filho);
+        }
+
+        private void UpdateTotalIdeias(int idUtiliz)
+        {
+            var totalIdeias = _uc.SelecionarTotalIdeias(idUtiliz);
+            numIdeias_lbl.Text = totalIdeias.ToString();
         }
     }
 }

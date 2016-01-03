@@ -77,6 +77,17 @@ namespace ideial.Controller
             }
             return nome;
         }
-        
+
+        public int SelecionarTotalIdeias(int id)
+        {
+            var ideiasUtiliz = new UtilizadorDAO();
+            var row = ideiasUtiliz.SelecionarTotalIdeias(id);
+            var totalIdeias = 0;
+            while (row.Read())
+            {
+                totalIdeias++;
+            }
+            return totalIdeias;
+        }
     }
 }
