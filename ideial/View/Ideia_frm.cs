@@ -13,6 +13,7 @@ namespace ideial.View
         readonly Bitmap _starDeselected = Properties.Resources.inactiveStar;
 
         private int idIdeia;
+        private bool _classificacaoExistente;
 
         public Ideia_frm(int id)
         {
@@ -24,6 +25,7 @@ namespace ideial.View
         private void Ideia_frm_Load(object sender, EventArgs e)
         {
             CarregaDadosIdeia();
+            CarregaDadosClassificacao();
         }
 
         private void CarregaDadosIdeia()
@@ -38,6 +40,22 @@ namespace ideial.View
             string nomeUtilizador = uc.SelecionarUtilizadorId(i.IdUtilizador);
 
             criadorIdeia_lbl.Text = nomeUtilizador;
+        }
+
+        private void CarregaDadosClassificacao()
+        {
+            var cic = new ClassificacaoIdeiaControl();
+            var ci = cic.SelecionarClassif(idIdeia, UserLogged.IdUtilizador);
+            if (ci != null)
+            {
+                _classificacaoExistente = true;
+                ideiaScore_img.Image = ci.Classificacao == 1 ? _starSelected : _starDeselected;
+            }
+            else
+            {
+                _classificacaoExistente = false;
+                ideiaScore_img.Image = _starDeselected;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -59,6 +77,20 @@ namespace ideial.View
         {
             var tempImage = ideiaScore_img.Image;
             ideiaScore_img.Image = tempImage == _starSelected ? _starDeselected : _starSelected;
+            
+            var classificacao = ideiaScore_img.Image == _starSelected ? 1 : 0;
+
+            if (_classificacaoExistente)
+            {
+                var cic = new ClassificacaoIdeiaControl();
+                var ideiaId = cic.SelecionarClassifId(idIdeia, UserLogged.IdUtilizador);
+
+                ClassificacaoIdeiaControl.AtualizarClassificacao(ideiaId, classificacao);
+            }
+            else
+            {
+                ClassificacaoIdeiaControl.ClassificarIdeia(idIdeia, UserLogged.IdUtilizador, classificacao);
+            }
         }
 
     }

@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassificacaoIdeia.cs" />
+    <Compile Include="ClassificacaoIdeiaControl.cs" />
+    <Compile Include="ClassificacaoIdeiaDAO.cs" />
     <Compile Include="Controller\CampanhaControl.cs" />
     <Compile Include="Controller\CargoControl.cs" />
     <Compile Include="Controller\ContaControl.cs" />
