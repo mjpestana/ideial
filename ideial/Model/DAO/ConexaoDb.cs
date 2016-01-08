@@ -3,34 +3,53 @@ using MySql.Data.MySqlClient;
 
 namespace ideial.Model.DAO
 {
+    //Classe Singleton
     public class ConexaoDb
     {
-        public static MySqlConnection conexao = new MySqlConnection();
+        public static MySqlConnection conexaoString = new MySqlConnection();
 
-        public static void AbrirConexao()
+        private static ConexaoDb _instance;
+
+        //Construtor Protegido
+        protected ConexaoDb()
+        {
+        }
+
+        public static ConexaoDb GetConexaoDb()
+        {
+            if (_instance == null)
+            {
+                _instance = new ConexaoDb();
+            }
+
+            return _instance;
+        }
+
+        public void AbrirConexao()
         {
             FecharConexao();    //fecha conexão caso ainda esteja aberta
 
-            conexao.ConnectionString = "Server=127.0.0.1; Database=dbIdeial; User=ideial; Password=huqXfzsVXssTUhQJ;";
-            conexao.Open();
+            conexaoString.ConnectionString = "Server=127.0.0.1; Database=dbIdeial; User=ideial; Password=huqXfzsVXssTUhQJ;";
+            conexaoString.Open();
         }
 
-        public static void FecharConexao()
+        public void FecharConexao()
         {
-            if (conexao.State == ConnectionState.Open) //verifica se conexão está aberta
+            if (conexaoString.State == ConnectionState.Open) //verifica se conexão está aberta
             {
-                conexao.Close();
-                conexao.Dispose();
+                conexaoString.Close();
+                conexaoString.Dispose();
             }
         }
 
         public static long ExecutarComando(string sql)
         {
-            AbrirConexao();
+            ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+            conDb.AbrirConexao();
 
             MySqlCommand comando = new MySqlCommand();  //cria uma nova instância da classe OleDbCommand
             comando.CommandText = sql;  //define a instrução SQL a ser executada
-            comando.Connection = conexao;   //define a conexão usada para a instância do OleDbCommand
+            comando.Connection = conexaoString;   //define a conexão usada para a instância do OleDbCommand
 
             //Executa a instrução SQL e retorna o número de linhas afetadas
             int registos = comando.ExecuteNonQuery();
@@ -42,11 +61,12 @@ namespace ideial.Model.DAO
 
         public static MySqlDataReader SelecionarRegistos(string sql)
         {
-            AbrirConexao();
+            ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+            conDb.AbrirConexao();
 
             MySqlCommand comando = new MySqlCommand();
             comando.CommandText = sql;
-            comando.Connection = conexao;
+            comando.Connection = conexaoString;
 
             //Executa comando e cria um DataReader
             MySqlDataReader reader = comando.ExecuteReader();

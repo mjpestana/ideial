@@ -13,10 +13,12 @@ namespace ideial.Model.DAO
                 MySqlDataAdapter cc;
 
                 DataSet estado_ds = new DataSet();
-                ConexaoDb.FecharConexao();
+
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.FecharConexao();
 
                 string sql = "SELECT * FROM estado";
-                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexaoString);
                 cc.Fill(estado_ds, "estado_dt");
                 return estado_ds.Tables["estado_dt"];
             }

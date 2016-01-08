@@ -13,10 +13,12 @@ namespace ideial.Model.DAO
                 MySqlDataAdapter cc;
 
                 DataSet cargo_ds = new DataSet();
-                ConexaoDb.FecharConexao();
+
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.FecharConexao();
 
                 string sql = "SELECT * FROM cargo";
-                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexaoString);
                 cc.Fill(cargo_ds, "cargo_dt");
                 return cargo_ds.Tables["cargo_dt"];
             }

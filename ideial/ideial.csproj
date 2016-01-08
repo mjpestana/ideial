@@ -47,9 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassificacaoIdeia.cs" />
-    <Compile Include="ClassificacaoIdeiaControl.cs" />
-    <Compile Include="ClassificacaoIdeiaDAO.cs" />
+    <Compile Include="Model\Entity\ClassificacaoIdeia.cs" />
+    <Compile Include="Controller\ClassificacaoIdeiaControl.cs" />
+    <Compile Include="Model\DAO\ClassificacaoIdeiaDAO.cs" />
     <Compile Include="Controller\CampanhaControl.cs" />
     <Compile Include="Controller\CargoControl.cs" />
     <Compile Include="Controller\ContaControl.cs" />
@@ -61,7 +61,6 @@
     <Compile Include="Controller\TipoUtilizadorControl.cs" />
     <Compile Include="Controller\UtilizadorControl.cs" />
     <Compile Include="Model\DAO\IdeiaDAO.cs" />
-    <Compile Include="Model\Entity\Campanha_old.cs" />
     <Compile Include="Model\Entity\ConcreteCliente.cs" />
     <Compile Include="Model\Entity\ConcreteColaborador.cs" />
     <Compile Include="Model\Entity\ConcreteFornecedor.cs" />

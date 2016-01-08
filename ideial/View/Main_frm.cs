@@ -57,7 +57,9 @@ namespace ideial.View
         {
             if (MessageBox.Show("Deseja sair da aplicação?", "Ideial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ConexaoDb.FecharConexao(); //chama método para fechar conexão
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.FecharConexao();  //chama método para fechar conexão
+
                 Environment.Exit(0);    //fecha a aplicação 
             }
             else
@@ -96,11 +98,13 @@ namespace ideial.View
                 case "Gestor":
                     criarCampanha_lbl.Visible = true;
                     criarCampanha_btn.Visible = true;
+                    campanhas_btn.Visible = true;
                     utilizadores_btn.Visible = true;
                     break;
                 default:
                     criarCampanha_lbl.Visible = false;
                     criarCampanha_btn.Visible = false;
+                    campanhas_btn.Visible = false;
                     utilizadores_btn.Visible = false;
                     break;
             }

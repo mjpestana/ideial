@@ -13,10 +13,12 @@ namespace ideial.Model.DAO
                 MySqlDataAdapter cc;
 
                 DataSet TipoUtilizador_ds = new DataSet();
-                ConexaoDb.FecharConexao();
+
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.FecharConexao();
 
                 string sql = "SELECT * FROM tipoutilizador";
-                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexaoString);
                 cc.Fill(TipoUtilizador_ds, "TipoUtilizador_dt");
                 return TipoUtilizador_ds.Tables["TipoUtilizador_dt"];    
             }

@@ -14,10 +14,12 @@ namespace ideial.Model.DAO
                 MySqlDataAdapter cc;
 
                 DataSet Departamento_ds = new DataSet();
-                ConexaoDb.FecharConexao();
+
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.FecharConexao();
 
                 string sql = "SELECT * FROM departamento";
-                cc = new MySqlDataAdapter(sql, ConexaoDb.conexao);
+                cc = new MySqlDataAdapter(sql, ConexaoDb.conexaoString);
                 cc.Fill(Departamento_ds, "Departamento_dt");
 
                 return Departamento_ds.Tables["Departamento_dt"];

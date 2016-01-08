@@ -70,7 +70,7 @@
             this.campanhas_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.campanhas_btn.Size = new System.Drawing.Size(231, 38);
             this.campanhas_btn.TabIndex = 0;
-            this.campanhas_btn.Text = "Campanhas";
+            this.campanhas_btn.Text = "As minhas Campanhas";
             this.campanhas_btn.UseVisualStyleBackColor = false;
             this.campanhas_btn.Click += new System.EventHandler(this.campanhas_btn_Click);
             // 
@@ -208,7 +208,7 @@
             this.ideias_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ideias_btn.Size = new System.Drawing.Size(231, 38);
             this.ideias_btn.TabIndex = 8;
-            this.ideias_btn.Text = "Ideias";
+            this.ideias_btn.Text = "As minhas Ideias";
             this.ideias_btn.UseVisualStyleBackColor = false;
             this.ideias_btn.Click += new System.EventHandler(this.ideias_btn_Click);
             // 

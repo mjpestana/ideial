@@ -50,11 +50,12 @@ namespace ideial.Model.DAO
                 //Prepara string para atualizar dados da tabela 
                 string sql = "UPDATE conta SET password = '" + pass + "' WHERE ID = '" + idConta + "'";
 
-                ConexaoDb.AbrirConexao();
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.AbrirConexao();
 
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandText = sql;
-                comando.Connection = ConexaoDb.conexao;
+                comando.Connection = ConexaoDb.conexaoString;
 
                 //Executa comando
                 comando.ExecuteReader();
