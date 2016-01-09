@@ -22,11 +22,6 @@ namespace ideial.View
             CarregaDadosUtilizador();
             PermissoesFormPrincipal();
             UpdateTotalIdeias(UserLogged.IdUtilizador);
-
-            var form = Application.OpenForms.OfType<Feed_frm>().FirstOrDefault();
-            Feed_frm filho = form ?? new Feed_frm();
-            AddFormInPanel(filho);
-            
         }
 
         private void AddFormInPanel(Form con)
@@ -43,7 +38,6 @@ namespace ideial.View
             this.panel_conteudo.Controls.Add(con);
             this.panel_conteudo.Tag = con;
             con.Show();
-            
         }
 
         private void utilizadores_btn_Click(object sender, EventArgs e)

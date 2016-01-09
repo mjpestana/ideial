@@ -17,10 +17,5 @@ namespace ideial.View
             Ideia_frm form = new Ideia_frm(idIdeia = 1); //alterar para receber Id de forma dinâmica
             form.Show();
         }
-
-        private void ListaIdeias_frm_Load(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

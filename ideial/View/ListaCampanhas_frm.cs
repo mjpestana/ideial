@@ -16,10 +16,5 @@ namespace ideial.View
             Campanha_frm form = new Campanha_frm(idCampanha = 1); //alterar para receber Id de forma dinâmica
             form.Show();
         }
-
-        private void ListaCampanhas_frm_Load(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }
