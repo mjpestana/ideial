@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\FeedController.cs" />
     <Compile Include="Model\Entity\ClassificacaoIdeia.cs" />
     <Compile Include="Controller\ClassificacaoIdeiaControl.cs" />
     <Compile Include="Model\DAO\ClassificacaoIdeiaDAO.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Model\Entity\ConcreteGestor.cs" />
     <Compile Include="Model\Entity\UserLogged.cs" />
     <Compile Include="Model\Entity\FactoryUtilizador.cs" />
+    <Compile Include="Model\FeedDAO.cs" />
     <Compile Include="View\Campanha_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +97,12 @@
       <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\EstadoControl.cs" />
+    <Compile Include="View\Feed_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Feed_frm.Designer.cs">
+      <DependentUpon>Feed_frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Ideia_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CriarIdeia_frm.resx">
       <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Feed_frm.resx">
+      <DependentUpon>Feed_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ideia_frm.resx">
       <DependentUpon>Ideia_frm.cs</DependentUpon>
