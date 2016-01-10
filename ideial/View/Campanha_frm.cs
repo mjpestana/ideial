@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 using ideial.Controller;
@@ -8,27 +9,26 @@ namespace ideial.View
 {
     public partial class Campanha_frm : Form
     {
-        private int idCampanha;
+        public int IdCampanha { get; set; }
         private readonly CampanhaControl _cc = new CampanhaControl();
-
         
-         
         public Campanha_frm(int id)
         {
             InitializeComponent();
 
-            idCampanha = id;
+            IdCampanha = id;
         }
 
         private void Campanha_Load(object sender, EventArgs e)
         {
+            
             CarregaDadosCampanha();
-            UpdateTotalIdeias(idCampanha);
+            UpdateTotalIdeias(IdCampanha);
         }
 
         private void CarregaDadosCampanha()
         {
-            Campanha c = _cc.SelecionarCampanhaId(idCampanha);
+            Campanha c = _cc.SelecionarCampanhaId(IdCampanha);
 
             ideiaTitulo_lbl.Text = c.Nome ;
             ideiaConteudo_lbl.Text = c.Descricao;
@@ -41,7 +41,7 @@ namespace ideial.View
 
         private void adicionarIdeia_btn_Click(object sender, EventArgs e)
         {
-            CriarIdeia_frm form = new CriarIdeia_frm(idCampanha); //alterar para receber Id de forma dinâmica
+            CriarIdeia_frm form = new CriarIdeia_frm(IdCampanha); //alterar para receber Id de forma dinâmica
             form.Show();
         }
 
@@ -53,7 +53,19 @@ namespace ideial.View
 
         private void ideias_img_Click(object sender, EventArgs e)
         {
-            Main_frm.LoadFeedExternal(3, idCampanha);
+            Main_frm.LoadFeedExternal(3, IdCampanha);
+        }
+
+        private void ideias_img_Hover(object sender, EventArgs e)
+        {
+            ideias_img.Size = new Size(ideias_img.Width + 4, ideias_img.Height + 4);
+            ideias_img.Location = new Point(ideias_img.Location.X - 2, ideias_img.Location.Y - 2);
+        }
+
+        private void ideias_img_Leave(object sender, EventArgs e)
+        {
+            ideias_img.Size = new Size(ideias_img.Width - 4, ideias_img.Height - 4);
+            ideias_img.Location = new Point(ideias_img.Location.X + 2, ideias_img.Location.Y + 2);
         }
     }
 }

@@ -36,25 +36,25 @@
             this.sair_btn = new System.Windows.Forms.Button();
             this.numIdeias_lbl = new System.Windows.Forms.Label();
             this.score_lbl = new System.Windows.Forms.Label();
+            this.idea_img = new System.Windows.Forms.PictureBox();
+            this.star_img = new System.Windows.Forms.PictureBox();
             this.utilizadores_btn = new System.Windows.Forms.Button();
             this.ideias_btn = new System.Windows.Forms.Button();
             this.tipoUtilizador_lbl = new System.Windows.Forms.Label();
+            this.userPic_img = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.criarCampanha_lbl = new System.Windows.Forms.Label();
+            this.criarCampanha_btn = new System.Windows.Forms.Button();
+            this.criarIdeia_btn = new System.Windows.Forms.Button();
             this.criarIdeia_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.criarCampanha_btn = new System.Windows.Forms.Button();
-            this.criarIdeia_btn = new System.Windows.Forms.Button();
-            this.idea_img = new System.Windows.Forms.PictureBox();
-            this.star_img = new System.Windows.Forms.PictureBox();
-            this.userPic_img = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // campanhas_btn
@@ -128,7 +128,7 @@
             this.sair_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sair_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sair_btn.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.sair_btn.Location = new System.Drawing.Point(7, 342);
+            this.sair_btn.Location = new System.Drawing.Point(7, 413);
             this.sair_btn.Name = "sair_btn";
             this.sair_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sair_btn.Size = new System.Drawing.Size(218, 38);
@@ -160,6 +160,26 @@
             this.score_lbl.Size = new System.Drawing.Size(16, 17);
             this.score_lbl.TabIndex = 12;
             this.score_lbl.Text = "0";
+            // 
+            // idea_img
+            // 
+            this.idea_img.Image = ((System.Drawing.Image)(resources.GetObject("idea_img.Image")));
+            this.idea_img.Location = new System.Drawing.Point(156, 70);
+            this.idea_img.Name = "idea_img";
+            this.idea_img.Size = new System.Drawing.Size(26, 25);
+            this.idea_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.idea_img.TabIndex = 11;
+            this.idea_img.TabStop = false;
+            // 
+            // star_img
+            // 
+            this.star_img.Image = global::ideial.Properties.Resources.silverBadge1;
+            this.star_img.Location = new System.Drawing.Point(11, 67);
+            this.star_img.Name = "star_img";
+            this.star_img.Size = new System.Drawing.Size(36, 29);
+            this.star_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.star_img.TabIndex = 7;
+            this.star_img.TabStop = false;
             // 
             // utilizadores_btn
             // 
@@ -207,6 +227,17 @@
             this.tipoUtilizador_lbl.TabIndex = 7;
             this.tipoUtilizador_lbl.Text = "Tipo Utilizador";
             // 
+            // userPic_img
+            // 
+            this.userPic_img.Cursor = System.Windows.Forms.Cursors.Default;
+            this.userPic_img.Image = ((System.Drawing.Image)(resources.GetObject("userPic_img.Image")));
+            this.userPic_img.Location = new System.Drawing.Point(11, 12);
+            this.userPic_img.Name = "userPic_img";
+            this.userPic_img.Size = new System.Drawing.Size(44, 53);
+            this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPic_img.TabIndex = 6;
+            this.userPic_img.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.criarCampanha_lbl);
@@ -230,6 +261,35 @@
             this.criarCampanha_lbl.TabIndex = 13;
             this.criarCampanha_lbl.Text = "Criar Campanha";
             this.criarCampanha_lbl.Click += new System.EventHandler(this.criarCampanha_lbl_Click);
+            // 
+            // criarCampanha_btn
+            // 
+            this.criarCampanha_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.criarCampanha_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criarCampanha_btn.BackgroundImage")));
+            this.criarCampanha_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.criarCampanha_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.criarCampanha_btn.FlatAppearance.BorderSize = 0;
+            this.criarCampanha_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.criarCampanha_btn.Location = new System.Drawing.Point(162, 60);
+            this.criarCampanha_btn.Name = "criarCampanha_btn";
+            this.criarCampanha_btn.Size = new System.Drawing.Size(42, 42);
+            this.criarCampanha_btn.TabIndex = 12;
+            this.criarCampanha_btn.UseVisualStyleBackColor = false;
+            this.criarCampanha_btn.Click += new System.EventHandler(this.criarCampanha_btn_Click);
+            // 
+            // criarIdeia_btn
+            // 
+            this.criarIdeia_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.criarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criarIdeia_btn.BackgroundImage")));
+            this.criarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.criarIdeia_btn.FlatAppearance.BorderSize = 0;
+            this.criarIdeia_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.criarIdeia_btn.Location = new System.Drawing.Point(162, 12);
+            this.criarIdeia_btn.Name = "criarIdeia_btn";
+            this.criarIdeia_btn.Size = new System.Drawing.Size(42, 42);
+            this.criarIdeia_btn.TabIndex = 7;
+            this.criarIdeia_btn.UseVisualStyleBackColor = false;
+            this.criarIdeia_btn.Click += new System.EventHandler(this.criarIdeia_btn_Click);
             // 
             // criarIdeia_lbl
             // 
@@ -263,66 +323,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // criarCampanha_btn
-            // 
-            this.criarCampanha_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.criarCampanha_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criarCampanha_btn.BackgroundImage")));
-            this.criarCampanha_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.criarCampanha_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.criarCampanha_btn.FlatAppearance.BorderSize = 0;
-            this.criarCampanha_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.criarCampanha_btn.Location = new System.Drawing.Point(162, 60);
-            this.criarCampanha_btn.Name = "criarCampanha_btn";
-            this.criarCampanha_btn.Size = new System.Drawing.Size(42, 42);
-            this.criarCampanha_btn.TabIndex = 12;
-            this.criarCampanha_btn.UseVisualStyleBackColor = false;
-            this.criarCampanha_btn.Click += new System.EventHandler(this.criarCampanha_btn_Click);
-            // 
-            // criarIdeia_btn
-            // 
-            this.criarIdeia_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.criarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("criarIdeia_btn.BackgroundImage")));
-            this.criarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.criarIdeia_btn.FlatAppearance.BorderSize = 0;
-            this.criarIdeia_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.criarIdeia_btn.Location = new System.Drawing.Point(162, 12);
-            this.criarIdeia_btn.Name = "criarIdeia_btn";
-            this.criarIdeia_btn.Size = new System.Drawing.Size(42, 42);
-            this.criarIdeia_btn.TabIndex = 7;
-            this.criarIdeia_btn.UseVisualStyleBackColor = false;
-            this.criarIdeia_btn.Click += new System.EventHandler(this.criarIdeia_btn_Click);
-            // 
-            // idea_img
-            // 
-            this.idea_img.Image = ((System.Drawing.Image)(resources.GetObject("idea_img.Image")));
-            this.idea_img.Location = new System.Drawing.Point(156, 70);
-            this.idea_img.Name = "idea_img";
-            this.idea_img.Size = new System.Drawing.Size(26, 25);
-            this.idea_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.idea_img.TabIndex = 11;
-            this.idea_img.TabStop = false;
-            // 
-            // star_img
-            // 
-            this.star_img.Image = global::ideial.Properties.Resources.silverBadge1;
-            this.star_img.Location = new System.Drawing.Point(11, 67);
-            this.star_img.Name = "star_img";
-            this.star_img.Size = new System.Drawing.Size(36, 29);
-            this.star_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.star_img.TabIndex = 7;
-            this.star_img.TabStop = false;
-            // 
-            // userPic_img
-            // 
-            this.userPic_img.Cursor = System.Windows.Forms.Cursors.Default;
-            this.userPic_img.Image = ((System.Drawing.Image)(resources.GetObject("userPic_img.Image")));
-            this.userPic_img.Location = new System.Drawing.Point(11, 12);
-            this.userPic_img.Name = "userPic_img";
-            this.userPic_img.Size = new System.Drawing.Size(44, 53);
-            this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPic_img.TabIndex = 6;
-            this.userPic_img.TabStop = false;
-            // 
             // Main_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,12 +342,12 @@
             this.Load += new System.EventHandler(this.Main_frm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

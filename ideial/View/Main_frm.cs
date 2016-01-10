@@ -101,11 +101,12 @@ namespace ideial.View
 
         public static void LoadFeedExternal(int tipo, int id)
         {
+            
             var fc = Application.OpenForms["Feed_frm"];
             fc?.Close();
 
             var form = Application.OpenForms.OfType<Feed_frm>().FirstOrDefault();
-            var filho = form ?? new Feed_frm(tipo);
+            var filho = form ?? new Feed_frm(tipo, id);
             AddFormInPanel(filho);
         }
 
@@ -132,6 +133,7 @@ namespace ideial.View
                     utilizadores_btn.Visible = false;
                     criarIdeia_lbl.Location = new Point(criarIdeia_lbl.Location.X - 15, criarIdeia_lbl.Location.Y + 25);
                     criarIdeia_btn.Location = new Point(criarIdeia_btn.Location.X - 15, criarIdeia_btn.Location.Y + 25);
+                    ideias_btn.Location = new Point(ideias_btn.Location.X, ideias_btn.Location.Y - 40);
                     break;
             }
         }

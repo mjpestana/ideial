@@ -32,8 +32,6 @@
             this.campanhaBG_pnl = new System.Windows.Forms.Panel();
             this.bottom_pnl = new System.Windows.Forms.Panel();
             this.adicionarIdeia_btn = new System.Windows.Forms.Button();
-            this.camp_commentsNbr_lbl = new System.Windows.Forms.Label();
-            this.comment_img = new System.Windows.Forms.PictureBox();
             this.ideiaConteudo_lbl = new System.Windows.Forms.Label();
             this.ideiaTitulo_lbl = new System.Windows.Forms.Label();
             this.top_pnl = new System.Windows.Forms.Panel();
@@ -43,7 +41,6 @@
             this.criadorCampanhaPic_img = new System.Windows.Forms.PictureBox();
             this.campanhaBG_pnl.SuspendLayout();
             this.bottom_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).BeginInit();
             this.top_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ideias_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.criadorCampanhaPic_img)).BeginInit();
@@ -66,8 +63,6 @@
             // 
             this.bottom_pnl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.bottom_pnl.Controls.Add(this.adicionarIdeia_btn);
-            this.bottom_pnl.Controls.Add(this.camp_commentsNbr_lbl);
-            this.bottom_pnl.Controls.Add(this.comment_img);
             this.bottom_pnl.Location = new System.Drawing.Point(-1, 190);
             this.bottom_pnl.Name = "bottom_pnl";
             this.bottom_pnl.Size = new System.Drawing.Size(482, 36);
@@ -78,34 +73,13 @@
             this.adicionarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adicionarIdeia_btn.BackgroundImage")));
             this.adicionarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.adicionarIdeia_btn.FlatAppearance.BorderSize = 0;
-            this.adicionarIdeia_btn.Location = new System.Drawing.Point(9, 2);
+            this.adicionarIdeia_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adicionarIdeia_btn.Location = new System.Drawing.Point(388, 3);
             this.adicionarIdeia_btn.Name = "adicionarIdeia_btn";
             this.adicionarIdeia_btn.Size = new System.Drawing.Size(29, 28);
             this.adicionarIdeia_btn.TabIndex = 8;
             this.adicionarIdeia_btn.UseVisualStyleBackColor = true;
             this.adicionarIdeia_btn.Click += new System.EventHandler(this.adicionarIdeia_btn_Click);
-            // 
-            // camp_commentsNbr_lbl
-            // 
-            this.camp_commentsNbr_lbl.AutoSize = true;
-            this.camp_commentsNbr_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.camp_commentsNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.camp_commentsNbr_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.camp_commentsNbr_lbl.Location = new System.Drawing.Point(400, 10);
-            this.camp_commentsNbr_lbl.Name = "camp_commentsNbr_lbl";
-            this.camp_commentsNbr_lbl.Size = new System.Drawing.Size(16, 17);
-            this.camp_commentsNbr_lbl.TabIndex = 15;
-            this.camp_commentsNbr_lbl.Text = "0";
-            // 
-            // comment_img
-            // 
-            this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
-            this.comment_img.Location = new System.Drawing.Point(364, 4);
-            this.comment_img.Name = "comment_img";
-            this.comment_img.Size = new System.Drawing.Size(29, 26);
-            this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.comment_img.TabIndex = 0;
-            this.comment_img.TabStop = false;
             // 
             // ideiaConteudo_lbl
             // 
@@ -178,6 +152,8 @@
             this.ideias_img.TabIndex = 13;
             this.ideias_img.TabStop = false;
             this.ideias_img.Click += new System.EventHandler(this.ideias_img_Click);
+            this.ideias_img.MouseLeave += new System.EventHandler(this.ideias_img_Leave);
+            this.ideias_img.MouseHover += new System.EventHandler(this.ideias_img_Hover);
             // 
             // criadorCampanhaPic_img
             // 
@@ -205,8 +181,6 @@
             this.campanhaBG_pnl.ResumeLayout(false);
             this.campanhaBG_pnl.PerformLayout();
             this.bottom_pnl.ResumeLayout(false);
-            this.bottom_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).EndInit();
             this.top_pnl.ResumeLayout(false);
             this.top_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ideias_img)).EndInit();
@@ -219,8 +193,6 @@
 
         private System.Windows.Forms.Panel campanhaBG_pnl;
         private System.Windows.Forms.Panel bottom_pnl;
-        private System.Windows.Forms.Label camp_commentsNbr_lbl;
-        private System.Windows.Forms.PictureBox comment_img;
         private System.Windows.Forms.Label ideiaConteudo_lbl;
         private System.Windows.Forms.Label ideiaTitulo_lbl;
         private System.Windows.Forms.Panel top_pnl;

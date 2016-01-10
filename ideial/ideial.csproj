@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ComentarioControl.cs" />
     <Compile Include="Controller\FeedControl.cs" />
+    <Compile Include="Model\DAO\ComentarioDAO.cs" />
     <Compile Include="Model\DAO\FeedDAO.cs" />
     <Compile Include="Model\Entity\ClassificacaoIdeia.cs" />
     <Compile Include="Controller\ClassificacaoIdeiaControl.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Controller\TipoUtilizadorControl.cs" />
     <Compile Include="Controller\UtilizadorControl.cs" />
     <Compile Include="Model\DAO\IdeiaDAO.cs" />
+    <Compile Include="Model\Entity\Comentario.cs" />
     <Compile Include="Model\Entity\ConcreteCliente.cs" />
     <Compile Include="Model\Entity\ConcreteColaborador.cs" />
     <Compile Include="Model\Entity\ConcreteFornecedor.cs" />
@@ -91,6 +94,12 @@
     <Compile Include="View\CriarCampanha_frm.Designer.cs">
       <DependentUpon>CriarCampanha_frm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CriarComentario_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CriarComentario_frm.Designer.cs">
+      <DependentUpon>CriarComentario_frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CriarIdeia_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +124,6 @@
     </Compile>
     <Compile Include="View\ListaCampanhas_frm.Designer.cs">
       <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ListaIdeias_frm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ListaIdeias_frm.Designer.cs">
-      <DependentUpon>ListaIdeias_frm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Main_frm.cs">
       <SubType>Form</SubType>
@@ -156,6 +159,9 @@
     <EmbeddedResource Include="View\CriarCampanha_frm.resx">
       <DependentUpon>CriarCampanha_frm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CriarComentario_frm.resx">
+      <DependentUpon>CriarComentario_frm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CriarIdeia_frm.resx">
       <DependentUpon>CriarIdeia_frm.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ListaCampanhas_frm.resx">
       <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ListaIdeias_frm.resx">
-      <DependentUpon>ListaIdeias_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main_frm.resx">
       <DependentUpon>Main_frm.cs</DependentUpon>
@@ -226,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\silverBadge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\plusLight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,7 +16,7 @@ namespace ideial.View
     public partial class Feed_frm : Form
     {
         private readonly int _tipoFeed;
-        private int _id;
+        public int Id { get; set; }
 
         public Feed_frm(int tipo)
         {
@@ -28,7 +28,8 @@ namespace ideial.View
         {
             InitializeComponent();
             _tipoFeed = tipo;
-            _id = id;
+            Id = id;
+            
         }
 
         private void Feed_frm_Load(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace ideial.View
                     PopulateFeedCampanhas();
                     break;
                 case 3:
-                    PopulateFeedIdeiasDaCampanha(_id);
+                    PopulateFeedIdeiasDaCampanha(Id);
                     break;
             }
         }
@@ -72,7 +73,7 @@ namespace ideial.View
                 
                 if (listaFeed.Keys.ElementAt(i).Contains("ideia"))
                 {
-                    filho = new Ideia_frm(listaFeed.Values.ElementAt(i));
+                    filho = new Ideia_frm(listaFeed.Values.ElementAt(i), false);
                 }
                 else
                 {
@@ -89,7 +90,7 @@ namespace ideial.View
 
             for (int i = 0; i < listaIdeias.Count; i++)
             {
-                Ideia_frm filho = new Ideia_frm(listaIdeias.Keys.ElementAt(i));
+                Ideia_frm filho = new Ideia_frm(listaIdeias.Keys.ElementAt(i), false);
                 AddFormInPanel(filho);
             }
         }
@@ -108,10 +109,10 @@ namespace ideial.View
         public void PopulateFeedIdeiasDaCampanha(int idCamp)
         {
             var listaIdeias = FeedControl.SelecionarIdeiasDaCampanha(idCamp);
-
+            
             for (int i = 0; i < listaIdeias.Count; i++)
             {
-                Ideia_frm filho = new Ideia_frm(listaIdeias[i]);
+                Ideia_frm filho = new Ideia_frm(listaIdeias[i], false);
                 AddFormInPanel(filho);
             }
         }

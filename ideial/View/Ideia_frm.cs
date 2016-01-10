@@ -11,30 +11,43 @@ namespace ideial.View
     {
         readonly Bitmap _starSelected = Properties.Resources.star;
         readonly Bitmap _starDeselected = Properties.Resources.inactiveStar;
-
-        private readonly int _idIdeia;
+        private bool _mostraComentarios;
+        public int IdIdeia { get; set; }
         private bool _classificacaoExistente;
 
         private readonly ClassificacaoIdeiaControl _cic = new ClassificacaoIdeiaControl();
 
-        public Ideia_frm(int id)
+        public Ideia_frm(int id, bool mostraComentarios)
         {
             InitializeComponent();
-
-            _idIdeia = id;
+            _mostraComentarios = mostraComentarios;
+            IdIdeia = id;
         }
 
         private void Ideia_frm_Load(object sender, EventArgs e)
         {
+            if (_mostraComentarios)
+            {
+                this.Size = new Size(460, 415);
+            }
+            else
+            {
+                this.Size = new Size(460, 265);
+            }
             CarregaDadosIdeia();
             CarregaDadosClassificacao();
-            UpdateTotalClassif(_idIdeia);
+            UpdateTotalClassif(IdIdeia);
+        }
+
+        public int IdDaIdeiaEmFocus()
+        {
+            return IdIdeia;
         }
 
         private void CarregaDadosIdeia()
         {
             IdeiaControl ic = new IdeiaControl();
-            Ideia i = ic.SelecionarIdeiaId(_idIdeia);
+            Ideia i = ic.SelecionarIdeiaId(IdIdeia);
 
             ideiaTitulo_lbl.Text = i.Titulo;
             ideiaConteudo_lbl.Text = i.Descricao;
@@ -47,7 +60,7 @@ namespace ideial.View
 
         private void CarregaDadosClassificacao()
         {
-            var ci = _cic.SelecionarClassif(_idIdeia, UserLogged.IdUtilizador);
+            var ci = _cic.SelecionarClassif(IdIdeia, UserLogged.IdUtilizador);
             if (ci != null)
             {
                 _classificacaoExistente = true;
@@ -84,22 +97,27 @@ namespace ideial.View
             
             if (_classificacaoExistente)
             {
-                var ideiaId = _cic.SelecionarClassifId(_idIdeia, UserLogged.IdUtilizador);
+                var ideiaId = _cic.SelecionarClassifId(IdIdeia, UserLogged.IdUtilizador);
                 ClassificacaoIdeiaControl.AtualizarClassificacao(ideiaId, classificacao);
             }
             else
             {
-                ClassificacaoIdeiaControl.ClassificarIdeia(_idIdeia, UserLogged.IdUtilizador, classificacao);
+                ClassificacaoIdeiaControl.ClassificarIdeia(IdIdeia, UserLogged.IdUtilizador, classificacao);
             }
 
-            UpdateTotalClassif(_idIdeia);
+            UpdateTotalClassif(IdIdeia);
         }
 
         private void UpdateTotalClassif(int idId)
         {
-            var totalClassif = _cic.SelecionarTotalClassif(_idIdeia);
+            var totalClassif = _cic.SelecionarTotalClassif(IdIdeia);
             scoresNbr_lbl.Text = totalClassif.ToString();
         }
 
+        private void adicionarComentario_btn_Click(object sender, EventArgs e)
+        {
+            CriarComentario_frm form = new CriarComentario_frm(IdIdeia); //alterar para receber Id de forma dinâmica
+            form.Show();
+        }
     }
 }
