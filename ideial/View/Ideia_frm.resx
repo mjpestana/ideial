@@ -159,7 +159,7 @@
 </value>
   </data>
   <data name="ideiaConteudo_lbl.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec aliquet tellus. Fusce pellentesque ornare lectus, non efficitur diam pretium vel. Duis condimentum auctor urna eget maximus. Mauris eget pulvinar orci, ut blandit tellus. Aenean quis ligula finibus, imperdiet est lacinia, elementum nulla. Maecenas nec commodo massa. Integer vitae mi eget risus iaculis pulvinar. Aliquam pellentesque ex vel placerat efficitur.</value>
+    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec aliquet tellus. Fusce pellentesque ornare lectus, non efficitur diam pretium vel. Duis condimentum auctor urna eget maximus. Mauris eget pulvinar orci, ut blandit tellus. Aenean quis ligula finibus, imperdiet est lacinia, elementum nulla. </value>
   </data>
   <data name="ideiaScore_img.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

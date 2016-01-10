@@ -306,7 +306,7 @@
             // 
             // mainv_ScrlBr
             // 
-            this.mainv_ScrlBr.Location = new System.Drawing.Point(512, 2);
+            this.mainv_ScrlBr.Location = new System.Drawing.Point(515, 12);
             this.mainv_ScrlBr.Name = "mainv_ScrlBr";
             this.mainv_ScrlBr.Size = new System.Drawing.Size(15, 455);
             this.mainv_ScrlBr.TabIndex = 0;

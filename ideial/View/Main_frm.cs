@@ -22,6 +22,7 @@ namespace ideial.View
             CarregaDadosUtilizador();
             PermissoesFormPrincipal();
             UpdateTotalIdeias(UserLogged.IdUtilizador);
+            LoadFeed();
         }
 
         private void AddFormInPanel(Form con)
@@ -82,6 +83,13 @@ namespace ideial.View
         {
             var form = Application.OpenForms.OfType<Perfil_frm>().FirstOrDefault();
             Perfil_frm filho = form ?? new Perfil_frm();
+            AddFormInPanel(filho);
+        }
+
+        private void LoadFeed()
+        {
+            var form = Application.OpenForms.OfType<Feed_frm>().FirstOrDefault();
+            var filho = form ?? new Feed_frm();
             AddFormInPanel(filho);
         }
 

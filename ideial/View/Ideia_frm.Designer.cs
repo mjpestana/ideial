@@ -57,7 +57,7 @@
             this.ideiasBG_pnl.Controls.Add(this.top_pnl);
             this.ideiasBG_pnl.Location = new System.Drawing.Point(0, 0);
             this.ideiasBG_pnl.Name = "ideiasBG_pnl";
-            this.ideiasBG_pnl.Size = new System.Drawing.Size(474, 282);
+            this.ideiasBG_pnl.Size = new System.Drawing.Size(420, 225);
             this.ideiasBG_pnl.TabIndex = 0;
             this.ideiasBG_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -66,9 +66,9 @@
             this.bottom_pnl.BackColor = System.Drawing.SystemColors.Highlight;
             this.bottom_pnl.Controls.Add(this.commentsNbr_lbl);
             this.bottom_pnl.Controls.Add(this.comment_img);
-            this.bottom_pnl.Location = new System.Drawing.Point(-1, 244);
+            this.bottom_pnl.Location = new System.Drawing.Point(-1, 189);
             this.bottom_pnl.Name = "bottom_pnl";
-            this.bottom_pnl.Size = new System.Drawing.Size(474, 36);
+            this.bottom_pnl.Size = new System.Drawing.Size(420, 36);
             this.bottom_pnl.TabIndex = 15;
             // 
             // commentsNbr_lbl
@@ -77,7 +77,7 @@
             this.commentsNbr_lbl.BackColor = System.Drawing.SystemColors.Highlight;
             this.commentsNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentsNbr_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.commentsNbr_lbl.Location = new System.Drawing.Point(444, 10);
+            this.commentsNbr_lbl.Location = new System.Drawing.Point(389, 10);
             this.commentsNbr_lbl.Name = "commentsNbr_lbl";
             this.commentsNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.commentsNbr_lbl.TabIndex = 15;
@@ -86,7 +86,7 @@
             // comment_img
             // 
             this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
-            this.comment_img.Location = new System.Drawing.Point(408, 4);
+            this.comment_img.Location = new System.Drawing.Point(353, 4);
             this.comment_img.Name = "comment_img";
             this.comment_img.Size = new System.Drawing.Size(30, 26);
             this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,9 +100,9 @@
             this.ideiaConteudo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ideiaConteudo_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
             this.ideiaConteudo_lbl.Location = new System.Drawing.Point(41, 97);
-            this.ideiaConteudo_lbl.MaximumSize = new System.Drawing.Size(400, 140);
+            this.ideiaConteudo_lbl.MaximumSize = new System.Drawing.Size(320, 100);
             this.ideiaConteudo_lbl.Name = "ideiaConteudo_lbl";
-            this.ideiaConteudo_lbl.Size = new System.Drawing.Size(400, 136);
+            this.ideiaConteudo_lbl.Size = new System.Drawing.Size(316, 100);
             this.ideiaConteudo_lbl.TabIndex = 13;
             this.ideiaConteudo_lbl.Text = resources.GetString("ideiaConteudo_lbl.Text");
             this.ideiaConteudo_lbl.Click += new System.EventHandler(this.ideiaConteudo_lbl_Click);
@@ -129,7 +129,7 @@
             this.top_pnl.Controls.Add(this.criadorIdeiaPic_img);
             this.top_pnl.Location = new System.Drawing.Point(-1, -1);
             this.top_pnl.Name = "top_pnl";
-            this.top_pnl.Size = new System.Drawing.Size(474, 55);
+            this.top_pnl.Size = new System.Drawing.Size(420, 55);
             this.top_pnl.TabIndex = 1;
             // 
             // scoresNbr_lbl
@@ -138,7 +138,7 @@
             this.scoresNbr_lbl.BackColor = System.Drawing.SystemColors.Highlight;
             this.scoresNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoresNbr_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.scoresNbr_lbl.Location = new System.Drawing.Point(444, 19);
+            this.scoresNbr_lbl.Location = new System.Drawing.Point(389, 19);
             this.scoresNbr_lbl.Name = "scoresNbr_lbl";
             this.scoresNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.scoresNbr_lbl.TabIndex = 14;
@@ -159,7 +159,7 @@
             // ideiaScore_img
             // 
             this.ideiaScore_img.Image = ((System.Drawing.Image)(resources.GetObject("ideiaScore_img.Image")));
-            this.ideiaScore_img.Location = new System.Drawing.Point(412, 17);
+            this.ideiaScore_img.Location = new System.Drawing.Point(357, 17);
             this.ideiaScore_img.Name = "ideiaScore_img";
             this.ideiaScore_img.Size = new System.Drawing.Size(26, 22);
             this.ideiaScore_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(474, 281);
+            this.ClientSize = new System.Drawing.Size(420, 226);
             this.Controls.Add(this.ideiasBG_pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -216,5 +216,9 @@
         private System.Windows.Forms.Panel bottom_pnl;
         private System.Windows.Forms.Label commentsNbr_lbl;
         private System.Windows.Forms.PictureBox comment_img;
+
+        public Ideia_frm()
+        {
+        }
     }
 }
