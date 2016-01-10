@@ -81,7 +81,7 @@ namespace ideial.Controller
         public int SelecionarTotalIdeias(int id)
         {
             var ideiasUtiliz = new UtilizadorDAO();
-            var row = ideiasUtiliz.SelecionarTotalIdeias(id);
+            var row = UtilizadorDAO.SelecionarTotalIdeias(id);
             var totalIdeias = 0;
             while (row.Read())
             {

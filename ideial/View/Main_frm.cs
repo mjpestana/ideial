@@ -22,22 +22,21 @@ namespace ideial.View
             CarregaDadosUtilizador();
             PermissoesFormPrincipal();
             UpdateTotalIdeias(UserLogged.IdUtilizador);
-            LoadFeed();
+            LoadFeed(0);
         }
 
         private void AddFormInPanel(Form con)
         {
-
-            if (this.panel_conteudo.Controls.Count != 0)
+            if (panel_conteudo.Controls.Count != 0)
             {
-                this.panel_conteudo.Controls.RemoveAt(0);
+                panel_conteudo.Controls.RemoveAt(0);
             }
             con.TopLevel = false;
             con.FormBorderStyle = FormBorderStyle.None;
             con.Dock = DockStyle.Fill;
 
-            this.panel_conteudo.Controls.Add(con);
-            this.panel_conteudo.Tag = con;
+            panel_conteudo.Controls.Add(con);
+            panel_conteudo.Tag = con;
             con.Show();
         }
 
@@ -50,7 +49,7 @@ namespace ideial.View
 
         private void sair_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             
         }
 
@@ -86,10 +85,13 @@ namespace ideial.View
             AddFormInPanel(filho);
         }
 
-        private void LoadFeed()
+        private void LoadFeed(int tipo)
         {
+            var fc = Application.OpenForms["Feed_frm"];
+            fc?.Close();
+
             var form = Application.OpenForms.OfType<Feed_frm>().FirstOrDefault();
-            var filho = form ?? new Feed_frm();
+            var filho = form ?? new Feed_frm(tipo);
             AddFormInPanel(filho);
         }
 
@@ -154,22 +156,28 @@ namespace ideial.View
 
         private void ideias_btn_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<ListaIdeias_frm>().FirstOrDefault();
-            ListaIdeias_frm filho = form ?? new ListaIdeias_frm();
-            AddFormInPanel(filho);
+            LoadFeed(1);
         }
 
         private void campanhas_btn_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<ListaCampanhas_frm>().FirstOrDefault();
-            ListaCampanhas_frm filho = form ?? new ListaCampanhas_frm();
-            AddFormInPanel(filho);
+            LoadFeed(2);
         }
 
         private void UpdateTotalIdeias(int idUtiliz)
         {
             var totalIdeias = _uc.SelecionarTotalIdeias(idUtiliz);
             numIdeias_lbl.Text = totalIdeias.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            LoadFeed(0);
         }
     }
 }

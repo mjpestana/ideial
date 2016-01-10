@@ -171,7 +171,7 @@
             // ideias_img
             // 
             this.ideias_img.Image = ((System.Drawing.Image)(resources.GetObject("ideias_img.Image")));
-            this.ideias_img.Location = new System.Drawing.Point(365, 10);
+            this.ideias_img.Location = new System.Drawing.Point(364, 16);
             this.ideias_img.Name = "ideias_img";
             this.ideias_img.Size = new System.Drawing.Size(25, 22);
             this.ideias_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

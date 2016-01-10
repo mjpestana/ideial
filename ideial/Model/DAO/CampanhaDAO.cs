@@ -36,7 +36,7 @@ namespace ideial.Model.DAO
             }
         }
 
-        public MySqlDataReader SelecionarTotalIdeias(int id)
+        public MySqlDataReader SelecionarTotalIdeiasCamp(int id)
         {
             try
             {

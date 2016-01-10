@@ -48,13 +48,13 @@
             this.criarIdeia_btn = new System.Windows.Forms.Button();
             this.criarIdeia_lbl = new System.Windows.Forms.Label();
             this.panel_conteudo = new System.Windows.Forms.Panel();
-            this.mainv_ScrlBr = new System.Windows.Forms.VScrollBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel_conteudo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // campanhas_btn
@@ -298,18 +298,22 @@
             // 
             // panel_conteudo
             // 
-            this.panel_conteudo.Controls.Add(this.mainv_ScrlBr);
-            this.panel_conteudo.Location = new System.Drawing.Point(254, 0);
+            this.panel_conteudo.Location = new System.Drawing.Point(238, 40);
             this.panel_conteudo.Name = "panel_conteudo";
-            this.panel_conteudo.Size = new System.Drawing.Size(530, 460);
+            this.panel_conteudo.Size = new System.Drawing.Size(543, 420);
             this.panel_conteudo.TabIndex = 7;
             // 
-            // mainv_ScrlBr
+            // pictureBox1
             // 
-            this.mainv_ScrlBr.Location = new System.Drawing.Point(515, 12);
-            this.mainv_ScrlBr.Name = "mainv_ScrlBr";
-            this.mainv_ScrlBr.Size = new System.Drawing.Size(15, 455);
-            this.mainv_ScrlBr.TabIndex = 0;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Image = global::ideial.Properties.Resources.ideial_logo_white;
+            this.pictureBox1.Location = new System.Drawing.Point(238, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(543, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // Main_frm
             // 
@@ -317,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel_conteudo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -334,7 +339,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel_conteudo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,8 +364,8 @@
         private System.Windows.Forms.Button sair_btn;
         private System.Windows.Forms.Button criarCampanha_btn;
         private System.Windows.Forms.Label criarCampanha_lbl;
-        private System.Windows.Forms.VScrollBar mainv_ScrlBr;
         private System.Windows.Forms.Button editPrfl_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -159,7 +159,7 @@
             // ideiaScore_img
             // 
             this.ideiaScore_img.Image = ((System.Drawing.Image)(resources.GetObject("ideiaScore_img.Image")));
-            this.ideiaScore_img.Location = new System.Drawing.Point(382, 17);
+            this.ideiaScore_img.Location = new System.Drawing.Point(382, 16);
             this.ideiaScore_img.Name = "ideiaScore_img";
             this.ideiaScore_img.Size = new System.Drawing.Size(26, 22);
             this.ideiaScore_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

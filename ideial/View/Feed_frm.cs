@@ -2,32 +2,48 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ideial.Controller;
+using ideial.Model.Entity;
 
 namespace ideial.View
 {
     public partial class Feed_frm : Form
     {
-        public Feed_frm()
+        private readonly int _tipoFeed;
+
+        public Feed_frm(int tipo)
         {
             InitializeComponent();
+            _tipoFeed = tipo;
         }
 
         private void Feed_frm_Load(object sender, EventArgs e)
         {
-            PopulateFeed();
+            switch (_tipoFeed)
+            {
+                case 0:
+                    PopulateFeed();
+                    break;
+                case 1:
+                    PopulateFeedIdeias();
+                    break;
+                case 2:
+                    PopulateFeedCampanhas();
+                    break;
+            }
         }
 
         private void AddFormInPanel(Form con)
         {
             con.TopLevel = false;
             con.FormBorderStyle = FormBorderStyle.None;
-            con.Location = new Point(10, feed_pnl.Controls.Count * 270);
+            con.Location = new Point(20, feed_pnl.Controls.Count * 270);
             this.feed_pnl.Controls.Add(con);
             this.feed_pnl.Tag = con;
             con.Show();
@@ -58,24 +74,22 @@ namespace ideial.View
 
         private void PopulateFeedIdeias()
         {
-            var listaIdeias = FeedControl.SelecionarIdeias();
+            var listaIdeias = FeedControl.SelecionarIdeiasUtiliz();
 
             for (int i = 0; i < listaIdeias.Count; i++)
             {
                 Ideia_frm filho = new Ideia_frm(listaIdeias.Keys.ElementAt(i));
-                filho.Name = filho.Name + i;
                 AddFormInPanel(filho);
             }
         }
 
         private void PopulateFeedCampanhas()
         {
-            var listaCampanhas = FeedControl.SelecionarCampanhas();
+            var listaCampanhas = FeedControl.SelecionarCampanhasUtiliz();
 
             for (int i = 0; i < listaCampanhas.Count; i++)
             {
                 Campanha_frm filho = new Campanha_frm(listaCampanhas.Keys.ElementAt(i));
-                filho.Name = filho.Name + i;
                 AddFormInPanel(filho);
             }
         }

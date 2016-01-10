@@ -36,14 +36,14 @@
             this.feed_pnl.AutoScroll = true;
             this.feed_pnl.Location = new System.Drawing.Point(12, 12);
             this.feed_pnl.Name = "feed_pnl";
-            this.feed_pnl.Size = new System.Drawing.Size(479, 399);
+            this.feed_pnl.Size = new System.Drawing.Size(513, 394);
             this.feed_pnl.TabIndex = 0;
             // 
             // Feed_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 423);
+            this.ClientSize = new System.Drawing.Size(527, 405);
             this.Controls.Add(this.feed_pnl);
             this.Name = "Feed_frm";
             this.Text = "Feed";

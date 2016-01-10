@@ -47,7 +47,7 @@ namespace ideial.View
 
         private void UpdateTotalIdeias(int idCampanha)
         {
-            var totalIdeias = _cc.SelecionarTotalIdeias(idCampanha);
+            var totalIdeias = _cc.SelecionarTotalIdeiasCamp(idCampanha);
             ideiasNbr_lbl.Text = totalIdeias.ToString();
         }
     }

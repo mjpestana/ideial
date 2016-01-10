@@ -36,5 +36,33 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        public static MySqlDataReader SelecionarIdeiasUtiliz(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_utilizador = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
+        public static MySqlDataReader SelecionarCampanhasUtiliz(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM campanha WHERE id_utilizador = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }
