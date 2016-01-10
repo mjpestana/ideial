@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(542, 405);
             this.Controls.Add(this.feed_pnl);
             this.Name = "Feed_frm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Feed";
             this.Load += new System.EventHandler(this.Feed_frm_Load);
             this.ResumeLayout(false);

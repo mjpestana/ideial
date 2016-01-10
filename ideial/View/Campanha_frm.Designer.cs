@@ -176,6 +176,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Campanha_frm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Campanha";
             this.Load += new System.EventHandler(this.Campanha_Load);
             this.campanhaBG_pnl.ResumeLayout(false);

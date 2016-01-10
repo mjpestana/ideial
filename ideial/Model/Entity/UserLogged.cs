@@ -14,5 +14,6 @@ namespace ideial.Model.Entity
         public static int IdCargo { get; set; }
         public static int IdDepartamento { get; set; }
         public static int IdEmpresa { get; set; }
+        public static int Pontuacao { get; set; }
     }
 }

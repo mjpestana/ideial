@@ -125,12 +125,6 @@
     <Compile Include="View\Ideia_frm.Designer.cs">
       <DependentUpon>Ideia_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ListaCampanhas_frm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ListaCampanhas_frm.Designer.cs">
-      <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Main_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Ideia_frm.resx">
       <DependentUpon>Ideia_frm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ListaCampanhas_frm.resx">
-      <DependentUpon>ListaCampanhas_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main_frm.resx">
       <DependentUpon>Main_frm.cs</DependentUpon>

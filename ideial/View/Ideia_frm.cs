@@ -29,7 +29,8 @@ namespace ideial.View
 
         private void Ideia_frm_Load(object sender, EventArgs e)
         {
-            _listaComentarios = ComentarioControl.SelecionarComentariosDaIdeia(IdIdeia);
+            var cc = new ComentarioControl();
+            _listaComentarios = cc.SelecionarComentariosDaIdeia(IdIdeia);
             _numComent = _listaComentarios.Count;
             commentsNbr_lbl.Text = _numComent.ToString();
             if (_mostraComentarios)

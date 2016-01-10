@@ -40,7 +40,7 @@ namespace ideial.Controller
             return _comentario;
         }
 
-        public static List<int> SelecionarComentariosDaIdeia(int id)
+        public List<int> SelecionarComentariosDaIdeia(int id)
         {
             List<int> listaComentarios = new List<int>();
 

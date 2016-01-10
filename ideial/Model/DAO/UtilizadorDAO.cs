@@ -105,5 +105,43 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        public void AtualizarPontuacaoUtilizador(int idUtilizador, int pontuacao)
+        {
+            try
+            {
+                //Prepara string para atualizar dados da tabela 
+                string sql = "UPDATE utilizador SET pontuacao = '" + pontuacao + "' WHERE ID = '" + idUtilizador + "'";
+
+                ConexaoDb conDb = ConexaoDb.GetConexaoDb();
+                conDb.AbrirConexao();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandText = sql;
+                comando.Connection = ConexaoDb.conexaoString;
+
+                //Executa comando e cria um DataReader
+                comando.ExecuteReader();
+                
+            }
+            catch (MySqlException msg)
+            {
+                MessageBox.Show("Erro: " + msg.Message);
+            }
+        }
+
+        public MySqlDataReader PontuacaoUtilizador(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT pontuacao FROM utilizador WHERE ID = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }

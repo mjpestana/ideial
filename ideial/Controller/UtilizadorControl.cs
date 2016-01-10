@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -10,22 +11,24 @@ namespace ideial.Controller
     class UtilizadorControl
     {
 
-        public static void CriarUtilizador(string user, string pass, string nome, string email, string foto, string tipo, int id_cargo, int id_departamento, int id_empresa)
+        public static void CriarUtilizador(string user, string pass, string nome, string email, string foto, string tipo,
+            int id_cargo, int id_departamento, int id_empresa)
         {
             //Instância Conta
             Conta c = new Conta(user, pass);
 
             //Insere Conta na Db e retorna IdConta
             ContaDAO contaDAO = new ContaDAO();
-            int contaId = (int)contaDAO.InserirConta(c);
+            int contaId = (int) contaDAO.InserirConta(c);
 
             //Instância Utilizador
             FactoryUtilizador utilizador = new FactoryUtilizador();
-            Utilizador u = utilizador.getUtilizadorObj(contaId, nome, email, foto, tipo, id_cargo, id_departamento, id_empresa);
-            
+            Utilizador u = utilizador.getUtilizadorObj(contaId, nome, email, foto, tipo, id_cargo, id_departamento,
+                id_empresa);
+
             //Instância UtilizadorDAO e chama método para guardar Utilizador na DB e retorna IdConta
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-            int userId = (int)utilizadorDAO.InserirUtilizador(u);
+            int userId = (int) utilizadorDAO.InserirUtilizador(u);
 
             if (userId > 0)
             {
@@ -34,11 +37,14 @@ namespace ideial.Controller
             }
             else
             {
-                MessageBox.Show("Ocorreu um problema ao inserir o registo!", "Ideial", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um problema ao inserir o registo!", "Ideial", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
-        public static void AtualizarUtilizador(int idConta, string user, string pass, int idUtilizador, string tipoUtilizador, string nome, string email, string foto, int idCargo, int idDepartamento, int idEmpresa)
+        public static void AtualizarUtilizador(int idConta, string user, string pass, int idUtilizador,
+            string tipoUtilizador, string nome, string email, string foto, int idCargo, int idDepartamento,
+            int idEmpresa)
         {
             if (pass != "")
             {
@@ -62,6 +68,20 @@ namespace ideial.Controller
             UserLogged.IdCargo = idCargo;
             UserLogged.IdDepartamento = idDepartamento;
             UserLogged.IdEmpresa = idEmpresa;
+        }
+
+        public void AtualizarPontuacaoUtilizador(int idUtilizador, int pontuacao)
+        {
+
+            //Atualiza Utilizador na Db
+            UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
+            utilizadorDAO.AtualizarPontuacaoUtilizador(idUtilizador, pontuacao);
+            MySqlDataReader row = utilizadorDAO.PontuacaoUtilizador(idUtilizador);
+            while (row.Read())
+            {
+                UserLogged.Pontuacao = Convert.ToInt32(row["pontuacao"].ToString());
+            }
+
         }
 
         public string SelecionarUtilizadorId(int id)
@@ -90,6 +110,28 @@ namespace ideial.Controller
             return totalIdeias;
         }
 
-       
+        public List<int> SelecionarListaIdeiasDoUtilizador(int id)
+        {
+            var ideiasUtiliz = new UtilizadorDAO();
+            var row = UtilizadorDAO.SelecionarTotalIdeias(id);
+            var listaIdeiasUtiliz =new List<int>();
+            while (row.Read())
+            {
+                listaIdeiasUtiliz.Add(Convert.ToInt32(row["ID"].ToString()));
+            }
+            return listaIdeiasUtiliz;
+        }
+        
+        public int PontuacaoUtilizador(int id)
+        {
+            var pontuacaoUtiliz = new UtilizadorDAO();
+            var row = pontuacaoUtiliz.PontuacaoUtilizador(id);
+            var scoreUtiliz = 0;
+            while (row.Read())
+            {
+                scoreUtiliz = Convert.ToInt32(row["pontuacao"].ToString());
+            }
+            return scoreUtiliz;
+        }
     }
 }

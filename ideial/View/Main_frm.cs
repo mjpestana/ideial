@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace ideial.View
         private int idCampanha;
         private readonly UtilizadorControl _uc = new UtilizadorControl();
         private static Panel _panel_conteudo;
+        private int _scoreUtiliz;
 
         public Main_frm() {
             InitializeComponent();
@@ -24,9 +26,52 @@ namespace ideial.View
         private void Main_frm_Load(object sender, EventArgs e)
         {
             CarregaDadosUtilizador();
+            CalculaScoreUtilizador();
             PermissoesFormPrincipal();
             UpdateTotalIdeias(UserLogged.IdUtilizador);
             LoadFeed(0);
+        }
+
+        private void CalculaScoreUtilizador()
+        {
+            var scoreIdeias = _uc.SelecionarTotalIdeias(UserLogged.IdUtilizador);
+
+            var listaIdeias = _uc.SelecionarListaIdeiasDoUtilizador(UserLogged.IdUtilizador);
+
+            var scoreLikes = 2 * CalculaTotalClassificacoes(listaIdeias);
+            var scoreComentariosRecebidos = CalculaTotalComentarios(listaIdeias);
+
+            int pontuacao = scoreIdeias + scoreLikes + scoreComentariosRecebidos;
+
+            _uc.AtualizarPontuacaoUtilizador(UserLogged.IdUtilizador, pontuacao);
+            _scoreUtiliz = _uc.PontuacaoUtilizador(UserLogged.IdUtilizador);
+            score_lbl.Text = _scoreUtiliz.ToString();
+        }
+
+        private int CalculaTotalClassificacoes(List<int> listaIdeias)
+        {
+            
+            var cc = new ComentarioControl();
+            var scoreComent = 0;
+
+            for (var i = 0; i < listaIdeias.Count; i++)
+            {
+                scoreComent += cc.SelecionarComentariosDaIdeia(listaIdeias[i]).Count;
+            }
+            return scoreComent;
+        }
+
+        private int CalculaTotalComentarios(List<int> listaIdeias)
+        {
+            
+            var cic = new ClassificacaoIdeiaControl();
+            var scoreLikes = 0;
+
+            for (var i = 0; i < listaIdeias.Count; i++)
+            {
+                scoreLikes += cic.SelecionarTotalClassif(listaIdeias[i]);
+            }
+            return scoreLikes;
         }
 
         public static void AddFormInPanel(Form con)

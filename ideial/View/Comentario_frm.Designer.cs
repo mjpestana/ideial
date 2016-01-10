@@ -93,6 +93,7 @@
             this.Controls.Add(this.top_pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Comentario_frm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Comentario_frm";
             this.Load += new System.EventHandler(this.Comentario_frm_Load);
             this.top_pnl.ResumeLayout(false);
