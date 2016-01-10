@@ -57,9 +57,9 @@
             this.campanhaBG_pnl.Controls.Add(this.ideiaConteudo_lbl);
             this.campanhaBG_pnl.Controls.Add(this.ideiaTitulo_lbl);
             this.campanhaBG_pnl.Controls.Add(this.top_pnl);
-            this.campanhaBG_pnl.Location = new System.Drawing.Point(2, -1);
+            this.campanhaBG_pnl.Location = new System.Drawing.Point(0, 0);
             this.campanhaBG_pnl.Name = "campanhaBG_pnl";
-            this.campanhaBG_pnl.Size = new System.Drawing.Size(483, 282);
+            this.campanhaBG_pnl.Size = new System.Drawing.Size(443, 225);
             this.campanhaBG_pnl.TabIndex = 1;
             // 
             // bottom_pnl
@@ -68,7 +68,7 @@
             this.bottom_pnl.Controls.Add(this.adicionarIdeia_btn);
             this.bottom_pnl.Controls.Add(this.camp_commentsNbr_lbl);
             this.bottom_pnl.Controls.Add(this.comment_img);
-            this.bottom_pnl.Location = new System.Drawing.Point(-1, 245);
+            this.bottom_pnl.Location = new System.Drawing.Point(-1, 190);
             this.bottom_pnl.Name = "bottom_pnl";
             this.bottom_pnl.Size = new System.Drawing.Size(482, 36);
             this.bottom_pnl.TabIndex = 15;
@@ -78,7 +78,7 @@
             this.adicionarIdeia_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adicionarIdeia_btn.BackgroundImage")));
             this.adicionarIdeia_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.adicionarIdeia_btn.FlatAppearance.BorderSize = 0;
-            this.adicionarIdeia_btn.Location = new System.Drawing.Point(9, 4);
+            this.adicionarIdeia_btn.Location = new System.Drawing.Point(9, 2);
             this.adicionarIdeia_btn.Name = "adicionarIdeia_btn";
             this.adicionarIdeia_btn.Size = new System.Drawing.Size(29, 28);
             this.adicionarIdeia_btn.TabIndex = 8;
@@ -91,7 +91,7 @@
             this.camp_commentsNbr_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.camp_commentsNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.camp_commentsNbr_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.camp_commentsNbr_lbl.Location = new System.Drawing.Point(444, 10);
+            this.camp_commentsNbr_lbl.Location = new System.Drawing.Point(400, 10);
             this.camp_commentsNbr_lbl.Name = "camp_commentsNbr_lbl";
             this.camp_commentsNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.camp_commentsNbr_lbl.TabIndex = 15;
@@ -100,9 +100,9 @@
             // comment_img
             // 
             this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
-            this.comment_img.Location = new System.Drawing.Point(408, 4);
+            this.comment_img.Location = new System.Drawing.Point(364, 4);
             this.comment_img.Name = "comment_img";
-            this.comment_img.Size = new System.Drawing.Size(30, 26);
+            this.comment_img.Size = new System.Drawing.Size(29, 26);
             this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.comment_img.TabIndex = 0;
             this.comment_img.TabStop = false;
@@ -114,9 +114,9 @@
             this.ideiaConteudo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ideiaConteudo_lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ideiaConteudo_lbl.Location = new System.Drawing.Point(41, 97);
-            this.ideiaConteudo_lbl.MaximumSize = new System.Drawing.Size(400, 140);
+            this.ideiaConteudo_lbl.MaximumSize = new System.Drawing.Size(375, 85);
             this.ideiaConteudo_lbl.Name = "ideiaConteudo_lbl";
-            this.ideiaConteudo_lbl.Size = new System.Drawing.Size(400, 136);
+            this.ideiaConteudo_lbl.Size = new System.Drawing.Size(365, 85);
             this.ideiaConteudo_lbl.TabIndex = 13;
             this.ideiaConteudo_lbl.Text = resources.GetString("ideiaConteudo_lbl.Text");
             // 
@@ -139,9 +139,9 @@
             this.top_pnl.Controls.Add(this.criadorCampanha_lbl);
             this.top_pnl.Controls.Add(this.ideias_img);
             this.top_pnl.Controls.Add(this.criadorCampanhaPic_img);
-            this.top_pnl.Location = new System.Drawing.Point(-1, -1);
+            this.top_pnl.Location = new System.Drawing.Point(-1, 0);
             this.top_pnl.Name = "top_pnl";
-            this.top_pnl.Size = new System.Drawing.Size(482, 56);
+            this.top_pnl.Size = new System.Drawing.Size(442, 53);
             this.top_pnl.TabIndex = 1;
             // 
             // ideiasNbr_lbl
@@ -150,7 +150,7 @@
             this.ideiasNbr_lbl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ideiasNbr_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ideiasNbr_lbl.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ideiasNbr_lbl.Location = new System.Drawing.Point(444, 19);
+            this.ideiasNbr_lbl.Location = new System.Drawing.Point(400, 19);
             this.ideiasNbr_lbl.Name = "ideiasNbr_lbl";
             this.ideiasNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.ideiasNbr_lbl.TabIndex = 14;
@@ -171,9 +171,9 @@
             // ideias_img
             // 
             this.ideias_img.Image = ((System.Drawing.Image)(resources.GetObject("ideias_img.Image")));
-            this.ideias_img.Location = new System.Drawing.Point(412, 17);
+            this.ideias_img.Location = new System.Drawing.Point(365, 10);
             this.ideias_img.Name = "ideias_img";
-            this.ideias_img.Size = new System.Drawing.Size(26, 22);
+            this.ideias_img.Size = new System.Drawing.Size(25, 22);
             this.ideias_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ideias_img.TabIndex = 13;
             this.ideias_img.TabStop = false;
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(484, 281);
+            this.ClientSize = new System.Drawing.Size(444, 226);
             this.Controls.Add(this.campanhaBG_pnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

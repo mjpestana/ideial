@@ -8,9 +8,9 @@ namespace ideial.Model.Entity
 {
     public class Feed
     {
-        public Dictionary<int, string> FeedCompleto;
+        public Dictionary<string, int> FeedCompleto;
         
-        public Feed(Dictionary<int, string> lista)
+        public Feed(Dictionary<string, int> lista)
         {
             FeedCompleto = lista;
         }

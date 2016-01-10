@@ -13,7 +13,7 @@ namespace ideial.Controller
     {
         private Feed _feed;
 
-        public Dictionary<int, DateTime> SelecionarIdeias()
+        public static Dictionary<int, DateTime> SelecionarIdeias()
         {
             Dictionary<int, DateTime> listaIdeias = new Dictionary<int, DateTime>();
             MySqlDataReader row = FeedDAO.SelecionarIdeias();
@@ -26,7 +26,7 @@ namespace ideial.Controller
             return listaIdeias;
         }
 
-        public Dictionary<int, DateTime> SelecionarCampanhas()
+        public static Dictionary<int, DateTime> SelecionarCampanhas()
         {
             Dictionary<int, DateTime> listaCampanhas = new Dictionary<int, DateTime>();
             MySqlDataReader row = FeedDAO.SelecionarCampanhas();
@@ -39,41 +39,78 @@ namespace ideial.Controller
             return listaCampanhas;
         }
 
-        public Feed GerarFeed(Dictionary<int, DateTime> li, Dictionary<int, DateTime> lc)
+        public static Dictionary<string, int> GerarFeed(Dictionary<int, DateTime> li, Dictionary<int, DateTime> lc)
         {
             var listaCampanhas = lc;
             var listaIdeias = li;
-            var listaGeral = new Dictionary<int, string>();
-
-            foreach (var pair in listaCampanhas)
+            var listaGeral = new Dictionary<string, int>();
+            var list1 = new Dictionary<int,DateTime>();
+            var list2 = new Dictionary<int, DateTime>();
+            string type1;
+            string type2;
+            //Console.WriteLine("1ª ideia: " + listaIdeias.Values.ElementAt(0) + "1ª campanha: " + listaCampanhas.Values.ElementAt(0));
+            var result = DateTime.Compare(listaIdeias.Values.ElementAt(0), listaCampanhas.Values.ElementAt(0));
+            if (result < 0)
             {
-                var campKey = pair.Key;
-                var campDate = pair.Value;
+                list1 = li;
+                type1="ideia";
+                list2 = lc;
+                type2 = "campanha";
+            }
+            else
+            {
+                list1 = lc;
+                type1 = "campanha";
+                list2 = li;
+                type2 = "ideia";
+            }
+
+            foreach (var pair in list1)
+            {
+                var list1Key = pair.Key;
+                var list1Date = pair.Value;
                 var added = false;
-
-                foreach (var pair2 in listaIdeias)
+                Console.WriteLine("list1Key: " + list1Key + " list1Date: " + list1Date);
+                
+                foreach (var pair2 in list2)
                 {
-                    var ideiaKey = pair.Key;
-                    var ideiaDate = pair.Value;
+                    var list2Key = pair2.Key;
+                    var list2Date = pair2.Value;
+                    var compare = DateTime.Compare(list2Date, list1Date);
 
-                    if (ideiaDate > campDate)
+                    Console.WriteLine("list2Key: " + list2Key + " list2Date: " + list2Date);
+                    if (compare < 0)
                     {
-                        listaGeral.Add(ideiaKey, "ideia");
-                        added = true;
+                        if (!listaGeral.ContainsKey(type2 + list2Key))
+                        {
+                            listaGeral.Add(type2 + list2Key, list2Key);
+                            added = true;
+                            Console.WriteLine("Added: " + list2Key + "-" + type2);
+                        }   
                     }
                     else
                     {
                         if (!added)
                         {
-                            listaGeral.Add(campKey, "campanha");
-                            added = true;
+                            if (!listaGeral.ContainsKey(type1 + list1Key))
+                            {
+                                listaGeral.Add(type1 + list1Key, list1Key);
+                                added = true;
+                                Console.WriteLine("Added: " + list1Key + "-" + type1);
+                            }  
                         }
                     }
+                    
                 }
-
+                //check if there is some in list 1 with date after the latest added
+                var compareLast = DateTime.Compare(list1Date, list2.Values.ElementAt(list2.Count - 1));
+                if (compareLast > 0 && !listaGeral.ContainsKey(type1 + list1Key))
+                {
+                    listaGeral.Add(type1 + list1Key, list1Key);
+                    Console.WriteLine("Added: " + list1Key + "-" + type1);
+                }
             }
-            var feedGeral = new Feed(listaGeral);
-            return feedGeral;
+            return listaGeral;
         }
     }
 
