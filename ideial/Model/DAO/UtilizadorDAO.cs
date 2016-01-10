@@ -64,7 +64,9 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
         
+
         public void AtualizarUtilizador(int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
         {
             try

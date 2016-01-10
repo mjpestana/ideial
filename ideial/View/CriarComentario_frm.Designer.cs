@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CriarComentario_frm));
             this.conteudo_txt = new System.Windows.Forms.TextBox();
             this.insira_lbl = new System.Windows.Forms.Label();
             this.submeterComentario_btn = new System.Windows.Forms.Button();
@@ -75,8 +76,11 @@
             this.Controls.Add(this.submeterComentario_btn);
             this.Controls.Add(this.insira_lbl);
             this.Controls.Add(this.conteudo_txt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CriarComentario_frm";
             this.Text = "Criar Comentario";
+            this.Load += new System.EventHandler(this.CriarComentario_frm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

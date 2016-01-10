@@ -32,5 +32,10 @@ namespace ideial.View
             Close();
 
         }
+
+        private void CriarComentario_frm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

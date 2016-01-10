@@ -59,7 +59,7 @@
             this.ideiasBG_pnl.Controls.Add(this.top_pnl);
             this.ideiasBG_pnl.Location = new System.Drawing.Point(0, 0);
             this.ideiasBG_pnl.Name = "ideiasBG_pnl";
-            this.ideiasBG_pnl.Size = new System.Drawing.Size(443, 225);
+            this.ideiasBG_pnl.Size = new System.Drawing.Size(444, 225);
             this.ideiasBG_pnl.TabIndex = 0;
             this.ideiasBG_pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -69,9 +69,9 @@
             this.bottom_pnl.Controls.Add(this.adicionarComentario_btn);
             this.bottom_pnl.Controls.Add(this.commentsNbr_lbl);
             this.bottom_pnl.Controls.Add(this.comment_img);
-            this.bottom_pnl.Location = new System.Drawing.Point(-1, 189);
+            this.bottom_pnl.Location = new System.Drawing.Point(0, 189);
             this.bottom_pnl.Name = "bottom_pnl";
-            this.bottom_pnl.Size = new System.Drawing.Size(449, 36);
+            this.bottom_pnl.Size = new System.Drawing.Size(444, 36);
             this.bottom_pnl.TabIndex = 15;
             // 
             // commentsNbr_lbl
@@ -120,9 +120,9 @@
             this.top_pnl.Controls.Add(this.criadorIdeia_lbl);
             this.top_pnl.Controls.Add(this.ideiaScore_img);
             this.top_pnl.Controls.Add(this.criadorIdeiaPic_img);
-            this.top_pnl.Location = new System.Drawing.Point(-1, -1);
+            this.top_pnl.Location = new System.Drawing.Point(0, 0);
             this.top_pnl.Name = "top_pnl";
-            this.top_pnl.Size = new System.Drawing.Size(449, 55);
+            this.top_pnl.Size = new System.Drawing.Size(444, 55);
             this.top_pnl.TabIndex = 1;
             // 
             // scoresNbr_lbl
@@ -152,9 +152,9 @@
             // comentarios_pnl
             // 
             this.comentarios_pnl.AutoScroll = true;
-            this.comentarios_pnl.Location = new System.Drawing.Point(0, 226);
+            this.comentarios_pnl.Location = new System.Drawing.Point(0, 225);
             this.comentarios_pnl.Name = "comentarios_pnl";
-            this.comentarios_pnl.Size = new System.Drawing.Size(443, 170);
+            this.comentarios_pnl.Size = new System.Drawing.Size(444, 170);
             this.comentarios_pnl.TabIndex = 1;
             // 
             // adicionarComentario_btn
@@ -179,6 +179,7 @@
             this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.comment_img.TabIndex = 0;
             this.comment_img.TabStop = false;
+            this.comment_img.Click += new System.EventHandler(this.comment_img_Click);
             // 
             // ideiaScore_img
             // 

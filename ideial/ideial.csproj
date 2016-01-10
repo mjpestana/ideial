@@ -88,6 +88,12 @@
     <Compile Include="Model\DAO\UtilizadorDAO.cs" />
     <Compile Include="Model\Entity\Campanha.cs" />
     <Compile Include="Model\Entity\Conta.cs" />
+    <Compile Include="View\Comentario_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Comentario_frm.Designer.cs">
+      <DependentUpon>Comentario_frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CriarCampanha_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="View\Campanha_frm.resx">
       <DependentUpon>Campanha_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comentario_frm.resx">
+      <DependentUpon>Comentario_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CriarCampanha_frm.resx">
       <DependentUpon>CriarCampanha_frm.cs</DependentUpon>

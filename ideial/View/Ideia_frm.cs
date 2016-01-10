@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace ideial.View
         private bool _mostraComentarios;
         public int IdIdeia { get; set; }
         private bool _classificacaoExistente;
+        private int _numComent;
+        private List<int> _listaComentarios = new List<int>();
 
         private readonly ClassificacaoIdeiaControl _cic = new ClassificacaoIdeiaControl();
 
@@ -26,9 +29,13 @@ namespace ideial.View
 
         private void Ideia_frm_Load(object sender, EventArgs e)
         {
+            _listaComentarios = ComentarioControl.SelecionarComentariosDaIdeia(IdIdeia);
+            _numComent = _listaComentarios.Count;
+            commentsNbr_lbl.Text = _numComent.ToString();
             if (_mostraComentarios)
             {
                 this.Size = new Size(460, 415);
+                PopulateFeedComentarios();
             }
             else
             {
@@ -38,6 +45,26 @@ namespace ideial.View
             CarregaDadosClassificacao();
             UpdateTotalClassif(IdIdeia);
         }
+
+        public void PopulateFeedComentarios()
+        {
+            for (int i = 0; i < _listaComentarios.Count; i++)
+            {
+                Comentario_frm filho = new Comentario_frm(_listaComentarios[i]);
+                AddFormInPanel(filho);
+            }
+        }
+
+        private void AddFormInPanel(Form con)
+        {
+            con.TopLevel = false;
+            con.FormBorderStyle = FormBorderStyle.None;
+            con.Location = new Point(0, comentarios_pnl.Controls.Count * 140);
+            this.comentarios_pnl.Controls.Add(con);
+            this.comentarios_pnl.Tag = con;
+            con.Show();
+        }
+
 
         public int IdDaIdeiaEmFocus()
         {
@@ -118,6 +145,15 @@ namespace ideial.View
         {
             CriarComentario_frm form = new CriarComentario_frm(IdIdeia); //alterar para receber Id de forma dinâmica
             form.Show();
+        }
+
+        private void comment_img_Click(object sender, EventArgs e)
+        {
+            if (_numComent > 0)
+            {
+                Ideia_frm form = new Ideia_frm(IdIdeia, true);
+                form.Show();
+            }
         }
     }
 }

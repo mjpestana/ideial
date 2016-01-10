@@ -24,5 +24,33 @@ namespace ideial.Model.DAO
                 MessageBox.Show(@"Erro: " + msg.Message);
             }
         }
+
+        public MySqlDataReader SelecionarComentarioId(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM comentario WHERE ID = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
+        public static MySqlDataReader SelecionarComentariosDaIdeia(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM comentario WHERE id_ideia = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }
