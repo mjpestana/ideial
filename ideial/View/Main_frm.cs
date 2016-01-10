@@ -12,9 +12,11 @@ namespace ideial.View
     {
         private int idCampanha;
         private readonly UtilizadorControl _uc = new UtilizadorControl();
-        
+        private static Panel _panel_conteudo;
+
         public Main_frm() {
             InitializeComponent();
+            _panel_conteudo = this.panel_conteudo;
         }
 
         private void Main_frm_Load(object sender, EventArgs e)
@@ -25,18 +27,18 @@ namespace ideial.View
             LoadFeed(0);
         }
 
-        private void AddFormInPanel(Form con)
+        public static void AddFormInPanel(Form con)
         {
-            if (panel_conteudo.Controls.Count != 0)
+            if (_panel_conteudo.Controls.Count != 0)
             {
-                panel_conteudo.Controls.RemoveAt(0);
+                _panel_conteudo.Controls.RemoveAt(0);
             }
             con.TopLevel = false;
             con.FormBorderStyle = FormBorderStyle.None;
             con.Dock = DockStyle.Fill;
 
-            panel_conteudo.Controls.Add(con);
-            panel_conteudo.Tag = con;
+            _panel_conteudo.Controls.Add(con);
+            _panel_conteudo.Tag = con;
             con.Show();
         }
 
@@ -86,6 +88,16 @@ namespace ideial.View
         }
 
         private void LoadFeed(int tipo)
+        {
+            var fc = Application.OpenForms["Feed_frm"];
+            fc?.Close();
+
+            var form = Application.OpenForms.OfType<Feed_frm>().FirstOrDefault();
+            var filho = form ?? new Feed_frm(tipo);
+            AddFormInPanel(filho);
+        }
+
+        public static void LoadFeedExternal(int tipo, int id)
         {
             var fc = Application.OpenForms["Feed_frm"];
             fc?.Close();
@@ -179,5 +191,6 @@ namespace ideial.View
         {
             LoadFeed(0);
         }
+
     }
 }

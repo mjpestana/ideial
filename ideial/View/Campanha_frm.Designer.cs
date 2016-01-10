@@ -177,6 +177,7 @@
             this.ideias_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ideias_img.TabIndex = 13;
             this.ideias_img.TabStop = false;
+            this.ideias_img.Click += new System.EventHandler(this.ideias_img_Click);
             // 
             // criadorCampanhaPic_img
             // 

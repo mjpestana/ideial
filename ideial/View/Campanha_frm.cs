@@ -50,5 +50,10 @@ namespace ideial.View
             var totalIdeias = _cc.SelecionarTotalIdeiasCamp(idCampanha);
             ideiasNbr_lbl.Text = totalIdeias.ToString();
         }
+
+        private void ideias_img_Click(object sender, EventArgs e)
+        {
+            Main_frm.LoadFeedExternal(3, idCampanha);
+        }
     }
 }

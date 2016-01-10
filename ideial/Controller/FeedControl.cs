@@ -129,6 +129,20 @@ namespace ideial.Controller
 
             return listaCampanhas;
         }
+
+        public static List<int> SelecionarIdeiasDaCampanha(int id)
+        {
+            List<int> listaIdeiasCamp = new List<int>();
+
+            MySqlDataReader row = FeedDAO.SelecionarCampanhasUtiliz(UserLogged.IdUtilizador);
+
+            while (row.Read())
+            {
+                listaIdeiasCamp.Add(Convert.ToInt32(row["ID"].ToString()));
+            }
+
+            return listaIdeiasCamp;
+        }
     }
 
 }
