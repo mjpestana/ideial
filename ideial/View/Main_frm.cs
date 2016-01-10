@@ -17,6 +17,8 @@ namespace ideial.View
         private readonly UtilizadorControl _uc = new UtilizadorControl();
         private static Panel _panel_conteudo;
         private int _scoreUtiliz;
+        readonly Bitmap _silverRank = Properties.Resources.silverBadge;
+        readonly Bitmap _goldRank = Properties.Resources.goldBadge;
 
         public Main_frm() {
             InitializeComponent();
@@ -27,9 +29,38 @@ namespace ideial.View
         {
             CarregaDadosUtilizador();
             CalculaScoreUtilizador();
+            CalculaRankUtilizador();
             PermissoesFormPrincipal();
             UpdateTotalIdeias(UserLogged.IdUtilizador);
             LoadFeed(0);
+        }
+
+        private void CalculaRankUtilizador()
+        {
+            var mediaTotal = CalculaMediaTodosUtilizadores();
+            
+            if (_scoreUtiliz > mediaTotal)
+            {
+                rank_img.Image = _goldRank;
+            }
+            else
+            {
+                rank_img.Image = _silverRank;
+            }
+        }
+
+        private int CalculaMediaTodosUtilizadores()
+        {
+            var media = 0;
+            var totalPont = _uc.PontuacaoTodosUtilizadores();
+            for(var i= 0; i < totalPont.Count; i ++)
+            {
+                media += totalPont[i];
+            }
+
+            media = media/totalPont.Count;
+
+            return media;
         }
 
         private void CalculaScoreUtilizador()

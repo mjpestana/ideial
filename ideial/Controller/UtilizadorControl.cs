@@ -133,5 +133,17 @@ namespace ideial.Controller
             }
             return scoreUtiliz;
         }
+
+        public List<int> PontuacaoTodosUtilizadores()
+        {
+            var pontuacaoUtiliz = new UtilizadorDAO();
+            var row = pontuacaoUtiliz.PontuacaoTodosUtilizadores();
+            var todasPontuacoes = new List<int>();
+            while (row.Read())
+            {
+                todasPontuacoes.Add(Convert.ToInt32(row["pontuacao"].ToString()));
+            }
+            return todasPontuacoes;
+        }
     }
 }

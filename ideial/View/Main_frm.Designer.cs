@@ -37,7 +37,7 @@
             this.numIdeias_lbl = new System.Windows.Forms.Label();
             this.score_lbl = new System.Windows.Forms.Label();
             this.idea_img = new System.Windows.Forms.PictureBox();
-            this.star_img = new System.Windows.Forms.PictureBox();
+            this.rank_img = new System.Windows.Forms.PictureBox();
             this.utilizadores_btn = new System.Windows.Forms.Button();
             this.ideias_btn = new System.Windows.Forms.Button();
             this.tipoUtilizador_lbl = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rank_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,7 +95,7 @@
             this.panel1.Controls.Add(this.numIdeias_lbl);
             this.panel1.Controls.Add(this.score_lbl);
             this.panel1.Controls.Add(this.idea_img);
-            this.panel1.Controls.Add(this.star_img);
+            this.panel1.Controls.Add(this.rank_img);
             this.panel1.Controls.Add(this.utilizadores_btn);
             this.panel1.Controls.Add(this.ideias_btn);
             this.panel1.Controls.Add(this.tipoUtilizador_lbl);
@@ -171,15 +171,15 @@
             this.idea_img.TabIndex = 11;
             this.idea_img.TabStop = false;
             // 
-            // star_img
+            // rank_img
             // 
-            this.star_img.Image = global::ideial.Properties.Resources.silverBadge1;
-            this.star_img.Location = new System.Drawing.Point(11, 67);
-            this.star_img.Name = "star_img";
-            this.star_img.Size = new System.Drawing.Size(36, 29);
-            this.star_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.star_img.TabIndex = 7;
-            this.star_img.TabStop = false;
+            this.rank_img.Image = global::ideial.Properties.Resources.silverBadge1;
+            this.rank_img.Location = new System.Drawing.Point(11, 67);
+            this.rank_img.Name = "rank_img";
+            this.rank_img.Size = new System.Drawing.Size(36, 29);
+            this.rank_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rank_img.TabIndex = 7;
+            this.rank_img.TabStop = false;
             // 
             // utilizadores_btn
             // 
@@ -343,7 +343,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idea_img)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.star_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rank_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPic_img)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -366,7 +366,7 @@
         private System.Windows.Forms.Button criarIdeia_btn;
         private System.Windows.Forms.Label score_lbl;
         private System.Windows.Forms.PictureBox idea_img;
-        private System.Windows.Forms.PictureBox star_img;
+        private System.Windows.Forms.PictureBox rank_img;
         private System.Windows.Forms.Label numIdeias_lbl;
         private System.Windows.Forms.Panel panel_conteudo;
         private System.Windows.Forms.Button sair_btn;

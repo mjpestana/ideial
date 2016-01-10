@@ -143,5 +143,19 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        public MySqlDataReader PontuacaoTodosUtilizadores()
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT pontuacao FROM utilizador");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }
