@@ -83,6 +83,16 @@ namespace ideial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goldBadge {
+            get {
+                object obj = ResourceManager.GetObject("goldBadge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ideia {
             get {
                 object obj = ResourceManager.GetObject("ideia", resourceCulture);
@@ -126,6 +136,26 @@ namespace ideial.Properties {
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silverBadge {
+            get {
+                object obj = ResourceManager.GetObject("silverBadge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silverBadge1 {
+            get {
+                object obj = ResourceManager.GetObject("silverBadge1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

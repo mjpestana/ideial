@@ -64,5 +64,19 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        public static MySqlDataReader SelecionarIdeiasDaCampanha(int id)
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_campanha = '" + id + "'");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }

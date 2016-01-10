@@ -134,7 +134,7 @@ namespace ideial.Controller
         {
             List<int> listaIdeiasCamp = new List<int>();
 
-            MySqlDataReader row = FeedDAO.SelecionarCampanhasUtiliz(UserLogged.IdUtilizador);
+            MySqlDataReader row = FeedDAO.SelecionarIdeiasDaCampanha(id);
 
             while (row.Read())
             {

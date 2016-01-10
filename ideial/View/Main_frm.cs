@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
+using System.Security;
 using System.Windows.Forms;
 using ideial.Controller;
 using ideial.Model.DAO;
@@ -128,6 +130,8 @@ namespace ideial.View
                     criarCampanha_btn.Visible = false;
                     campanhas_btn.Visible = false;
                     utilizadores_btn.Visible = false;
+                    criarIdeia_lbl.Location = new Point(criarIdeia_lbl.Location.X - 15, criarIdeia_lbl.Location.Y + 25);
+                    criarIdeia_btn.Location = new Point(criarIdeia_btn.Location.X - 15, criarIdeia_btn.Location.Y + 25);
                     break;
             }
         }
