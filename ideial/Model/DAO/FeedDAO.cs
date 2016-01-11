@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ideial.Model.Entity;
 using MySql.Data.MySqlClient;
 
 namespace ideial.Model.DAO
@@ -13,7 +14,7 @@ namespace ideial.Model.DAO
         {
             try
             {
-                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM ideia");
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_estado = 2");
 
                 return reader;
             }
@@ -41,7 +42,18 @@ namespace ideial.Model.DAO
         {
             try
             {
-                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_utilizador = '" + id + "'");
+                MySqlDataReader reader;
+
+                if (id == UserLogged.IdUtilizador)
+                {
+                    reader =
+                        ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_utilizador = '" + id + "'");
+                }
+                else
+                {
+                    reader =
+                        ConexaoDb.SelecionarRegistos("SELECT * FROM ideia WHERE id_utilizador = '" + id + "' AND id_estado = 2");
+                }
 
                 return reader;
             }
@@ -69,7 +81,7 @@ namespace ideial.Model.DAO
         {
             try
             {
-                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM ideia WHERE id_campanha = '" + id + "'");
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM ideia WHERE id_campanha = '" + id + "' AND id_estado = 2");
 
                 return reader;
             }

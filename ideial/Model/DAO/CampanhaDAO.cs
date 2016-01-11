@@ -40,7 +40,7 @@ namespace ideial.Model.DAO
         {
             try
             {
-                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM ideia WHERE id_campanha = '" + id + "'");
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM ideia WHERE id_campanha = '" + id + "' AND id_estado = 2");
 
                 return reader;
             }
