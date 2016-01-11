@@ -42,5 +42,11 @@ namespace ideial.Controller
 
             return ideia;
         }
+
+        public void AtualizarEstadoIdeia(int id, int estado)
+        {
+            var ideiaDao = new IdeiaDAO();
+            ideiaDao.AtualizarEstadoIdeia(id, estado);
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace ideial.View
     {
         readonly Bitmap _starSelected = Properties.Resources.star;
         readonly Bitmap _starDeselected = Properties.Resources.inactiveStar;
+        readonly Bitmap _visible = Properties.Resources.visible;
+        readonly Bitmap _hidden = Properties.Resources.hidden;
         private bool _mostraComentarios;
         public int IdIdeia { get; set; }
         private bool _classificacaoExistente;
@@ -82,6 +84,16 @@ namespace ideial.View
 
             UtilizadorControl uc = new UtilizadorControl();
             string nomeUtilizador = uc.SelecionarUtilizadorId(i.IdUtilizador);
+
+            if (i.IdUtilizador == UserLogged.IdUtilizador)
+            {
+                state_btn.Visible = true;
+                state_btn.BackgroundImage = i.IdEstado == 1 ? _hidden : _visible;
+            }
+            else
+            {
+                state_btn.Visible = false;
+            }
 
             criadorIdeia_lbl.Text = nomeUtilizador;
         }
@@ -155,6 +167,25 @@ namespace ideial.View
                 Ideia_frm form = new Ideia_frm(IdIdeia, true);
                 form.Show();
             }
+        }
+
+        private void state_btn_Click(object sender, EventArgs e)
+        {
+            state_btn.BackgroundImage = state_btn.BackgroundImage == _hidden ? _visible : _hidden;
+
+            var novoEstado = 0;
+
+            if (state_btn.BackgroundImage == _hidden)
+            {
+                novoEstado = 1;
+            }
+            else
+            {
+                novoEstado = 2;
+            }
+
+            var ic = new IdeiaControl();
+            ic.AtualizarEstadoIdeia(IdIdeia, novoEstado);
         }
     }
 }

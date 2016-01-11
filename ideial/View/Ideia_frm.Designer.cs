@@ -31,21 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ideia_frm));
             this.ideiasBG_pnl = new System.Windows.Forms.Panel();
             this.bottom_pnl = new System.Windows.Forms.Panel();
-            this.adicionarComentario_btn = new System.Windows.Forms.Button();
             this.commentsNbr_lbl = new System.Windows.Forms.Label();
-            this.comment_img = new System.Windows.Forms.PictureBox();
             this.ideiaConteudo_lbl = new System.Windows.Forms.Label();
             this.ideiaTitulo_lbl = new System.Windows.Forms.Label();
             this.top_pnl = new System.Windows.Forms.Panel();
             this.scoresNbr_lbl = new System.Windows.Forms.Label();
             this.criadorIdeia_lbl = new System.Windows.Forms.Label();
+            this.comentarios_pnl = new System.Windows.Forms.Panel();
+            this.adicionarComentario_btn = new System.Windows.Forms.Button();
+            this.comment_img = new System.Windows.Forms.PictureBox();
             this.ideiaScore_img = new System.Windows.Forms.PictureBox();
             this.criadorIdeiaPic_img = new System.Windows.Forms.PictureBox();
-            this.comentarios_pnl = new System.Windows.Forms.Panel();
+            this.state_btn = new System.Windows.Forms.Button();
             this.ideiasBG_pnl.SuspendLayout();
             this.bottom_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).BeginInit();
             this.top_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideiaScore_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.criadorIdeiaPic_img)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             // bottom_pnl
             // 
             this.bottom_pnl.BackColor = System.Drawing.SystemColors.Highlight;
+            this.bottom_pnl.Controls.Add(this.state_btn);
             this.bottom_pnl.Controls.Add(this.adicionarComentario_btn);
             this.bottom_pnl.Controls.Add(this.commentsNbr_lbl);
             this.bottom_pnl.Controls.Add(this.comment_img);
@@ -73,19 +75,6 @@
             this.bottom_pnl.Name = "bottom_pnl";
             this.bottom_pnl.Size = new System.Drawing.Size(444, 36);
             this.bottom_pnl.TabIndex = 15;
-            // 
-            // adicionarComentario_btn
-            // 
-            this.adicionarComentario_btn.BackgroundImage = global::ideial.Properties.Resources.plusLight;
-            this.adicionarComentario_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.adicionarComentario_btn.FlatAppearance.BorderSize = 0;
-            this.adicionarComentario_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adicionarComentario_btn.Location = new System.Drawing.Point(342, 3);
-            this.adicionarComentario_btn.Name = "adicionarComentario_btn";
-            this.adicionarComentario_btn.Size = new System.Drawing.Size(29, 28);
-            this.adicionarComentario_btn.TabIndex = 15;
-            this.adicionarComentario_btn.UseVisualStyleBackColor = true;
-            this.adicionarComentario_btn.Click += new System.EventHandler(this.adicionarComentario_btn_Click);
             // 
             // commentsNbr_lbl
             // 
@@ -98,17 +87,6 @@
             this.commentsNbr_lbl.Size = new System.Drawing.Size(16, 17);
             this.commentsNbr_lbl.TabIndex = 15;
             this.commentsNbr_lbl.Text = "0";
-            // 
-            // comment_img
-            // 
-            this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
-            this.comment_img.Location = new System.Drawing.Point(378, 4);
-            this.comment_img.Name = "comment_img";
-            this.comment_img.Size = new System.Drawing.Size(30, 26);
-            this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.comment_img.TabIndex = 0;
-            this.comment_img.TabStop = false;
-            this.comment_img.Click += new System.EventHandler(this.comment_img_Click);
             // 
             // ideiaConteudo_lbl
             // 
@@ -167,11 +145,43 @@
             this.criadorIdeia_lbl.BackColor = System.Drawing.SystemColors.Highlight;
             this.criadorIdeia_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.criadorIdeia_lbl.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.criadorIdeia_lbl.Location = new System.Drawing.Point(44, 20);
+            this.criadorIdeia_lbl.Location = new System.Drawing.Point(50, 20);
             this.criadorIdeia_lbl.Name = "criadorIdeia_lbl";
             this.criadorIdeia_lbl.Size = new System.Drawing.Size(96, 13);
             this.criadorIdeia_lbl.TabIndex = 8;
             this.criadorIdeia_lbl.Text = "Nome do Utilizador";
+            // 
+            // comentarios_pnl
+            // 
+            this.comentarios_pnl.AutoScroll = true;
+            this.comentarios_pnl.Location = new System.Drawing.Point(0, 225);
+            this.comentarios_pnl.Name = "comentarios_pnl";
+            this.comentarios_pnl.Size = new System.Drawing.Size(444, 170);
+            this.comentarios_pnl.TabIndex = 1;
+            // 
+            // adicionarComentario_btn
+            // 
+            this.adicionarComentario_btn.BackgroundImage = global::ideial.Properties.Resources.plusLight;
+            this.adicionarComentario_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adicionarComentario_btn.FlatAppearance.BorderSize = 0;
+            this.adicionarComentario_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adicionarComentario_btn.Location = new System.Drawing.Point(342, 3);
+            this.adicionarComentario_btn.Name = "adicionarComentario_btn";
+            this.adicionarComentario_btn.Size = new System.Drawing.Size(29, 28);
+            this.adicionarComentario_btn.TabIndex = 15;
+            this.adicionarComentario_btn.UseVisualStyleBackColor = true;
+            this.adicionarComentario_btn.Click += new System.EventHandler(this.adicionarComentario_btn_Click);
+            // 
+            // comment_img
+            // 
+            this.comment_img.Image = ((System.Drawing.Image)(resources.GetObject("comment_img.Image")));
+            this.comment_img.Location = new System.Drawing.Point(378, 4);
+            this.comment_img.Name = "comment_img";
+            this.comment_img.Size = new System.Drawing.Size(30, 26);
+            this.comment_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.comment_img.TabIndex = 0;
+            this.comment_img.TabStop = false;
+            this.comment_img.Click += new System.EventHandler(this.comment_img_Click);
             // 
             // ideiaScore_img
             // 
@@ -188,20 +198,25 @@
             // 
             this.criadorIdeiaPic_img.Cursor = System.Windows.Forms.Cursors.Default;
             this.criadorIdeiaPic_img.Image = ((System.Drawing.Image)(resources.GetObject("criadorIdeiaPic_img.Image")));
-            this.criadorIdeiaPic_img.Location = new System.Drawing.Point(9, 8);
+            this.criadorIdeiaPic_img.Location = new System.Drawing.Point(15, 8);
             this.criadorIdeiaPic_img.Name = "criadorIdeiaPic_img";
             this.criadorIdeiaPic_img.Size = new System.Drawing.Size(29, 38);
             this.criadorIdeiaPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.criadorIdeiaPic_img.TabIndex = 7;
             this.criadorIdeiaPic_img.TabStop = false;
             // 
-            // comentarios_pnl
+            // state_btn
             // 
-            this.comentarios_pnl.AutoScroll = true;
-            this.comentarios_pnl.Location = new System.Drawing.Point(0, 225);
-            this.comentarios_pnl.Name = "comentarios_pnl";
-            this.comentarios_pnl.Size = new System.Drawing.Size(444, 170);
-            this.comentarios_pnl.TabIndex = 1;
+            this.state_btn.BackgroundImage = global::ideial.Properties.Resources.visible;
+            this.state_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.state_btn.FlatAppearance.BorderSize = 0;
+            this.state_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.state_btn.Location = new System.Drawing.Point(15, 4);
+            this.state_btn.Name = "state_btn";
+            this.state_btn.Size = new System.Drawing.Size(29, 28);
+            this.state_btn.TabIndex = 16;
+            this.state_btn.UseVisualStyleBackColor = true;
+            this.state_btn.Click += new System.EventHandler(this.state_btn_Click);
             // 
             // Ideia_frm
             // 
@@ -221,9 +236,9 @@
             this.ideiasBG_pnl.PerformLayout();
             this.bottom_pnl.ResumeLayout(false);
             this.bottom_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).EndInit();
             this.top_pnl.ResumeLayout(false);
             this.top_pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comment_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ideiaScore_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.criadorIdeiaPic_img)).EndInit();
             this.ResumeLayout(false);
@@ -250,5 +265,6 @@
 
         private System.Windows.Forms.Panel comentarios_pnl;
         private System.Windows.Forms.Button adicionarComentario_btn;
+        private System.Windows.Forms.Button state_btn;
     }
 }
