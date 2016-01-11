@@ -48,6 +48,9 @@ namespace ideial.View
                 case 3:
                     PopulateFeedIdeiasDaCampanha(Id);
                     break;
+                case 4:
+                    PopulateFeedUtilizadores();
+                    break;
             }
         }
 
@@ -55,7 +58,12 @@ namespace ideial.View
         {
             con.TopLevel = false;
             con.FormBorderStyle = FormBorderStyle.None;
-            con.Location = new Point(20, feed_pnl.Controls.Count * 270);
+            var height = 270;
+
+            if (con.Name == "PerfilResumoFrm")
+                height = 170;
+
+            con.Location = new Point(20, feed_pnl.Controls.Count * height);
             this.feed_pnl.Controls.Add(con);
             this.feed_pnl.Tag = con;
             con.Show();
@@ -113,6 +121,17 @@ namespace ideial.View
             for (int i = 0; i < listaIdeias.Count; i++)
             {
                 Ideia_frm filho = new Ideia_frm(listaIdeias[i], false);
+                AddFormInPanel(filho);
+            }
+        }
+
+        public void PopulateFeedUtilizadores()
+        {
+            var listaUtilizadores = FeedControl.SelecionarTodosUtilizadores();
+
+            for (int i = 0; i < listaUtilizadores.Count; i++)
+            {
+                PerfilResumoFrm filho = new PerfilResumoFrm(listaUtilizadores[i]);
                 AddFormInPanel(filho);
             }
         }

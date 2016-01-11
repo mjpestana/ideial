@@ -210,6 +210,7 @@ namespace ideial.View
                     criarIdeia_lbl.Location = new Point(criarIdeia_lbl.Location.X - 15, criarIdeia_lbl.Location.Y + 25);
                     criarIdeia_btn.Location = new Point(criarIdeia_btn.Location.X - 15, criarIdeia_btn.Location.Y + 25);
                     ideias_btn.Location = new Point(ideias_btn.Location.X, ideias_btn.Location.Y - 40);
+                    utilizLista_btn.Location = new Point(utilizLista_btn.Location.X, utilizLista_btn.Location.Y - 40);
                     break;
             }
         }
@@ -274,5 +275,9 @@ namespace ideial.View
             LoadFeed(0);
         }
 
+        private void utilizLista_btn_Click(object sender, EventArgs e)
+        {
+            LoadFeed(4);
+        }
     }
 }

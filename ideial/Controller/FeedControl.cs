@@ -143,6 +143,20 @@ namespace ideial.Controller
 
             return listaIdeiasCamp;
         }
+
+        public static List<int> SelecionarTodosUtilizadores()
+        {
+            List<int> listaUtilizadores = new List<int>();
+
+            MySqlDataReader row = FeedDAO.SelecionarTodosUtilizadores();
+
+            while (row.Read())
+            {
+                listaUtilizadores.Add(Convert.ToInt32(row["ID"].ToString()));
+            }
+
+            return listaUtilizadores;
+        }
     }
 
 }

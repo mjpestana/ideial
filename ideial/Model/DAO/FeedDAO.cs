@@ -78,5 +78,19 @@ namespace ideial.Model.DAO
                 throw;
             }
         }
+
+        public static MySqlDataReader SelecionarTodosUtilizadores()
+        {
+            try
+            {
+                MySqlDataReader reader = ConexaoDb.SelecionarRegistos("SELECT ID FROM utilizador");
+
+                return reader;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }

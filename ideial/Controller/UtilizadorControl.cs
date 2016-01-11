@@ -98,6 +98,20 @@ namespace ideial.Controller
             return nome;
         }
 
+        public string SelecionarTipoUtilizadorId(int id)
+        {
+            UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
+
+            //Chama o método para selecionar Utilizador por Id
+            MySqlDataReader row = utilizadorDAO.SelecionarUtilizadorId(id);
+            string tipo = "";
+            while (row.Read())
+            {
+                tipo = row["tipoUtilizador"].ToString();
+            }
+            return tipo;
+        }
+
         public int SelecionarTotalIdeias(int id)
         {
             var ideiasUtiliz = new UtilizadorDAO();
