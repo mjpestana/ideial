@@ -102,11 +102,11 @@ namespace ideial.Controller
             return listaGeral;
         }
 
-        public static Dictionary<int, DateTime> SelecionarIdeiasUtiliz()
+        public static Dictionary<int, DateTime> SelecionarIdeiasUtiliz(int id)
         {
             Dictionary<int, DateTime> listaIdeias = new Dictionary<int, DateTime>();
-            Console.WriteLine("UserLogged.IdConta: " + UserLogged.IdUtilizador);
-            MySqlDataReader row = FeedDAO.SelecionarIdeiasUtiliz(UserLogged.IdUtilizador);
+            
+            MySqlDataReader row = FeedDAO.SelecionarIdeiasUtiliz(id);
 
             while (row.Read())
             {

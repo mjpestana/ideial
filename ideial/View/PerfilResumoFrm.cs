@@ -73,5 +73,10 @@ namespace ideial.View
 
             return media;
         }
+
+        private void userPic_img_Click(object sender, EventArgs e)
+        {
+            Main_frm.LoadFeedExternal(1, IdUtiliz);
+        }
     }
 }

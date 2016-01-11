@@ -251,7 +251,7 @@ namespace ideial.View
 
         private void ideias_btn_Click(object sender, EventArgs e)
         {
-            LoadFeed(1);
+            LoadFeedExternal(1, UserLogged.IdUtilizador);
         }
 
         private void campanhas_btn_Click(object sender, EventArgs e)

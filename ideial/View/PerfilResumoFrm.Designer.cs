@@ -125,6 +125,7 @@
             this.userPic_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userPic_img.TabIndex = 17;
             this.userPic_img.TabStop = false;
+            this.userPic_img.Click += new System.EventHandler(this.userPic_img_Click);
             // 
             // userName_lbl
             // 

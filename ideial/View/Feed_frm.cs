@@ -40,7 +40,7 @@ namespace ideial.View
                     PopulateFeed();
                     break;
                 case 1:
-                    PopulateFeedIdeias();
+                    PopulateFeedIdeias(Id);
                     break;
                 case 2:
                     PopulateFeedCampanhas();
@@ -92,9 +92,9 @@ namespace ideial.View
             }
         }
 
-        private void PopulateFeedIdeias()
+        private void PopulateFeedIdeias(int id)
         {
-            var listaIdeias = FeedControl.SelecionarIdeiasUtiliz();
+            var listaIdeias = FeedControl.SelecionarIdeiasUtiliz(id);
 
             for (int i = 0; i < listaIdeias.Count; i++)
             {
