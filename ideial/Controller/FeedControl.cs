@@ -92,11 +92,32 @@ namespace ideial.Controller
                         }
                     }
                 }
+
                 //check if there is some in list1 with date after the latest added
-                var compareLast = DateTime.Compare(list1Date, list2.Values.ElementAt(list2.Count - 1));
-                if (compareLast > 0 && !listaGeral.ContainsKey(type1 + list1Key))
+                
+                /*var compareLast = DateTime.Compare(list1Date, list2.Values.ElementAt(list2.Count - 1));
+                    if (compareLast > 0 && !listaGeral.ContainsKey(type1 + list1Key))
+                    {
+                        listaGeral.Add(type1 + list1Key, list1Key);
+                    }*/
+                }
+            foreach (var p in list1)
+            {
+                var lst1Key = p.Key;
+                var lst1Date = p.Value;
+
+                if (!listaGeral.ContainsKey(type1 + lst1Key))
                 {
-                    listaGeral.Add(type1 + list1Key, list1Key);
+                    listaGeral.Add(type1 + lst1Key, lst1Key);
+                }
+            }
+            foreach (var pair2 in list2)
+            {
+                var list2Key = pair2.Key;
+                var list2Date = pair2.Value;
+                if (!listaGeral.ContainsKey(type2 + list2Key))
+                {
+                    listaGeral.Add(type2 + list2Key, list2Key);
                 }
             }
             return listaGeral;
