@@ -113,8 +113,8 @@ namespace ideial.View
             pass = password_txt.Text;
             nome = nome_txt.Text;
             email = email_txt.Text;
-            foto = ConvertImageControl.ImageToByteArray(foto_pbox.Image);
 
+            foto = ConvertImageControl.ImageToByteArray(foto_pbox.Image);   
             //Atribui valores as variáveis de acordo com o valor selecionado nas ComboBox
             if (cargo_cmb.SelectedValue != null) { idCargo = (int) cargo_cmb.SelectedValue; }
             if (departamento_cmb.SelectedValue != null) { idDepartamento = (int)departamento_cmb.SelectedValue; }

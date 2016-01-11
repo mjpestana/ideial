@@ -13,15 +13,20 @@ using ideial.Model.Entity;
 
 namespace ideial.View
 {
+    
+
     public partial class Feed_frm : Form
     {
         private readonly int _tipoFeed;
         public int Id { get; set; }
+        private bool _byDate = true;
+        private bool _withId;
 
         public Feed_frm(int tipo)
         {
             InitializeComponent();
             _tipoFeed = tipo;
+            _withId = false;
         }
 
         public Feed_frm(int tipo, int id)
@@ -29,29 +34,13 @@ namespace ideial.View
             InitializeComponent();
             _tipoFeed = tipo;
             Id = id;
-            
+            _withId = true;
         }
 
         private void Feed_frm_Load(object sender, EventArgs e)
         {
-            switch (_tipoFeed)
-            {
-                case 0:
-                    PopulateFeed();
-                    break;
-                case 1:
-                    PopulateFeedIdeias(Id);
-                    break;
-                case 2:
-                    PopulateFeedCampanhas();
-                    break;
-                case 3:
-                    PopulateFeedIdeiasDaCampanha(Id);
-                    break;
-                case 4:
-                    PopulateFeedUtilizadores();
-                    break;
-            }
+            LoadForm();
+            
         }
 
         private void AddFormInPanel(Form con)
@@ -71,6 +60,7 @@ namespace ideial.View
 
         private void PopulateFeed()
         {
+            ordenar_pnl.Visible = false;
             var listaIdeias = FeedControl.SelecionarIdeias();
             var listaCampanhas = FeedControl.SelecionarCampanhas();
             var listaFeed = FeedControl.GerarFeed(listaIdeias, listaCampanhas);
@@ -94,8 +84,9 @@ namespace ideial.View
 
         private void PopulateFeedIdeias(int id)
         {
+            ordenar_pnl.Visible = true;
             var listaIdeias = FeedControl.SelecionarIdeiasUtiliz(id);
-
+            
             for (int i = 0; i < listaIdeias.Count; i++)
             {
                 Ideia_frm filho = new Ideia_frm(listaIdeias.Keys.ElementAt(i), false);
@@ -105,6 +96,7 @@ namespace ideial.View
 
         private void PopulateFeedCampanhas()
         {
+            ordenar_pnl.Visible = false;
             var listaCampanhas = FeedControl.SelecionarCampanhasUtiliz();
 
             for (int i = 0; i < listaCampanhas.Count; i++)
@@ -116,8 +108,9 @@ namespace ideial.View
 
         public void PopulateFeedIdeiasDaCampanha(int idCamp)
         {
+            ordenar_pnl.Visible = true;
             var listaIdeias = FeedControl.SelecionarIdeiasDaCampanha(idCamp);
-            
+
             for (int i = 0; i < listaIdeias.Count; i++)
             {
                 Ideia_frm filho = new Ideia_frm(listaIdeias[i], false);
@@ -127,12 +120,47 @@ namespace ideial.View
 
         public void PopulateFeedUtilizadores()
         {
+            ordenar_pnl.Visible = false;
             var listaUtilizadores = FeedControl.SelecionarTodosUtilizadores();
 
             for (int i = 0; i < listaUtilizadores.Count; i++)
             {
                 PerfilResumoFrm filho = new PerfilResumoFrm(listaUtilizadores[i]);
                 AddFormInPanel(filho);
+            }
+        }
+
+        private void ordenarData_btn_Click(object sender, EventArgs e)
+        {
+            _byDate = true;
+            //LoadForm();
+        }
+
+        private void ordenarPop_btn_Click(object sender, EventArgs e)
+        {
+            _byDate = false;
+            //LoadForm();
+        }
+
+        private void LoadForm()
+        {
+            switch (_tipoFeed)
+            {
+                case 0:
+                    PopulateFeed();
+                    break;
+                case 1:
+                    PopulateFeedIdeias(Id);
+                    break;
+                case 2:
+                    PopulateFeedCampanhas();
+                    break;
+                case 3:
+                    PopulateFeedIdeiasDaCampanha(Id);
+                    break;
+                case 4:
+                    PopulateFeedUtilizadores();
+                    break;
             }
         }
     }

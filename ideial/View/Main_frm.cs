@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security;
 using System.Windows.Forms;
@@ -191,7 +192,7 @@ namespace ideial.View
             userName_lbl.Text = UserLogged.User;
             tipoUtilizador_lbl.Text = UserLogged.TipoUtilizador;
         }
-
+        
         private void PermissoesFormPrincipal()
         {
             switch (UserLogged.TipoUtilizador)

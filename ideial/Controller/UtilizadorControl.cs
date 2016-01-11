@@ -5,6 +5,7 @@ using MySql.Data.MySqlClient;
 
 using ideial.Model.Entity;
 using ideial.Model.DAO;
+using static System.Buffer;
 
 namespace ideial.Controller
 {
