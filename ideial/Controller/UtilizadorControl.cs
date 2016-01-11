@@ -11,7 +11,7 @@ namespace ideial.Controller
     class UtilizadorControl
     {
 
-        public static void CriarUtilizador(string user, string pass, string nome, string email, string foto, string tipo,
+        public static void CriarUtilizador(string user, string pass, string nome, string email, byte[] foto, string tipo,
             int id_cargo, int id_departamento, int id_empresa)
         {
             //Instância Conta
@@ -43,7 +43,7 @@ namespace ideial.Controller
         }
 
         public static void AtualizarUtilizador(int idConta, string user, string pass, int idUtilizador,
-            string tipoUtilizador, string nome, string email, string foto, int idCargo, int idDepartamento,
+            string tipoUtilizador, string nome, string email, byte[] foto, int idCargo, int idDepartamento,
             int idEmpresa)
         {
             if (pass != "")
@@ -55,7 +55,7 @@ namespace ideial.Controller
 
             //Atualiza Utilizador na Db
             UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-            utilizadorDAO.AtualizarUtilizador(idUtilizador, nome, email, idCargo, idDepartamento, idEmpresa);
+            utilizadorDAO.AtualizarUtilizador(idUtilizador, nome, email, foto, idCargo, idDepartamento, idEmpresa);
 
             //Atualiza os dados do objeto UserLogged
             UserLogged.IdConta = idConta;

@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 using ideial.Model.Entity;
 using ideial.Controller;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace ideial.View
 {
@@ -96,28 +99,40 @@ namespace ideial.View
 
         private void atualizar_btn_Click(object sender, EventArgs e)
         {
-            string user, pass, tipoUtilizador, nome, email, foto;
+            string user, pass, tipoUtilizador, nome, email;
             int idConta=0, idUtilizador=0, idCargo=0, idDepartamento=0, idEmpresa=0;
+            byte[] foto;
 
             //Prepara dados do utilizador
             idConta = UserLogged.IdConta;
             user = UserLogged.User;
             idUtilizador = UserLogged.IdUtilizador;
             tipoUtilizador = UserLogged.TipoUtilizador;
-            foto = UserLogged.Foto;
 
             //Atribuir valores as variáveis de acordo com os campos alterados
             pass = password_txt.Text;
             nome = nome_txt.Text;
             email = email_txt.Text;
+            foto = ConvertImageControl.ImageToByteArray(foto_pbox.Image);
 
             //Atribui valores as variáveis de acordo com o valor selecionado nas ComboBox
             if (cargo_cmb.SelectedValue != null) { idCargo = (int) cargo_cmb.SelectedValue; }
             if (departamento_cmb.SelectedValue != null) { idDepartamento = (int)departamento_cmb.SelectedValue; }
             if (empresa_cmb.SelectedValue != null) { idEmpresa = (int)empresa_cmb.SelectedValue; }
-
+ 
             //Chama método para atualizar utilizador de acordo com os parâmetros enviados
             UtilizadorControl.AtualizarUtilizador(idConta, user, pass, idUtilizador, tipoUtilizador, nome, email, foto, idCargo, idDepartamento, idEmpresa);
+        }
+
+        private void userPic_img_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ficheiro = new OpenFileDialog();
+            ficheiro.Filter = "Imagem | *.jpg; *.jpeg; *.png; *.gif;";
+
+            if (ficheiro.ShowDialog() == DialogResult.OK)
+            {
+                foto_pbox.Image = Image.FromFile(ficheiro.FileName);
+            }
         }
     }
 }

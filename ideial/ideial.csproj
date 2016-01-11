@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ComentarioControl.cs" />
+    <Compile Include="Controller\ConvertImageControl.cs" />
     <Compile Include="Controller\FeedControl.cs" />
     <Compile Include="Model\DAO\ComentarioDAO.cs" />
     <Compile Include="Model\DAO\FeedDAO.cs" />

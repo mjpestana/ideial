@@ -5,7 +5,7 @@
         //ConcreteFornecedor herda as propriedades de Utilizador e tem outras propriedades específicas
         public int IdEmpresa { get; set; }
 
-        public ConcreteFornecedor(int idConta, string nome, string email, string foto, string tipoUtilizador, int idEmpresa)
+        public ConcreteFornecedor(int idConta, string nome, string email, byte[] foto, string tipoUtilizador, int idEmpresa)
         {
             this.IdConta = idConta;
             this.Nome = nome;

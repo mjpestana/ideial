@@ -26,7 +26,7 @@ namespace ideial.Controller
                     UserLogged.IdUtilizador = Convert.ToInt32( row["ID"].ToString() );
                     UserLogged.NomeUtilizador = row["nome"].ToString();
                     UserLogged.Email = row["email"].ToString();
-                    UserLogged.Foto = row["foto"].ToString();
+                    //UserLogged.Foto = row["foto"].ToString;
                     UserLogged.TipoUtilizador = row["tipoUtilizador"].ToString();
                     UserLogged.IdCargo = Convert.ToInt32( row["id_cargo"].ToString() );
                     UserLogged.IdDepartamento = Convert.ToInt32( row["id_departamento"].ToString() );

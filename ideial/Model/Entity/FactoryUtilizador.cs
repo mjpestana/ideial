@@ -4,7 +4,7 @@ namespace ideial.Model.Entity
 {
     public class FactoryUtilizador
     {
-        public Utilizador getUtilizadorObj(int idConta, string nome, string email, string foto, string tipoUtilizador, int idCargo, int idDepartamento, int idEmpresa)
+        public Utilizador getUtilizadorObj(int idConta, string nome, string email, byte[] foto, string tipoUtilizador, int idCargo, int idDepartamento, int idEmpresa)
         {
             Utilizador objUtilizador = null;
 

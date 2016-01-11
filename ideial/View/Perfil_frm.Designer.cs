@@ -49,13 +49,16 @@
             this.fornecedor_panel = new System.Windows.Forms.Panel();
             this.empresa_cmb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.foto_pbox = new System.Windows.Forms.PictureBox();
             this.utilizador_panel.SuspendLayout();
             this.funcionario_panel.SuspendLayout();
             this.fornecedor_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_pbox)).BeginInit();
             this.SuspendLayout();
             // 
             // utilizador_panel
             // 
+            this.utilizador_panel.Controls.Add(this.foto_pbox);
             this.utilizador_panel.Controls.Add(this.tipoUtilizador_lbl);
             this.utilizador_panel.Controls.Add(this.userName_lbl);
             this.utilizador_panel.Controls.Add(this.email_txt);
@@ -99,7 +102,7 @@
             this.email_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.email_txt.Location = new System.Drawing.Point(155, 129);
             this.email_txt.Name = "email_txt";
-            this.email_txt.Size = new System.Drawing.Size(250, 26);
+            this.email_txt.Size = new System.Drawing.Size(301, 26);
             this.email_txt.TabIndex = 3;
             // 
             // nome_txt
@@ -108,7 +111,7 @@
             this.nome_txt.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.nome_txt.Location = new System.Drawing.Point(155, 91);
             this.nome_txt.Name = "nome_txt";
-            this.nome_txt.Size = new System.Drawing.Size(250, 26);
+            this.nome_txt.Size = new System.Drawing.Size(189, 26);
             this.nome_txt.TabIndex = 2;
             // 
             // password_txt
@@ -272,6 +275,20 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Empresa";
             // 
+            // foto_pbox
+            // 
+            this.foto_pbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.foto_pbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foto_pbox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.foto_pbox.Image = ((System.Drawing.Image)(resources.GetObject("foto_pbox.Image")));
+            this.foto_pbox.Location = new System.Drawing.Point(375, 20);
+            this.foto_pbox.Name = "foto_pbox";
+            this.foto_pbox.Size = new System.Drawing.Size(81, 97);
+            this.foto_pbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.foto_pbox.TabIndex = 38;
+            this.foto_pbox.TabStop = false;
+            this.foto_pbox.Click += new System.EventHandler(this.userPic_img_Click);
+            // 
             // Perfil_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +310,7 @@
             this.funcionario_panel.PerformLayout();
             this.fornecedor_panel.ResumeLayout(false);
             this.fornecedor_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_pbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +337,6 @@
         private System.Windows.Forms.Label userName_lbl;
         private System.Windows.Forms.ComboBox cargo_cmb;
         private System.Windows.Forms.ComboBox empresa_cmb;
+        private System.Windows.Forms.PictureBox foto_pbox;
     }
 }

@@ -6,7 +6,7 @@
         public int IdCargo { get; set; }
         public int IdDepartamento { get; set; }
 
-        public ConcreteColaborador(int idConta, string nome, string email, string foto, string tipoUtilizador, int idCargo, int idDepartamento)
+        public ConcreteColaborador(int idConta, string nome, string email, byte[] foto, string tipoUtilizador, int idCargo, int idDepartamento)
         {
             this.IdConta = idConta;
             this.Nome = nome;

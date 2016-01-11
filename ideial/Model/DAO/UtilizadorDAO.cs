@@ -67,12 +67,12 @@ namespace ideial.Model.DAO
 
         
 
-        public void AtualizarUtilizador(int idUtilizador, string nome, string email, int idCargo, int idDepartamento, int idEmpresa)
+        public void AtualizarUtilizador(int idUtilizador, string nome, string email, byte[] foto, int idCargo, int idDepartamento, int idEmpresa)
         {
             try
             {
                 //Prepara string para atualizar dados da tabela 
-                string sql = "UPDATE utilizador SET nome = '" + nome + "', email = '" + email + "', id_cargo = '" + idCargo + "', id_departamento = '" + idDepartamento + "', id_empresa = '" + idEmpresa + "' WHERE ID = '" + idUtilizador + "'";
+                string sql = "UPDATE utilizador SET nome = '" + nome + "', email = '" + email + "', foto = '" + foto + "', id_cargo = '" + idCargo + "', id_departamento = '" + idDepartamento + "', id_empresa = '" + idEmpresa + "' WHERE ID = '" + idUtilizador + "'";
 
                 ConexaoDb conDb = ConexaoDb.GetConexaoDb();
                 conDb.AbrirConexao();

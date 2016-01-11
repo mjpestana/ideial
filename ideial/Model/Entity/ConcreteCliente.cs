@@ -4,7 +4,7 @@
     {
         //ConcreteGestor herda as propriedades de Utilizador
 
-        public ConcreteCliente(int idConta, string nome, string email, string foto, string tipoUtilizador)
+        public ConcreteCliente(int idConta, string nome, string email, byte[] foto, string tipoUtilizador)
         {
             this.IdConta = idConta;
             this.Nome = nome;

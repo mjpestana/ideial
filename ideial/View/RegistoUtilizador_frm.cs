@@ -90,7 +90,7 @@ namespace ideial.View
             string pass = password_txt.Text;
             string nome = nome_txt.Text;
             string email = email_txt.Text;
-            string foto = "";
+            byte[] foto = null;
             string tipo = tipoUtilizador_cmb.Text;
             int idCargo = (int)cargo_cmb.SelectedValue;
             int idDepartamento = (int)departamento_cmb.SelectedValue;
